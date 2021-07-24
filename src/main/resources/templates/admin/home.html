@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:replace="~{fragments/layoutAdmin :: title}">Title</title>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: meta}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: link}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: head/script}"></th:block>
+
+
+</head>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+<div class="page-wrapper">
+    <!-- BEGIN HEADER -->
+    <div th:insert="~{fragments/headerAdminPartial :: headerAdminPartial}"></div>
+    <!-- END HEADER -->
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"> </div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN PROGRESSBAR -->
+        <div th:insert="~{fragments/loadingPartial :: loadingPartial}"></div>
+        <!-- END PROGRESSBAR -->
+        <!-- BEGIN PROGRESSBAR -->
+        <div th:insert="~{fragments/progressBarPartial :: progressBarPartial}"></div>
+        <!-- END PROGRESSBAR -->
+        <!-- BEGIN NOTIFICATION -->
+        <div th:insert="~{fragments/notificationPartial :: notificationPartial}"></div>
+        <!-- END NOTIFICATION -->
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar-wrapper">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar navbar-collapse collapse ">
+                <ul class="page-sidebar-menu page-header-fixed" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+
+<!--                    <div th:insert="~{fragments/leftSidebarAdminPartial :: leftSidebarPartial}"></div>-->
+
+                    <li class="sidebar-toggler-wrapper hide">
+                        <div class="sidebar-toggler">
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="nav-item active open" id="nav-none">
+                        <a href="/admin" class="nav-link nav-toggle">
+                            <i class="icon-home"></i>
+                            <span class="uppercase title">Trang chủ</span>
+                            <span class="selected"></span></a>
+                    </li>
+                    <li class="nav-item" id="nav-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-user"></i>
+                            <span class="uppercase title">Quản lý bạn đọc</span>
+                            <span class="arrow" id="nav-span-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef"></span>
+                        </a>
+                        <ul class="sub-menu" style="display: none;">
+                            <li class="nav-item" id="nav-patronmanagement-insert">
+                                <a href="/admin/patronmanagement/insert" class="nav-link">
+                                    <span class="title">Thêm mới</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-patronmanagement-list">
+                                <a href="/admin/patronmanagement/list" class="nav-link">
+                                    <span class="title">Danh sách</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-blockedtracking-list">
+                                <a href="/admin/blockedtracking/list" class="nav-link">
+                                    <span class="title">Nhật ký khóa thẻ</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-renewcardlog-list">
+                                <a href="/admin/renewcardlog/list" class="nav-link">
+                                    <span class="title">Nhật ký gia hạn thẻ</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-patronmanagement-tools">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Công cụ</span>
+                                    <span class="arrow" id="nav-span-patronmanagement-tools"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-patronmanagement-patronmanagement-patrontypemanagement">
+                                        <a href="/admin/patrontypemanagement/list" class="nav-link ">
+                                            <span class="title">Loại bạn đọc</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-patronmanagement-patronmanagement-jobtitlemanagement">
+                                        <a href="/admin/jobtitlemanagement/list" class="nav-link ">
+                                            <span class="title">Chức vụ</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-0765c183-3c39-4a56-af3c-1fa4119698ca">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-notebook"></i>
+                            <span class="uppercase title">Quản lý sách giấy</span>
+                            <span class="arrow" id="nav-span-0765c183-3c39-4a56-af3c-1fa4119698ca"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-bibliographic-update">
+                                <a href="/admin/bibliographic/update" class="nav-link">
+                                    <span class="title">Thêm mới</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-bibliographic-list">
+                                <a href="/admin/bibliographic/list" class="nav-link">
+                                    <span class="title">Danh sách</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-bibliographic-tools">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Công cụ</span>
+                                    <span class="arrow" id="nav-span-bibliographic-tools"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-materialmanagement">
+                                        <a href="/admin/materialmanagement/list" class="nav-link ">
+                                            <span class="title">Loại tài liệu</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-mediatypemanagement">
+                                        <a href="/admin/mediatypemanagement/list" class="nav-link ">
+                                            <span class="title">Thể loại lưu trữ</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfc">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-calculator"></i>
+                            <span class="uppercase title">Quản lý mượn trả</span>
+                            <span class="arrow" id="nav-span-0e19b78e-9757-4394-837d-d3d9ebc33dfc"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-checkout-index">
+                                <a href="/admin/checkout/index" class="nav-link">
+                                    <span class="title">Mượn trả</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-circulation-history">
+                                <a href="/admin/circulation/history" class="nav-link">
+                                    <span class="title">Nhật ký lưu thông</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfd">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-social-dribbble"></i>
+                            <span class="uppercase title">Quản lý cổng thông tin</span>
+                            <span class="arrow" id="nav-span-0e19b78e-9757-4394-837d-d3d9ebc33dfd"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-sitemanagement-list">
+                                <a href="/admin/sitemanagement/list" class="nav-link">
+                                    <span class="title">Quản lý site</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-newsmanagement-list">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Quản lý tin tức</span>
+                                    <span class="arrow" id="nav-span-newsmanagement-list"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-newsmanagement">
+                                        <a href="/admin/newsmanagement/list" class="nav-link ">
+                                            <span class="title">Tin tức</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-categorymanagement">
+                                        <a href="/admin/categorymanagement/list" class="nav-link ">
+                                            <span class="title">Chuyên mục</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-authormanagement">
+                                        <a href="/admin/authormanagement/list" class="nav-link ">
+                                            <span class="title">Tác giả</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item" id="nav-filesmanagement-list">
+                                <a href="/admin/filesmanagement/list" class="nav-link">
+                                    <span class="title">Quản lý tập tin</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-users"></i>
+                            <span class="uppercase title">Quản lý người dùng</span>
+                            <span class="arrow" id="nav-span-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-usermanagement-list">
+                                <a href="/admin/usermanagement/list" class="nav-link">
+                                    <span class="title">Người dùng</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-rolemanagement-list">
+                                <a href="/admin/rolemanagement/list" class="nav-link">
+                                    <span class="title">Phân quyền</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <!-- END SIDEBAR MENU -->
+                <!-- END SIDEBAR MENU -->
+            </div>
+            <!-- END SIDEBAR -->
+        </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="modal fade"
+             id="stackPopupIndex"
+             tabindex="-1"
+             role="dialog"
+             data-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content"
+                     id="popupPageDetailIndex">
+                </div>
+            </div>
+        </div>
+
+        <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <div class="page-content dashboard" style="background: #eef1f5">
+                <div class="page-bar">
+                    <ul class="page-breadcrumb">
+                        <li>
+                            <a href="/admin">Trang chủ</a>
+                            <i class="fa fa-circle"></i>
+                        </li>
+                        <li>
+                            <span>Tổng quan</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END PAGE BAR -->
+                <!-- BEGIN PAGE TITLE-->
+                <h1 class="page-title">
+                </h1>
+                <!-- END PAGE TITLE-->
+                <!-- END PAGE HEADER-->
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="dashboard-stat2 ">
+                            <div class="display">
+                                <div class="number">
+                                    <h3 class="font-red-haze">
+                                        <span data-counter="counterup" data-value="100"></span>
+                                    </h3>
+                                    <small>TỔNG SỐ GIAO DỊCH</small>
+                                </div>
+                                <div class="icon">
+                                    <i class="icon-shopping-cart"></i>
+                                </div>
+                            </div>
+                            <div class="progress-info">
+                                <div class="progress">
+                            <span style="width: 100%;" class="progress-bar progress-bar-success red-haze">
+                            </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="dashboard-stat2 ">
+                            <div class="display">
+                                <div class="number">
+                                    <h3 class="font-blue-sharp">
+                                        <span data-counter="counterup" data-value="500"></span>
+                                    </h3>
+                                    <small>TỔNG SỐ SÁCH</small>
+                                </div>
+                                <div class="icon">
+                                    <i class="icon-book-open"></i>
+                                </div>
+                            </div>
+                            <div class="progress-info">
+                                <div class="progress">
+                            <span style="width: 100%;" class="progress-bar progress-bar-success blue-sharp">
+                            </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="dashboard-stat2 ">
+                            <div class="display">
+                                <div class="number">
+                                    <h3 class="font-purple-soft">
+                                        <span data-counter="counterup" data-value="1000"></span>
+                                    </h3>
+                                    <small>TỔNG SỐ BẠN ĐỌC</small>
+                                </div>
+                                <div class="icon">
+                                    <i class="icon-user"></i>
+                                </div>
+                            </div>
+                            <div class="progress-info">
+                                <div class="progress">
+                            <span style="width: 100%;" class="progress-bar progress-bar-success green-dark">
+                            </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="dashboard-stat2 ">
+                            <div class="display">
+                                <div class="number">
+                                    <h3 class="font-purple-soft">
+                                        <span data-counter="counterup" data-value="100"></span>
+                                    </h3>
+                                    <small>TỔNG SỐ NGƯỜI DÙNG</small>
+                                </div>
+                                <div class="icon">
+                                    <i class="ui-icon-person"></i>
+                                </div>
+                            </div>
+                            <div class="progress-info">
+                                <div class="progress">
+                            <span style="width: 100%;" class="progress-bar progress-bar-success purple-soft">
+                            </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12 col-sm-12">
+                        <div class="portlet light" style="padding: 12px 20px 15px">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-cursor font-dark hide"></i>
+                                    <span class="caption-subject font-dark bold uppercase">Thống kê theo tình trạng bạn đọc</span>
+                                </div>
+                                <div class="actions mr15">
+                                    <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#"> </a>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="chartdiv">
+                                        </div>
+                                    </div>
+                                    <div class="margin-bottom-10 visible-sm"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xs-12 col-sm-12">
+                        <div class="portlet light" style="padding: 12px 20px 15px">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-cursor font-dark hide"></i>
+                                    <span class="caption-subject font-dark bold uppercase">Thống kê theo loại bạn đọc</span>
+                                </div>
+                                <div class="actions mr15">
+                                    <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#"> </a>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="chartdiv2">
+                                        </div>
+                                    </div>
+                                    <div class="margin-bottom-10 visible-sm"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-lg-12 col-xs-12 col-sm-12">
+                        <div class="portlet light" style="padding: 12px 20px 15px">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-cursor font-dark hide"></i>
+                                    <span class="caption-subject font-dark bold uppercase">Thống kê giao dịch mượn trả sách</span>
+                                </div>
+                                <div class="actions mr15">
+                                    <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#"> </a>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="chartdiv4">
+                                        </div>
+                                    </div>
+                                    <div class="margin-bottom-10 visible-sm"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12 col-sm-12">
+                        <div class="portlet light" style="padding: 12px 20px 15px">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-cursor font-dark hide"></i>
+                                    <span class="caption-subject font-dark bold uppercase">Thống kê theo loại sách</span>
+                                </div>
+                                <div class="actions mr15">
+                                    <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#"> </a>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="chartdiv5">
+                                        </div>
+                                    </div>
+                                    <div class="margin-bottom-10 visible-sm"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xs-12 col-sm-12">
+                        <div class="portlet light" style="padding: 12px 20px 15px">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-cursor font-dark hide"></i>
+                                    <span class="caption-subject font-dark bold uppercase">Thống kê theo tình trạng sách</span>
+                                </div>
+                                <div class="actions mr15">
+                                    <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#"> </a>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="chartdiv6">
+                                        </div>
+                                    </div>
+                                    <div class="margin-bottom-10 visible-sm"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTENT BODY -->
+        </div>
+        <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+</div>
+</body>
+</html>

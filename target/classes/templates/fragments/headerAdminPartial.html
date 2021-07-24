@@ -1,0 +1,55 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="headerAdminPartial">
+    <div class="page-header navbar navbar-fixed-top">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner ">
+            <!-- BEGIN LOGO -->
+            <div class="page-logo">
+                <a href="/admin">
+                    <img src="/images/logo.png" alt="logo" class="logo-default"/>
+                </a>
+                <div class="menu-toggler sidebar-toggler">
+                    <span></span>
+                </div>
+            </div>
+            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
+               data-target=".navbar-collapse">
+                <span></span>
+            </a>
+            <div class="logon uppercase">Hệ thống quản lý thư viện
+            </div>
+            <div class="top-menu hidden-sm hidden-xs">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown dropdown-user">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                           data-close-others="true">
+                            <img width="28" height="30" class="img-circle" src="/images/avatar.jpg"/>
+                            <span class="username username-hide-on-mobile"> admin </span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-default">
+                            <li class="">
+                                <a href="">
+                                    <i class="icon-user"></i>Thông tin người dùng
+                                </a>
+                            </li>
+                            <li class="">
+                                <a onclick="$$$changePass.onChangePass()">
+                                    <i class="icon-refresh"></i>Thay đổi mật khẩu
+                                </a>
+                            </li>
+                            <li class="divider hidden"></li>
+                            <li>
+                                <a href="">
+                                    <i class="icon-key"></i>Đăng xuất
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- END TOP NAVIGATION MENU -->
+        </div>
+        <!-- END HEADER INNER -->
+    </div>
+</div>

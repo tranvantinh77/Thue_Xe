@@ -1,0 +1,29 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="loginAdminPartial">
+    <li class="dropdown dropdown-user">
+        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+           data-close-others="true">
+            <img width="28" height="30" class="img-circle" src="/images/avatar.jpg"/>
+            <span class="username username-hide-on-mobile"> admin </span>
+            <i class="fa fa-angle-down"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-default">
+            <li class="">
+                <a href="">
+                    <i class="icon-user"></i>Thông tin người dùng
+                </a>
+            </li>
+            <li class="">
+                <a onclick="$$$changePass.onChangePass()">
+                    <i class="icon-refresh"></i>Thay đổi mật khẩu
+                </a>
+            </li>
+            <li class="divider hidden"></li>
+            <li>
+                <a href="">
+                    <i class="icon-key"></i>Đăng xuất
+                </a>
+            </li>
+        </ul>
+    </li>
+</div>

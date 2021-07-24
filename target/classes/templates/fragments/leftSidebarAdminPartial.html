@@ -1,0 +1,280 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="leftSidebarPartial">
+    <li class="sidebar-toggler-wrapper hide">
+        <div class="sidebar-toggler">
+            <span></span>
+        </div>
+    </li>
+    <li class="nav-item active open" id="nav-none">
+        <a href="/admin" class="nav-link nav-toggle">
+            <i class="icon-home"></i>
+            <span class="uppercase title">Trang chủ</span>
+            <span class="selected"></span></a>
+    </li>
+    <li class="nav-item" id="nav-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef">
+        <a class="nav-link nav-toggle">
+            <i class="icon-user"></i>
+            <span class="uppercase title">Quản lý bạn đọc</span>
+            <span class="arrow" id="nav-span-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef"></span>
+        </a>
+        <ul class="sub-menu" style="display: none;">
+            <li class="nav-item" id="nav-patronmanagement-insert">
+                <a href="/admin/patronmanagement/insert" class="nav-link">
+                    <span class="title">Thêm mới</span>
+                </a>
+            </li>
+            <li class="nav-item" id="nav-patronmanagement-list">
+                <a href="/admin/patronmanagement/list" class="nav-link">
+                    <span class="title">Danh sách</span>
+                </a>
+            </li>
+            <li class="nav-item" id="nav-blockedtracking-list">
+                <a href="/admin/blockedtracking/list" class="nav-link">
+                    <span class="title">Nhật ký khóa thẻ</span>
+                </a>
+            </li>
+            <li class="nav-item" id="nav-renewcardlog-list">
+                <a href="/admin/renewcardlog/list" class="nav-link">
+                    <span class="title">Nhật ký gia hạn thẻ</span>
+                </a>
+            </li>
+            <li class="nav-item" id="nav-patronmanagement-tools">
+                <a class="nav-link nav-toggle">
+                    <span class="title">Công cụ</span>
+                    <span class="arrow" id="nav-span-patronmanagement-tools"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item" id="nav-patronmanagement-patronmanagement-patrontypemanagement">
+                        <a href="/admin/patrontypemanagement/list" class="nav-link ">
+                            <span class="title">Loại bạn đọc</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="nav-patronmanagement-patronmanagement-jobtitlemanagement">
+                        <a href="/admin/jobtitlemanagement/list" class="nav-link ">
+                            <span class="title">Chức vụ</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item" id="nav-0765c183-3c39-4a56-af3c-1fa4119698ca">
+        <a class="nav-link nav-toggle">
+            <i class="icon-notebook"></i>
+            <span class="uppercase title">Quản lý sách giấy</span>
+            <span class="arrow" id="nav-span-0765c183-3c39-4a56-af3c-1fa4119698ca"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item" id="nav-bibliographic-update">
+                <a href="/admin/bibliographic/update" class="nav-link">
+                    <span class="title">Biên mục</span>
+                </a>
+            </li>
+            <li class="nav-item" id="nav-bibliographic-list">
+                <a href="/admin/bibliographic/list" class="nav-link">
+                    <span class="title">Danh sách</span>
+                </a>
+            </li>
+            <li class="nav-item" id="nav-z3950search-list">
+                <a href="/admin/z3950search/list" class="nav-link">
+                    <span class="title">Tìm kiếm Z39.50</span>
+                </a>
+            </li>
+            <li class="nav-item" id="nav-bibliographic-tools">
+                <a class="nav-link nav-toggle">
+                    <span class="title">Công cụ</span>
+                    <span class="arrow" id="nav-span-bibliographic-tools"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item" id="nav-cataloging-bibliographic-materialmanagement">
+                        <a href="/admin/materialmanagement/list" class="nav-link ">
+                            <span class="title">Loại tài liệu</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="nav-cataloging-bibliographic-mediatypemanagement">
+                        <a href="/admin/mediatypemanagement/list" class="nav-link ">
+                            <span class="title">Thể loại lưu trữ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="nav-cataloging-bibliographic-templatemanagement">
+                        <a href="/admin/templatemanagement/list" class="nav-link ">
+                            <span class="title">Khung biên mục</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="nav-cataloging-bibliographic-deweymanagement">
+                        <a href="/admin/deweymanagement/list" class="nav-link ">
+                            <span class="title">Phân loại dewey</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="nav-cataloging-bibliographic-languagemanagement">
+                        <a href="/admin/languagemanagement/list" class="nav-link ">
+                            <span class="title">Ngôn ngữ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="nav-cataloging-bibliographic-nuccodedefinemanagement">
+                        <a href="/admin/nuccodedefinemanagement/list" class="nav-link ">
+                            <span class="title">Bộ mã hóa</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="nav-cataloging-bibliographic-bib1setmanagement">
+                        <a href="/admin/bib1setmanagement/list" class="nav-link ">
+                            <span class="title">Chỉ mục Z39.50</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="nav-cataloging-bibliographic-z3950databasemanagement">
+                        <a href="/admin/z3950databasemanagement/list" class="nav-link ">
+                            <span class="title">Cơ sở dữ liệu Z39.50</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="nav-cataloging-bibliographic-genbarcodemanagement">
+                        <a href="/admin/genbarcodemanagement/list" class="nav-link ">
+                            <span class="title">Mã vạch tự sinh</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfa">
+        <a class="nav-link nav-toggle">
+            <i class=" icon-book-open"></i>
+            <span class="uppercase title">Quản lý sách số</span>
+            <span class="arrow" id="nav-span-0e19b78e-9757-4394-837d-d3d9ebc33dfa"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item" id="nav-documentmanagement-insert">
+                <a href="/admin/documentmanagement/insert" class="nav-link">
+                    <span class="title">Thêm mới</span>
+                </a>
+            </li>
+            <li class="nav-item" id="nav-documentmanagement-list">
+                <a href="/admin/documentmanagement/list" class="nav-link">
+                    <span class="title">Danh sách</span>
+                </a>
+            </li>
+            <li class="nav-item" id="nav-digitaldocument-tools">
+                <a class="nav-link nav-toggle">
+                    <span class="title">Công cụ</span>
+                    <span class="arrow" id="nav-span-digitaldocument-tools"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item" id="nav-digitaldocument-digitaldocument-oaiservermanagement">
+                        <a href="/admin/oaiservermanagement/list" class="nav-link ">
+                            <span class="title">Cơ sở dữ liệu OAI</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfc">
+        <a class="nav-link nav-toggle">
+            <i class="icon-calculator"></i>
+            <span class="uppercase title">Quản lý mượn trả</span>
+            <span class="arrow" id="nav-span-0e19b78e-9757-4394-837d-d3d9ebc33dfc"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item" id="nav-checkout-index">
+                <a href="/admin/checkout/index" class="nav-link">
+                    <span class="title">Mượn trả</span>
+                </a>
+            </li>
+            <li class="nav-item" id="nav-circulation-history">
+                <a href="/admin/circulation/history" class="nav-link">
+                    <span class="title">Nhật ký lưu thông</span>
+                </a>
+            </li>
+            <li class="nav-item" id="nav-checkout-config">
+                <a href="/admin/checkout/config" class="nav-link">
+                    <span class="title">Cấu hình</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfd">
+        <a class="nav-link nav-toggle">
+            <i class="icon-social-dribbble"></i>
+            <span class="uppercase title">Quản lý cổng thông tin</span>
+            <span class="arrow" id="nav-span-0e19b78e-9757-4394-837d-d3d9ebc33dfd"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item" id="nav-sitemanagement-list">
+                <a href="/admin/sitemanagement/list" class="nav-link">
+                    <span class="title">Quản lý site</span>
+                </a>
+            </li>
+            <li class="nav-item" id="nav-newsmanagement-list">
+                <a class="nav-link nav-toggle">
+                    <span class="title">Quản lý tin tức</span>
+                    <span class="arrow" id="nav-span-newsmanagement-list"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item" id="nav-portaladmin-newsmanagement-newsmanagement">
+                        <a href="/admin/newsmanagement/list" class="nav-link ">
+                            <span class="title">Tin tức</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="nav-portaladmin-newsmanagement-categorymanagement">
+                        <a href="/admin/categorymanagement/list" class="nav-link ">
+                            <span class="title">Chuyên mục</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="nav-portaladmin-newsmanagement-authormanagement">
+                        <a href="/admin/authormanagement/list" class="nav-link ">
+                            <span class="title">Tác giả</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" id="nav-filesmanagement-list">
+                <a href="/admin/filesmanagement/list" class="nav-link">
+                    <span class="title">Quản lý tập tin</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item" id="nav-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef">
+        <a class="nav-link nav-toggle">
+            <i class="icon-users"></i>
+            <span class="uppercase title">Quản lý người dùng</span>
+            <span class="arrow" id="nav-span-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item" id="nav-usermanagement-list">
+                <a href="/admin/usermanagement/list" class="nav-link">
+                    <span class="title">Người dùng</span>
+                </a>
+            </li>
+            <li class="nav-item" id="nav-rolemanagement-list">
+                <a href="/admin/rolemanagement/list" class="nav-link">
+                    <span class="title">Phân quyền</span>
+                </a>
+            </li>
+            <li class="nav-item" id="nav-departmentmanagement-list">
+                <a href="/admin/departmentmanagement/list" class="nav-link">
+                    <span class="title">Phòng ban</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item" id="nav-8c9a9483-b9c4-4114-9cff-081cc66333cf">
+        <a class="nav-link nav-toggle">
+            <i class="icon-settings"></i>
+            <span class="uppercase title">Quản lý hệ thống</span>
+            <span class="arrow" id="nav-span-8c9a9483-b9c4-4114-9cff-081cc66333cf"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item" id="nav-resourcemanagement-list">
+                <a href="/admin/resourcemanagement/list" class="nav-link">
+                    <span class="title">Quản lý ngôn ngữ</span>
+                </a>
+            </li>
+            <li class="nav-item" id="nav-systemlogmanagement-list">
+                <a href="/admin/systemlogmanagement/list" class="nav-link">
+                    <span class="title">Nhật ký hệ thống</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+
+</div>

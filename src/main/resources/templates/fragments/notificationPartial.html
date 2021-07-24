@@ -1,0 +1,80 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="notificationPartial">
+    <script type="text/javascript">
+
+        var title = 'HỆ THỐNG THÔNG BÁO';
+
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "500",
+            "hideDuration": "5000",
+            "timeOut": "5000",
+            "extendedTimeOut": "5000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut",
+        };
+        var core_notification = {
+            messageNotify: function (_message) {
+                toastr['Error'](_message, title);
+            },
+            messageNotifySuccess: function (_message) {
+                toastr['Success'](_message, title);
+            },
+            updateSuccess: function () {
+                toastr['Success']('Cập nhật thành công', title);
+            },
+            updateFail: function () {
+                toastr['Error']('Cập nhật không thành công. Vui lòng thử lại', title);
+            },
+            deleteSuccess: function () {
+                toastr['Success']('Xóa thành công', title);
+            },
+            deleteFail: function () {
+                toastr['Error']('Xóa không thành công. Vui lòng thử lại', title);
+            },
+        };
+        // core_notify.status(2).msg('Cau thong bao').done(()=>{});
+        var core_notify = {
+            _msg: "",//Câu thông báo
+            _status: 1,//Loại thông báo 1- Success , 2-- Fail
+            _title: '',
+            msg: function (msg) {
+                this._msg = msg;
+                return this;
+            },
+            status: function (status) {
+                this._status = status;
+                return this;
+            },
+            title: function (title) {
+                this._title = title;
+                if (this._title = '') {
+                    this._title = '@ResourceManagement.GetResourceText("SystemResourceID.NotificationSystem", "HỆ THỐNG THÔNG BÁO", "NOTIFICATION SYSTEM")';
+                }
+                return this;
+            },
+            //Thực thi
+            done: function (callback) {
+                this.callback = callback;
+                if (this._status == 1) {
+                    toastr['@Constant.Notification_Success'](this._msg, title);
+                } else if (this._status == 2) {
+                    toastr['@Constant.Notification_Error'](this._msg, title);
+                }
+                if (this.callback) {
+                    this.callback();
+                }
+            }
+        };
+
+    </script>
+</div>
+
