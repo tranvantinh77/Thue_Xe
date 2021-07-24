@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/CarCompanyEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/CategoryEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/CheckoutEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/CirculationEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/DiscountEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/OtoEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/RoleEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/UserInfoEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1627129091195</updated>
       <workItem from="1627129095003" duration="1238000" />
-      <workItem from="1627130631531" duration="3774000" />
+      <workItem from="1627130631531" duration="4944000" />
     </task>
     <servers />
   </component>
