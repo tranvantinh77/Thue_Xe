@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="" />
+    <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/CarCompanyEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/CategoryEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/CheckoutEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/CirculationEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/DiscountEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/OtoEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/RoleEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/UserInfoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +53,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RunDashboard">
@@ -89,6 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1627129091195</updated>
       <workItem from="1627129095003" duration="1238000" />
+      <workItem from="1627130631531" duration="3774000" />
     </task>
     <servers />
   </component>
@@ -100,7 +114,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
