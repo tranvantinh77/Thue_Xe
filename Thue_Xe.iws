@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="" />
+    <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/headerWebPortalPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/headerWebPortalPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/headerWebPortalPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/headerWebPortalPartial.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +127,8 @@
       <workItem from="1627129095003" duration="1238000" />
       <workItem from="1627130631531" duration="6694000" />
       <workItem from="1627176560734" duration="940000" />
-      <workItem from="1627180389319" duration="11260000" />
+      <workItem from="1627180389319" duration="13253000" />
+      <workItem from="1627204149485" duration="628000" />
     </task>
     <servers />
   </component>
