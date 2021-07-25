@@ -204,7 +204,7 @@ table tr th { color: #688a7e;}
 
 .login-form a{
 
-    color: #688a7e !important;
+    color: #007aff !important;
 
 }
 
@@ -241,6 +241,8 @@ table tr th { color: #688a7e;}
 }
 
 .login-form .checkbox {
+
+    color: #434A59;
 
     font-weight: normal;
 
@@ -445,4 +447,5 @@ table tr th { color: #688a7e;}
 	float:left;
 
 }
+
 
