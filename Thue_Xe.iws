@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/app_data/car_rental_25_07.sql" afterDir="false" />
-    </list>
+    <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +123,7 @@
       <workItem from="1627129095003" duration="1238000" />
       <workItem from="1627130631531" duration="6694000" />
       <workItem from="1627176560734" duration="940000" />
-      <workItem from="1627180389319" duration="10941000" />
+      <workItem from="1627180389319" duration="11260000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Liên hệ</title>
+
+    <th:block th:insert="~{fragments/layoutWebPortal :: meta}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutWebPortal :: link}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutWebPortal :: head/script}"></th:block>
+
+</head>
+<body>
+<div th:insert="~{fragments/headerWebPortalPartial :: headerwebportal}"></div>
+<div class="c-layout-page">
+    <div th:insert="~{fragments/loadingPartial :: loadingPartial}"></div>
+    <!-- BEGIN: LAYOUT/BREADCRUMBS/BREADCRUMBS-3 -->
+    <div class="c-layout-breadcrumbs-1 c-bgimage-lienhe">
+        <div class="container">
+            <div class="c-page-title c-pull-left">
+                <h2 class="c-font-uppercase c-font-bold c-font-white c-font-20 c-font-slim">LIÊN HỆ</h2>
+            </div>
+        </div>
+    </div>
+    <!-- END: LAYOUT/BREADCRUMBS/BREADCRUMBS-3 -->
+    <!-- BEGIN: PAGE CONTENT -->
+    <!-- BEGIN: CONTENT/CONTACT/FEEDBACK-1 -->
+    <div class="c-content-box c-size-md c-bg-white">
+        <div class="container">
+            <div class="c-content-feedback-1 c-option-1">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="c-container c-bg-green c-bg-img-bottom-right" style="background-image:url(/assets/base/img/content/misc/feedback_box_1.png)">
+                            <div class="c-content-title-1 c-inverse">
+                                <h3 class="c-font-uppercase c-font-bold">THƯ VIỆN TRƯỜNG THPT</h3>
+                                <div class="c-line-left"></div>
+                                <p class="c-font-lowercase">
+                                    Địa chỉ:
+                                    <br />
+                                    Số điện thoại:
+                                    <br />
+                                    Website:
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 xs-mt-12">
+                        <div class="c-contact">
+                            <div class="c-content-title-1">
+                                <h3 class="c-font-uppercase c-font-bold">Liên hệ với chúng tôi</h3>
+                                <div class="c-line-left"></div>
+                                <p class="c-font-lowercase">Vui lòng nhập thông tin cần liên hệ với chúng tôi!</p>
+                            </div>
+                            <form action="" method="post">
+                                <div class="form-group">
+                                    <input class = "form-control c-square c-theme input-lg" type="text" placeholder = "Họ tên"/>
+                                </div>
+                                <div class="form-group">
+                                    <input class = "form-control c-square c-theme input-lg" type="text" placeholder = "Email"/>
+                                </div>
+                                <div class="form-group">
+                                    <input class = "form-control c-square c-theme input-lg" type="text" placeholder = "Tiêu đề"/>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class = "form-control c-square c-theme input-lg" rows="8" placeholder = "Nội dung"></textarea>
+                                </div>
+                                <button type="submit" class="btn c-theme-btn c-btn-uppercase btn-lg c-btn-bold c-btn-square">Gửi</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: CONTENT/CONTACT/FEEDBACK-1 -->
+    <!-- END: PAGE CONTENT -->
+</div>
+<div th:insert="~{fragments/footerWebPortalPartial :: footerwebportal}"></div>
+<div th:insert="~{fragments/backToTopWebPortal :: backToTopWebPortal}"></div>
+</body>
+</html>
