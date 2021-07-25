@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/config/JpaAuditingConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/headerWebPortalPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/headerWebPortalPartial.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/headerWebPortalPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/headerWebPortalPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/entity/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/DAO/UserDAO.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,9 +16,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -129,6 +130,7 @@
       <workItem from="1627176560734" duration="940000" />
       <workItem from="1627180389319" duration="13253000" />
       <workItem from="1627204149485" duration="628000" />
+      <workItem from="1627216363851" duration="3411000" />
     </task>
     <servers />
   </component>
