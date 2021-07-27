@@ -3500,8 +3500,8 @@ input:checked + .slider:before {
 .search-box .input-search-single .btn-search-text-single:visited,
 .search-box .input-search-single .btn-search-text-single:focus,
 .search-box .input-search-single .btn-search-text-single:checked {
-    background-color: #0D3860;
-    border-color: #0D3860;
+    background-color: #88898C;
+    border-color: #88898C;
 }
 
 .select2-container--bootstrap .select2-selection {
