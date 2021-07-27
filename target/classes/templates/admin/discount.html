@@ -289,148 +289,24 @@
                                                                style="width: 1600px">
                                                             <thead class="flip-content1">
                                                             <tr>
-                                                                <th class="text-center">#</th>
-                                                                <th>Tên </th>
-                                                                <th>Mô tả</th>
-                                                                <th>Người cập nhật</th>
-                                                                <th>Cập nhật cuối</th>
-                                                                <th>Thứ tự</th>
+                                                                <th class="text-center" style="width: 40px">#</th>
+                                                                <th>Mã giảm giá</th>
+                                                                <th>Tên</th>
+                                                                <th>Giảm giá (%)</th>
+                                                                <th>Trạng thái</th>
                                                                 <th>Thao tác</th>
                                                             </tr>
                                                             </thead>
 
                                                             <tbody id="bodyView">
-                                                            <tr>
+                                                            <tr th:each="listDis : ${discount}">
                                                                 <td class="text-center">1</td>
                                                                 <td>
-                                                                    <a href="">
-                                                                        Trần Bảo Ngọc
-                                                                    </a>
+                                                                    <a href="" th:text="${listDis.code}"></a>
                                                                 </td>
-                                                                <td>Mô tả tác giả</td>
-                                                                <td>admin</td>
-                                                                <td>4/4/2021</td>
-                                                                <td>0</td>
-
-                                                                <td class="text-right">
-                                                                    <a href="" class="btn btn-xs btn-icon-only btn-info"
-                                                                       title="Cập nhật">
-                                                                        <i class="icon icon-pencil mr5"></i>
-                                                                    </a>
-
-                                                                    <button class="btn btn-xs red btn-icon-only"
-                                                                            title="Xóa">
-                                                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="text-center">2</td>
-                                                                <td>
-                                                                    <a href="">
-                                                                        Trần Bảo Ngọc
-                                                                    </a>
-                                                                </td>
-                                                                <td>Mô tả tác giả</td>
-                                                                <td>admin</td>
-                                                                <td>4/4/2021</td>
-                                                                <td>0</td>
-
-                                                                <td class="text-right">
-                                                                    <a href="" class="btn btn-xs btn-icon-only btn-info"
-                                                                       title="Cập nhật">
-                                                                        <i class="icon icon-pencil mr5"></i>
-                                                                    </a>
-
-                                                                    <button class="btn btn-xs red btn-icon-only"
-                                                                            title="Xóa">
-                                                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="text-center">3</td>
-                                                                <td>
-                                                                    <a href="">
-                                                                        Trần Bảo Ngọc
-                                                                    </a>
-                                                                </td>
-                                                                <td>Mô tả tác giả</td>
-                                                                <td>admin</td>
-                                                                <td>4/4/2021</td>
-                                                                <td>0</td>
-
-                                                                <td class="text-right">
-                                                                    <a href="" class="btn btn-xs btn-icon-only btn-info"
-                                                                       title="Cập nhật">
-                                                                        <i class="icon icon-pencil mr5"></i>
-                                                                    </a>
-
-                                                                    <button class="btn btn-xs red btn-icon-only"
-                                                                            title="Xóa">
-                                                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="text-center">4</td>
-                                                                <td>
-                                                                    <a href="">
-                                                                        Trần Bảo Ngọc
-                                                                    </a>
-                                                                </td>
-                                                                <td>Mô tả tác giả</td>
-                                                                <td>admin</td>
-                                                                <td>4/4/2021</td>
-                                                                <td>0</td>
-
-                                                                <td class="text-right">
-                                                                    <a href="" class="btn btn-xs btn-icon-only btn-info"
-                                                                       title="Cập nhật">
-                                                                        <i class="icon icon-pencil mr5"></i>
-                                                                    </a>
-
-                                                                    <button class="btn btn-xs red btn-icon-only"
-                                                                            title="Xóa">
-                                                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="text-center">5</td>
-                                                                <td>
-                                                                    <a href="">
-                                                                        Trần Bảo Ngọc
-                                                                    </a>
-                                                                </td>
-                                                                <td>Mô tả tác giả</td>
-                                                                <td>admin</td>
-                                                                <td>4/4/2021</td>
-                                                                <td>0</td>
-
-                                                                <td class="text-right">
-                                                                    <a href="" class="btn btn-xs btn-icon-only btn-info"
-                                                                       title="Cập nhật">
-                                                                        <i class="icon icon-pencil mr5"></i>
-                                                                    </a>
-
-                                                                    <button class="btn btn-xs red btn-icon-only"
-                                                                            title="Xóa">
-                                                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="text-center">6</td>
-                                                                <td>
-                                                                    <a href="">
-                                                                        Trần Bảo Ngọc
-                                                                    </a>
-                                                                </td>
-                                                                <td>Mô tả tác giả</td>
-                                                                <td>admin</td>
-                                                                <td>4/4/2021</td>
-                                                                <td>0</td>
+                                                                <td th:text="${listDis.name}"></td>
+                                                                <td th:text="${listDis.price_discount}"></td>
+                                                                <td th:utext="${listDis.statusDisplay()}"></td>
 
                                                                 <td class="text-right">
                                                                     <a href="" class="btn btn-xs btn-icon-only btn-info"
