@@ -294,11 +294,11 @@
                                                             <thead class="flip-content1">
                                                             <tr>
                                                                 <th class="text-center" style="width: 40px">#</th>
-                                                                <th>Mã giảm giá</th>
-                                                                <th>Tên</th>
-                                                                <th>Giảm giá (%)</th>
-                                                                <th>Trạng thái</th>
-                                                                <th>Thao tác</th>
+                                                                <th class="text-center">Mã giảm giá</th>
+                                                                <th class="text-center">Tên</th>
+                                                                <th class="text-center">Giảm giá (%)</th>
+                                                                <th class="text-center">Trạng thái</th>
+                                                                <th class="text-center">Thao tác</th>
                                                             </tr>
                                                             </thead>
 
@@ -309,8 +309,8 @@
                                                                     <a href="" th:text="${listDis.code}"></a>
                                                                 </td>
                                                                 <td th:text="${listDis.name}"></td>
-                                                                <td th:text="${listDis.price_discount}"></td>
-                                                                <td th:utext="${listDis.statusDisplay()}"></td>
+                                                                <td class="text-center" th:text="${listDis.price_discount}"></td>
+                                                                <td class="text-center" th:utext="${listDis.statusDisplay()}"></td>
 
                                                                 <td class="text-right">
                                                                     <a href="" class="btn btn-xs btn-icon-only btn-info"
