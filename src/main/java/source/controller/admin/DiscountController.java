@@ -90,7 +90,7 @@ public class DiscountController {
 
     @RequestMapping(value = "/discount/insert", method = RequestMethod.POST)
     public String insertDiscount(@ModelAttribute("discountEntity") DiscountEntity discountEntity){
-        discountEntity.setStatus(1);
+        discountEntity.setStatus(AppStatus.discount.Unapproved);
         discountEntity.setActiveFag(AppStatus.ActiveFag);
         discountService.save(discountEntity);
         return "redirect:/admin/discount/list";
