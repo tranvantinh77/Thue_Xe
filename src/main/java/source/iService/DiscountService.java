@@ -15,4 +15,8 @@ public interface DiscountService {
 
     List<DiscountEntity> findByKeyword(String keyword);
 
+    void save(DiscountEntity discountEntity);
+
+    DiscountEntity findById(Long id);
+
 }

@@ -99,7 +99,7 @@ public class UserInfoEntity extends BaseEntity {
     public void setCMND_CCCD(String CMND_CCCD) {
         this.CMND_CCCD = CMND_CCCD;
     }
-    
+
     public String genderDisplay() {
         String result = "";
         switch (getGender()){

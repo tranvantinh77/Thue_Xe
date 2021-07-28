@@ -3,7 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/config/AppStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/config/AppStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/DAO/DiscountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/DAO/DiscountDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/controller/admin/DiscountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/DiscountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/entity/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/entity/UserInfoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/entity/UserInfoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/iService/DiscountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/iService/DiscountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/service/DiscountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/service/DiscountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/discount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/DAO/DiscountDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/DAO/DiscountDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/config/AppStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/config/AppStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/controller/admin/DiscountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/controller/admin/DiscountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/BaseEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/CarCompanyEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/CarCompanyEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/CategoryEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/CategoryEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/CheckoutEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/CheckoutEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/OtoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/OtoEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/UserEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/UserInfoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/UserInfoEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/iService/DiscountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/iService/DiscountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/service/DiscountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/service/DiscountServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/discount.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/discount.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,9 +85,11 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\Discount" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\js" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\css\404" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\webPortal" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="source.controller.webPortal" />
@@ -77,11 +98,9 @@
       <recent name="source.config" />
       <recent name="source.utils" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\js" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\css\404" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\webPortal" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\Discount" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -155,7 +174,8 @@
       <workItem from="1627381629844" duration="2698000" />
       <workItem from="1627392152203" duration="10488000" />
       <workItem from="1627402869082" duration="7000" />
-      <workItem from="1627442039919" duration="1668000" />
+      <workItem from="1627442039919" duration="1732000" />
+      <workItem from="1627478580916" duration="9289000" />
     </task>
     <servers />
   </component>

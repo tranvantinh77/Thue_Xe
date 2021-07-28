@@ -3,16 +3,17 @@ package source.controller.admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import source.config.AppStatus;
 import source.entity.DiscountEntity;
 import source.iService.DiscountService;
 import source.utils.PagningUtils;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,6 +27,7 @@ public class DiscountController {
     public String books(Model model, @RequestParam(name = "pageindex", required = false, defaultValue = "1") Integer page,
                         @RequestParam(name = "size", required = false, defaultValue = "10") Integer size) {
 
+        DiscountEntity discountEntity = new DiscountEntity();
         page -= 1;
         Pageable pageable = PageRequest.of(page, size);
         List<DiscountEntity> listDiscount = discountService.findByActiveFag(pageable);
@@ -43,6 +45,7 @@ public class DiscountController {
         model.addAttribute("currentPage", page);
         model.addAttribute("list", list);
         model.addAttribute("isLastPage", isLastPage);
+        model.addAttribute("discountEntity", discountEntity);
 
         return "admin/discount";
     }
@@ -52,6 +55,7 @@ public class DiscountController {
                          @RequestParam(name = "pageindex", required = false, defaultValue = "1") Integer page,
                          @RequestParam(name = "size", required = false, defaultValue = "10") Integer size) {
 
+        DiscountEntity discountEntity = new DiscountEntity();
         page -= 1;
         Pageable pageable = PageRequest.of(page, size);
 
@@ -79,8 +83,60 @@ public class DiscountController {
         model.addAttribute("currentPage", page);
         model.addAttribute("list", list);
         model.addAttribute("isLastPage", isLastPage);
+        model.addAttribute("discountEntity", discountEntity);
 
         return "admin/discount";
+    }
+
+    @RequestMapping(value = "/discount/insert", method = RequestMethod.POST)
+    public String insertDiscount(@ModelAttribute("discountEntity") DiscountEntity discountEntity){
+        discountEntity.setStatus(1);
+        discountEntity.setActiveFag(AppStatus.ActiveFag);
+        discountService.save(discountEntity);
+        return "redirect:/admin/discount/list";
+    }
+
+    @GetMapping("/admin/discount/update")
+    @ResponseBody
+    public DiscountEntity authorUpdate(@RequestParam("id") long id) {
+        return discountService.findById(id);
+    }
+
+    @PostMapping("/discount/update")
+    public String updateAuthor(
+            @RequestParam("name") String name,
+            @RequestParam("code") String code,
+            @RequestParam("price_discount") int price_discount,
+            @RequestParam("discountId") String discountId){
+        long id = Long.parseLong(discountId);
+        DiscountEntity discountEntity = discountService.findById(id);
+        discountEntity.setName(name);
+        discountEntity.setCode(code);
+        discountEntity.setPrice_discount(price_discount);
+        discountService.save(discountEntity);
+        return "redirect:/admin/discount/list";
+    }
+
+    @PostMapping("/discount/delete")
+    @ResponseBody
+    public DiscountEntity delete(@RequestBody DiscountEntity discountEntity1) {
+        DiscountEntity discountEntity = discountService.findById(discountEntity1.getId());
+        discountEntity.setActiveFag(AppStatus.DeleteActiveFag);
+        discountService.save(discountEntity);
+        return discountEntity;
+    }
+
+    @PostMapping("/discount/status")
+    @ResponseBody
+    public DiscountEntity banner(@RequestBody DiscountEntity discountEntity1) {
+        DiscountEntity discountEntity = discountService.findById(discountEntity1.getId());
+        if (discountEntity1.getStatus() == AppStatus.discount.Approved) {
+            discountEntity.setStatus(AppStatus.discount.Unapproved);
+        } else {
+            discountEntity.setStatus(AppStatus.discount.Approved);
+        }
+        discountService.save(discountEntity);
+        return discountEntity;
     }
 
 }
