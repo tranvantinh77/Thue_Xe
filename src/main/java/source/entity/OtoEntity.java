@@ -1,5 +1,7 @@
 package source.entity;
 
+import source.config.AppStatus;
+
 import javax.persistence.*;
 
 @Entity
@@ -105,5 +107,18 @@ public class OtoEntity extends BaseEntity {
 
     public void setCategory_id(CategoryEntity category_id) {
         this.category_id = category_id;
+    }
+
+    public String statusDisplay() {
+        String result = "";
+        switch (getStatus()){
+            case AppStatus.oto.Approved:
+                result =String.format("<span class=\"label label-sm label-success\">Đã duyệt</span>");
+                break;
+            case AppStatus.oto.Unapproved:
+                result =String .format("<span class=\"label label-sm label-danger\">Chưa duyệt</span>");
+                break;
+        }
+        return result;
     }
 }

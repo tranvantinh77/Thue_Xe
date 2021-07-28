@@ -1,5 +1,7 @@
 package source.entity;
 
+import source.config.AppStatus;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -96,5 +98,18 @@ public class UserInfoEntity extends BaseEntity {
 
     public void setCMND_CCCD(String CMND_CCCD) {
         this.CMND_CCCD = CMND_CCCD;
+    }
+    
+    public String genderDisplay() {
+        String result = "";
+        switch (getGender()){
+            case AppStatus.gender.Male:
+                result =String.format("<span class=\"label label-sm label-primary\">Nam</span>");
+                break;
+            case AppStatus.gender.Female:
+                result =String .format("<span class=\"label label-sm label-danger\">Nữ</span>");
+                break;
+        }
+        return result;
     }
 }

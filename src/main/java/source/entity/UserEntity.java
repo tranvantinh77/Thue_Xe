@@ -1,5 +1,7 @@
 package source.entity;
 
+import source.config.AppStatus;
+
 import javax.persistence.*;
 
 @Entity
@@ -61,5 +63,18 @@ public class UserEntity extends BaseEntity{
 
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    public String statusDisplay() {
+        String result = "";
+        switch (getStatus()){
+            case AppStatus.user.Active:
+                result =String.format("<span class=\"label label-sm label-success\">Hoạt động</span>");
+                break;
+            case AppStatus.user.Disable:
+                result =String .format("<span class=\"label label-sm label-danger\">Đã khóa</span>");
+                break;
+        }
+        return result;
     }
 }

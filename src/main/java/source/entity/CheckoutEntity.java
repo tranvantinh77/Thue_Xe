@@ -1,5 +1,7 @@
 package source.entity;
 
+import source.config.AppStatus;
+
 import javax.persistence.*;
 import java.sql.Date;
 
@@ -73,5 +75,21 @@ public class CheckoutEntity extends BaseEntity {
 
     public void setTotal_money(double total_money) {
         this.total_money = total_money;
+    }
+
+    public String statusDisplay() {
+        String result = "";
+        switch (getStatus()){
+            case AppStatus.checkout.PreRegistration:
+                result =String.format("<span class=\"label label-sm label-warning\">Đăng ký trước</span>");
+                break;
+            case AppStatus.checkout.Borrowed:
+                result =String .format("<span class=\"label label-sm label-success\">Đang thuê</span>");
+                break;
+            case AppStatus.checkout.OutOfDate:
+                result =String .format("<span class=\"label label-sm label-danger\">Quá hạn</span>");
+                break;
+        }
+        return result;
     }
 }
