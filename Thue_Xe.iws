@@ -3,26 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/DAO/DiscountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/DAO/DiscountDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/controller/admin/DiscountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/DiscountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/entity/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/entity/UserInfoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/entity/UserInfoEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/iService/DiscountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/iService/DiscountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/service/DiscountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/service/DiscountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/discount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/DAO/DiscountDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/DAO/DiscountDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/config/AppStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/config/AppStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/controller/admin/DiscountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/controller/admin/DiscountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/BaseEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/CarCompanyEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/CarCompanyEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/CategoryEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/CategoryEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/CheckoutEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/CheckoutEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/OtoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/OtoEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/UserInfoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/UserInfoEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/iService/DiscountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/iService/DiscountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/service/DiscountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/service/DiscountServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/discount.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/discount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/config/WebSecurityConfig.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +157,8 @@
       <workItem from="1627392152203" duration="10488000" />
       <workItem from="1627402869082" duration="7000" />
       <workItem from="1627442039919" duration="1732000" />
-      <workItem from="1627478580916" duration="9289000" />
+      <workItem from="1627478580916" duration="9434000" />
+      <workItem from="1627488072348" duration="482000" />
     </task>
     <servers />
   </component>
