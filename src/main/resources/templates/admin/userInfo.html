@@ -147,7 +147,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item active open" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfd">
+                    <li class="nav-item" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfd">
                         <a class="nav-link nav-toggle">
                             <i class="icon-social-dribbble"></i>
                             <span class="uppercase title">Quản lý cổng thông tin</span>
@@ -159,7 +159,7 @@
                                     <span class="title">Quản lý site</span>
                                 </a>
                             </li>
-                            <li class="nav-item active open" id="nav-newsmanagement-list">
+                            <li class="nav-item" id="nav-newsmanagement-list">
                                 <a class="nav-link nav-toggle">
                                     <span class="title">Quản lý tin tức</span>
                                     <span class="arrow" id="nav-span-newsmanagement-list"></span>
@@ -189,21 +189,16 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item" id="nav-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef">
+                    <li class="nav-item active open" id="nav-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef">
                         <a class="nav-link nav-toggle">
                             <i class="icon-users"></i>
                             <span class="uppercase title">Quản lý người dùng</span>
                             <span class="arrow" id="nav-span-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef"></span>
                         </a>
                         <ul class="sub-menu">
-                            <li class="nav-item" id="nav-usermanagement-list">
-                                <a href="/admin/usermanagement/list" class="nav-link">
+                            <li class="nav-item active open" id="nav-usermanagement-list">
+                                <a th:href="@{/admin/user/list}" class="nav-link">
                                     <span class="title">Người dùng</span>
-                                </a>
-                            </li>
-                            <li class="nav-item" id="nav-rolemanagement-list">
-                                <a href="/admin/rolemanagement/list" class="nav-link">
-                                    <span class="title">Phân quyền</span>
                                 </a>
                             </li>
                         </ul>
@@ -228,15 +223,11 @@
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <a href="">Cổng thông tin</a>
+                            <a href="">Quản lý người dùng</a>
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <a href="">Quản lý tin tức</a>
-                            <i class="fa fa-angle-right"></i>
-                        </li>
-                        <li>
-                            <a href="/admin/categorymanagement/list">Tác giả</a>
+                            <a th:href="@{/admin/user/list}">Người dùng</a>
                         </li>
                     </ul>
                 </div>
@@ -276,7 +267,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="doc-group-title pull-right">
-                                                <a href="#" data-toggle="modal" data-target="#stackPopup"
+                                                <a th:href="@{/admin/user/insert}"
                                                    class="btn green">
                                                     <i class="icon icon-plus mr5"></i>
                                                     Thêm
@@ -314,7 +305,7 @@
                                                                 <td class="text-center" th:utext="${user.statusDisplay()}">Trạng thái</td>
 
                                                                 <td class="text-right">
-                                                                    <a href="#"
+                                                                    <a th:href="@{/admin/user/update}"
                                                                        class="btn btn-xs btn-icon-only btn-info"
                                                                        title="Cập nhật">
                                                                         <i class="icon icon-pencil mr5"></i>

@@ -228,145 +228,171 @@
                         </li>
                         <li>
                             <a th:href="@{/admin/user/list}">Người dùng</a>
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <span>Thêm mới</span>
                         </li>
                     </ul>
                 </div>
                 <!-- END PAGE BAR -->
-                <div class="page-content-main page-search">
-                    <div class="page-content-1zone">
-                        <div class="portlet light pt0 pb0">
-                            <div class="portlet-body pb0">
-                                <!--SEARCH-->
-                                <div class="search-box">
-                                    <form th:action="@{/admin/user/search}" method="GET">
-                                        <div class="row">
-                                            <div class="col-md-12 xs-mt-12">
-                                                <div class="input-search-single">
-                                                    <input autofocus type="text" name="keyword" id="keyword"
-                                                           class="form-control"
-                                                           placeholder="Nhập từ khóa ...">
-                                                    <button type="submit" class="btn green mr0 btn-search-text-single">
-                                                        <i class="icon-magnifier mr5"></i>Tìm kiếm
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div><!--END SEARCH-->
-                                <!--LIST CONTENT-->
-                                <div id="body-content">
-
-                                    <div class="row mt10">
-                                        <div class="col-md-6">
-                                            <div class="doc-group-title">
-                                                <span aria-hidden="true" class="fa fa-user-secret"></span>
-                                                Tìm thấy tổng số <span id="lbl-getpaging-total"
-                                                                       class="span-total"
-                                                                       th:text="${list.size()}"></span>biểu ghi
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="doc-group-title pull-right">
-                                                <a th:href="@{/admin/user/insert}"
-                                                   class="btn green">
-                                                    <i class="icon icon-plus mr5"></i>
-                                                    Thêm
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row mt10">
-                                        <div class="col-md-12">
-                                            <div class="searh-result">
-                                                <div id="table-scroll" class="table-scroll">
-                                                    <div class="table-scrollable" style="min-height:initial !important">
-                                                        <table class="table table-bordered main-table"
-                                                               style="width: 1600px">
-                                                            <thead class="flip-content1">
-                                                            <tr>
-                                                                <th class="text-center" style="width: 40px">#</th>
-                                                                <th class="text-center">Tên</th>
-                                                                <th class="text-center">Email</th>
-                                                                <th class="text-center">Giới tính</th>
-                                                                <th class="text-center">Phân quyền</th>
-                                                                <th class="text-center">Trạng thái</th>
-                                                                <th class="text-center">Thao tác</th>
-                                                            </tr>
-                                                            </thead>
-
-                                                            <tbody id="bodyView">
-                                                            <tr th:each="user,iterStat : ${userInfo}">
-                                                                <td class="text-center" th:text="${iterStat.count+(pagesize*(currentPage))}">#</td>
-                                                                <td th:text="${user.user_info_id.name}">Tên</td>
-                                                                <td th:text="${user.user_info_id.email}">Email</td>
-                                                                <td class="text-center" th:utext="${user.user_info_id.genderDisplay()}">Giới tính</td>
-                                                                <td class="text-center" th:text="${user.role_id.role_name}">Phân quyền</td>
-                                                                <td class="text-center" th:utext="${user.statusDisplay()}">Trạng thái</td>
-
-                                                                <td class="text-right">
-                                                                    <a th:href="@{/admin/user/update}"
-                                                                       class="btn btn-xs btn-icon-only btn-info"
-                                                                       title="Cập nhật">
-                                                                        <i class="icon icon-pencil mr5"></i>
-                                                                    </a>
-
-                                                                    <button th:if="${user.status == 2}"
-                                                                            class="btn btn-xs yellow btn-icon-only"
-                                                                            title="Mở khóa"
-                                                                            th:onclick="'core_lstpage.onUpdateStatus('+${user.id}+','+${user.status}+')'">
-                                                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                                                    </button>
-
-                                                                    <button th:if="${user.status == 0}"
-                                                                            class="btn btn-xs red btn-icon-only"
-                                                                            title="Khóa"
-                                                                            th:onclick="'core_lstpage.onUpdateStatus('+${user.id}+','+${user.status}+')'">
-                                                                        <i class="fa fa-minus-square" aria-hidden="true"></i>
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12" th:if="${list.size()} > ${pagesize}">
-                                            <div class="pagination-control">
-                                                <div class="row">
-                                                    <div class="col-md-12 pull-right">
-                                                        <div id="page-selection" class="padding-top-15 clearboth">
-                                                            <ul class="pagination">
-                                                                <li th:class="${isFirstPage}? 'page-item disabled' : 'page-item'">
-                                                                    <a th:href="@{/admin/discount/list(pageindex=1)}"
-                                                                       class="page-link">
-                                                                        <span class="ms-bold fa fa-angle-double-left"></span>
-                                                                    </a>
-                                                                </li>
-                                                                <li th:each="page : ${pages}"
-                                                                    th:class="${page == currentPage ? 'page-item active' :'page-item' }">
-                                                                    <a th:href="@{/admin/discount/list(pageindex=${page + 1})}"
-                                                                       class="page-link">
-                                                                        <span th:utext="${page+1}"></span>
-                                                                    </a>
-                                                                </li>
-                                                                <li th:class="${isLastPage}? 'page-item disabled' : 'page-item'">
-                                                                    <a th:href="@{/admin/discount/list(pageindex=${endPage})}"
-                                                                       class="page-link">
-                                                                        <span class="ms-bold fa fa-angle-double-right"></span></a>
-                                                                </li>
-                                                            </ul>
+                <div class="content-main">
+                    <div class="portlet-body">
+                        <div class="tabbable-custom">
+                            <form action="#" method="post"
+                                  enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-md-3 xs-mt-12">
+                                        <div class="portlet light portlet-fit portlet-form">
+                                            <div class="portlet-body">
+                                                <div class="form-body">
+                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                        <div class="fileinput-new thumbnail"
+                                                             style="width: 180px; height: 250px;">
+                                                            <img id="img-info-user" src="/images/default.png"
+                                                                 alt="">
+                                                        </div>
+                                                        <div>
+                                                <span class="btn default btn-file">
+                                                    <input type="file" name="file" id="file-info-user"
+                                                           onchange="core_add.onChangeImage(this)">
+                                                    <span class="fileinput-new">Chọn hình</span>
+                                                </span>
+                                                            <a onclick="core_add.onDefaultImage()"
+                                                               class="btn default fileinput-exists"> Hủy bỏ </a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div><!--END LIST CONTENT-->
-                            </div>
+                                    <div class="col-md-9 xs-mt-12">
+                                        <div class="portlet light portlet-fit portlet-form">
+                                            <div class="portlet-body">
+                                                <div class="form-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>Tên đăng nhập</label>
+                                                                    <span class="field-validation-valid"
+                                                                          id="UserNameMsg" style="color: #e7505a"></span>
+                                                                    <input class="form-control" readonly
+                                                                           id="username" name="username" type="text" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>Họ tên</label>
+                                                                    <span class="field-validation-valid"
+                                                                          id="FullNameMsg" style="color: #e7505a"></span>
+                                                                    <input class="form-control"
+                                                                           id="name" name="name" type="text" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>Email</label>
+                                                                    <span class="field-validation-valid"
+                                                                          id="EmailMsg"
+                                                                          style="color: #e7505a"></span>
+                                                                    <input class="form-control" readonly
+                                                                           id="email" name="email" type="email"
+                                                                           value=""/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>CMND/CCCD</label>
+                                                                    <span class="field-validation-valid"
+                                                                          id="CMNDMsg"
+                                                                          style="color: #e7505a"></span>
+                                                                    <input class="form-control"
+                                                                           id="cmnd" name="cmnd" type="number"
+                                                                           value=""/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>Ngày sinh</label>
+                                                                    <span class="field-validation-valid"
+                                                                          id="BirthdayMsg" style="color: #e7505a"></span>
+                                                                    <input class="form-control"
+                                                                           id="birthday" name="birthday" type="date" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>Giới tính</label>
+                                                                    <span class="field-validation-valid"
+                                                                          style="color: #e7505a"></span>
+                                                                    <select class="form-control"
+                                                                            id="gender" name="gender">
+                                                                        <option value="0">Nam</option>
+                                                                        <option value="1">Nữ</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>Địa chỉ</label>
+                                                                    <span class="field-validation-valid"
+                                                                          id="AddressMsg" style="color: #e7505a"></span>
+                                                                    <input class="form-control"
+                                                                           id="address" name="address" type="text" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>Số điện thoại</label>
+                                                                    <span class="field-validation-valid"
+                                                                          id="PhoneMsg"
+                                                                          style="color: #e7505a"></span>
+                                                                    <input class="form-control"
+                                                                           id="phone" name="phone" type="number"
+                                                                           value=""/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="portlet-footer pull-right xs-mb-10">
+                                                    <button onclick="core_add.onClose()" type="button"
+                                                            class="btn btn-circle default" data-dismiss="modal"
+                                                            aria-hidden="true">
+                                                        <i class="fa fa-close mr5"></i>
+                                                        Trở lại
+                                                    </button>
+                                                    <button type="submit" class="btn btn-circle btn-mini btn-info">
+                                                        <i class="fa fa-save mr5"></i>
+                                                        Lưu
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -382,66 +408,33 @@
 </body>
 </html>
 <script type="text/javascript">
-    var ctorPage = {
-        updateStatus: '/user/status',
-        btnCssDefault: 'a.btn-df',
-        TextYes: 'Có',
-        TextNo: 'Không',
-        TextDelAskMsg: 'Bạn có chắc chắn XÓA biểu ghi này ?'
-    };
 
-    var core_lstpage = {
+    var defaultImageUrl = '/images/default.png';
 
-        onUpdateStatus: function (_id, _status) {
-            var msg = 'Bạn có chắc chắn muốn mở khóa tài khoản này không ?';
-            if (_status === 0) {
-                msg = 'Bạn có chắc chắn muốn khóa tài khoản này không ?';
-            }
-            bootbox.confirm({
-                message: msg,
-                buttons: {
-                    confirm: {
-                        label: ctorPage.TextYes,
-                        className: 'btn-success'
-                    },
-                    cancel: {
-                        label: ctorPage.TextNo,
-                        className: 'btn-danger'
-                    }
-                },
-                callback: function (result) {
-                    if (result) {
-                        var Book = {
-                            id: _id,
-                            status: _status
-                        }
-                        console.log(_id);
-                        ShowLoading();
-                        core_services.postAsync(ctorPage.updateStatus, JSON.stringify(Book)
-                            , function (res) {
-                                HideLoading();
-                                if (res) {
-                                    core_lstpage.onReload()
-                                } else {
-                                    // core_notification.updateFail();
-                                    core_lstpage.onReload()
-                                }
-                                core_lstpage.onReload();
-                            }
-                            , function () {
-                                // core_notification.updateFail();
-                                core_lstpage.onReload();
-                            });
-                    }
+    $('document').ready(function () {
+        $(".fileinput-exists").click(function () {
+            $('#img-info-user').attr('src', defaultImageUrl);
+        });
+    });
+
+    $('document').ready(function () {
+        $(".btn-file input").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#img-info-user').attr('src', e.target.result);
                 }
-            });
-        },
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
 
-        onReload: function () {
-            HideLoading();
-            window.location.reload();
+    var core_add = {
 
+        onClose: function () {
+            window.location.href = "/admin/user/list";
         },
 
     }
+
 </script>

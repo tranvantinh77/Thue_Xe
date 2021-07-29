@@ -97,4 +97,14 @@ public class UserInfoController {
         return userEntity;
     }
 
+    @RequestMapping(value = "/admin/user/insert", method = RequestMethod.GET)
+    public String insertUser() {
+        return "admin/insertUser";
+    }
+
+    @RequestMapping(value = "/admin/user/update", method = RequestMethod.GET)
+    public String updatetUser() {
+        return "admin/updateUser";
+    }
+
 }
