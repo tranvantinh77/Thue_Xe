@@ -43,7 +43,7 @@
                         </div>
                     </li>
                     <li class="nav-item" id="nav-none">
-                        <a href="/admin" class="nav-link nav-toggle">
+                        <a th:href="@{/admin}" class="nav-link nav-toggle">
                             <i class="icon-home"></i>
                             <span class="uppercase title">Trang chủ</span>
                             <span class="selected"></span></a>
@@ -51,43 +51,29 @@
                     <li class="nav-item" id="nav-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef">
                         <a class="nav-link nav-toggle">
                             <i class="icon-user"></i>
-                            <span class="uppercase title">Quản lý bạn đọc</span>
+                            <span class="uppercase title">Quản lý xe</span>
                             <span class="arrow" id="nav-span-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef"></span>
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item" id="nav-patronmanagement-insert">
-                                <a href="/patronmanagement/insert" class="nav-link">
+                                <a th:href="@{/admin/oto/insert}" class="nav-link">
                                     <span class="title">Thêm mới</span>
                                 </a>
                             </li>
                             <li class="nav-item" id="nav-patronmanagement-list">
-                                <a href="/admin/patronmanagement/list" class="nav-link">
+                                <a th:href="@{/admin/oto/list}" class="nav-link">
                                     <span class="title">Danh sách</span>
                                 </a>
                             </li>
                             <li class="nav-item" id="nav-blockedtracking-list">
-                                <a href="/admin/blockedtracking/list" class="nav-link">
-                                    <span class="title">Nhật ký khóa thẻ</span>
+                                <a th:href="@{/admin/carcompany/list}" class="nav-link">
+                                    <span class="title">Hãng xe</span>
                                 </a>
                             </li>
                             <li class="nav-item" id="nav-renewcardlog-list">
-                                <a href="/admin/renewcardlog/list" class="nav-link">
-                                    <span class="title">Nhật ký gia hạn thẻ</span>
+                                <a th:href="@{/admin/category/list}" class="nav-link">
+                                    <span class="title">Loại xe</span>
                                 </a>
-                            </li>
-                            <li class="nav-item" id="nav-patronmanagement-tools">
-                                <a class="nav-link nav-toggle">
-                                    <span class="title">Công cụ</span>
-                                    <span class="arrow" id="nav-span-patronmanagement-tools"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item"
-                                        id="nav-patronmanagement-patronmanagement-patrontypemanagement">
-                                        <a href="/admin/patrontypemanagement/list" class="nav-link ">
-                                            <span class="title">Loại bạn đọc</span>
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                     </li>
@@ -147,7 +133,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item active open" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfd">
+                    <li class="nav-item" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfd">
                         <a class="nav-link nav-toggle">
                             <i class="icon-social-dribbble"></i>
                             <span class="uppercase title">Quản lý cổng thông tin</span>
@@ -159,7 +145,7 @@
                                     <span class="title">Quản lý site</span>
                                 </a>
                             </li>
-                            <li class="nav-item active open" id="nav-newsmanagement-list">
+                            <li class="nav-item" id="nav-newsmanagement-list">
                                 <a class="nav-link nav-toggle">
                                     <span class="title">Quản lý tin tức</span>
                                     <span class="arrow" id="nav-span-newsmanagement-list"></span>
@@ -197,13 +183,8 @@
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item" id="nav-usermanagement-list">
-                                <a href="/admin/usermanagement/list" class="nav-link">
+                                <a th:href="@{/admin/user/list}" class="nav-link">
                                     <span class="title">Người dùng</span>
-                                </a>
-                            </li>
-                            <li class="nav-item" id="nav-rolemanagement-list">
-                                <a href="/admin/rolemanagement/list" class="nav-link">
-                                    <span class="title">Phân quyền</span>
                                 </a>
                             </li>
                         </ul>
@@ -224,7 +205,7 @@
                 <div class="page-bar">
                     <ul class="page-breadcrumb">
                         <li>
-                            <a href="/admin">Trang chủ</a>
+                            <a th:href="@{/admin}">Trang chủ</a>
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
@@ -307,13 +288,25 @@
 
                                                             <tbody id="bodyView">
                                                             <tr th:each="listDis,iterStat : ${discount}">
-                                                                <td class="text-center" th:text="${iterStat.count+(pagesize*(currentPage))}">#</td>
+                                                                <td class="text-center"
+                                                                    th:text="${iterStat.count+(pagesize*(currentPage))}">
+                                                                    #
+                                                                </td>
                                                                 <td th:text="${listDis.code}">Mã giảm giá</td>
                                                                 <td th:text="${listDis.name}">Tên</td>
-                                                                <td class="text-center" th:text="${listDis.price_discount}">Giảm giá (%)</td>
-                                                                <td class="text-center" th:utext="${listDis.statusDisplay()}">Trạng thái</td>
-                                                                <td class="text-center" th:utext="${listDis.updateBy}">Trạng thái</td>
-                                                                <td class="text-center" th:utext="${#dates.format(listDis.updateDate, 'dd-MM-yyyy')}">Trạng thái</td>
+                                                                <td class="text-center"
+                                                                    th:text="${listDis.price_discount}">Giảm giá (%)
+                                                                </td>
+                                                                <td class="text-center"
+                                                                    th:utext="${listDis.statusDisplay()}">Trạng thái
+                                                                </td>
+                                                                <td class="text-center" th:utext="${listDis.updateBy}">
+                                                                    Trạng thái
+                                                                </td>
+                                                                <td class="text-center"
+                                                                    th:utext="${#dates.format(listDis.updateDate, 'dd-MM-yyyy')}">
+                                                                    Trạng thái
+                                                                </td>
 
                                                                 <td class="text-right">
                                                                     <button class="btn btn-xs btn-icon-only btn-info"
@@ -339,7 +332,8 @@
                                                                             class="btn btn-xs green btn-icon-only"
                                                                             title="Hủy duyệt"
                                                                             th:onclick="'core_lstpage.onUpdateStatus('+${listDis.id}+','+${listDis.status}+')'">
-                                                                        <i class="fa fa-minus-square" aria-hidden="true"></i>
+                                                                        <i class="fa fa-minus-square"
+                                                                           aria-hidden="true"></i>
                                                                     </button>
                                                                 </td>
                                                             </tr>
@@ -408,57 +402,51 @@
                                 <div class="modal-body detail-container">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="form-group form-md-line-input">
+                                            <div class="form-group">
                                                 <div class="input-group2">
-                                                    <div class="input-group-control ">
-                                                        <span class="field-validation-valid" data-valmsg-for="Name"
-                                                              data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                        <input class="form-control" data-val="true"
-                                                               data-val-required="Tên tác giả không được bỏ trống"
-                                                               type="text" value="" th:field="*{code}">
-                                                        <label>
-                                                            Mã giảm giá
-                                                            <span class="symbol-valid">*</span>
-                                                        </label>
-                                                    </div>
+                                                    <label>
+                                                        Mã giảm giá
+                                                        <span class="symbol-valid">*</span>
+                                                    </label>
+                                                    <span class="field-validation-valid" data-valmsg-for="Name"
+                                                          data-valmsg-replace="true" style="color: #e7505a"></span>
+                                                    <input class="form-control" data-val="true"
+                                                           data-val-required="Tên tác giả không được bỏ trống"
+                                                           type="text" value="" th:field="*{code}">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="form-group form-md-line-input">
+                                            <div class="form-group">
                                                 <div class="input-group2">
-                                                    <div class="input-group-control ">
-                                                        <span class="field-validation-valid" data-valmsg-for="Name"
-                                                              data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                        <input class="form-control" data-val="true"
-                                                               data-val-required="Tên tác giả không được bỏ trống"
-                                                               th:field="*{name}" type="text" value="">
-                                                        <label>
-                                                            Tên
-                                                            <span class="symbol-valid">*</span>
-                                                        </label>
-                                                    </div>
+                                                    <label>
+                                                        Tên
+                                                        <span class="symbol-valid">*</span>
+                                                    </label>
+                                                    <span class="field-validation-valid" data-valmsg-for="Name"
+                                                          data-valmsg-replace="true" style="color: #e7505a"></span>
+                                                    <input class="form-control" data-val="true"
+                                                           data-val-required="Tên tác giả không được bỏ trống"
+                                                           th:field="*{name}" type="text" value="">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="form-group form-md-line-input">
+                                            <div class="form-group">
                                                 <div class="input-group2">
-                                                    <div class="input-group-control ">
-                                                        <span class="field-validation-valid" data-valmsg-for="Name"
-                                                              data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                        <input class="form-control" data-val="true"
-                                                               data-val-required="Tên tác giả không được bỏ trống"
-                                                               th:field="*{price_discount}" type="number" value="">
-                                                        <label>
-                                                            Giảm giá (%)
-                                                            <span class="symbol-valid">*</span>
-                                                        </label>
-                                                    </div>
+                                                    <label>
+                                                        Giảm giá (%)
+                                                        <span class="symbol-valid">*</span>
+                                                    </label>
+                                                    <span class="field-validation-valid" data-valmsg-for="Name"
+                                                          data-valmsg-replace="true" style="color: #e7505a"></span>
+                                                    <input class="form-control" data-val="true"
+                                                           data-val-required="Tên tác giả không được bỏ trống"
+                                                           th:field="*{price_discount}" type="number" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -472,11 +460,11 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="submit" class="btn btn-mini btn-info">
-                                        <i class="icon icon-pencil mr5"></i>Lưu
-                                    </button>
                                     <button type="button" class="btn default" data-dismiss="modal" aria-hidden="true">
                                         <i class="fa fa-close mr5"></i>Đóng
+                                    </button>
+                                    <button type="submit" class="btn btn-mini btn-info">
+                                        <i class="icon icon-pencil mr5"></i>Lưu
                                     </button>
                                 </div>
                             </div>
@@ -505,57 +493,51 @@
                                     <div class="modal-body detail-container">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="form-group form-md-line-input">
+                                                <div class="form-group">
                                                     <div class="input-group2">
-                                                        <div class="input-group-control ">
+                                                        <label>
+                                                            Mã giảm giá
+                                                            <span class="symbol-valid">*</span>
+                                                        </label>
                                                         <span class="field-validation-valid" data-valmsg-for="Name"
                                                               data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                            <input class="form-control" data-val="true"
-                                                                   data-val-required="Tên tác giả không được bỏ trống"
-                                                                   type="text" value="" id="code_discount" name="code">
-                                                            <label>
-                                                                Mã giảm giá
-                                                                <span class="symbol-valid">*</span>
-                                                            </label>
-                                                        </div>
+                                                        <input class="form-control" data-val="true"
+                                                               data-val-required="Tên tác giả không được bỏ trống"
+                                                               type="text" value="" id="code_discount" name="code">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="form-group form-md-line-input">
+                                                <div class="form-group">
                                                     <div class="input-group2">
-                                                        <div class="input-group-control ">
+                                                        <label>
+                                                            Tên
+                                                            <span class="symbol-valid">*</span>
+                                                        </label>
                                                         <span class="field-validation-valid" data-valmsg-for="Name"
                                                               data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                            <input class="form-control" data-val="true"
-                                                                   data-val-required="Tên tác giả không được bỏ trống"
-                                                                   id="name_discount" name="name" type="text" value="">
-                                                            <label>
-                                                                Tên
-                                                                <span class="symbol-valid">*</span>
-                                                            </label>
-                                                        </div>
+                                                        <input class="form-control" data-val="true"
+                                                               data-val-required="Tên tác giả không được bỏ trống"
+                                                               id="name_discount" name="name" type="text" value="">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="form-group form-md-line-input">
+                                                <div class="form-group">
                                                     <div class="input-group2">
-                                                        <div class="input-group-control ">
+                                                        <label>
+                                                            Giảm giá (%)
+                                                            <span class="symbol-valid">*</span>
+                                                        </label>
                                                         <span class="field-validation-valid" data-valmsg-for="Name"
                                                               data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                            <input class="form-control" data-val="true"
-                                                                   data-val-required="Tên tác giả không được bỏ trống"
-                                                                   id="price" name="price_discount" type="number" value="">
-                                                            <label>
-                                                                Giảm giá (%)
-                                                                <span class="symbol-valid">*</span>
-                                                            </label>
-                                                        </div>
+                                                        <input class="form-control" data-val="true"
+                                                               data-val-required="Tên tác giả không được bỏ trống"
+                                                               id="price" name="price_discount" type="number" value="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -569,12 +551,12 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="submit" class="btn btn-mini btn-info">
-                                            <i class="icon icon-pencil mr5"></i>Lưu
-                                        </button>
                                         <button type="button" class="btn default" data-dismiss="modal"
                                                 aria-hidden="true">
                                             <i class="fa fa-close mr5"></i>Đóng
+                                        </button>
+                                        <button type="submit" class="btn btn-mini btn-info">
+                                            <i class="icon icon-pencil mr5"></i>Lưu
                                         </button>
                                     </div>
                                 </div>

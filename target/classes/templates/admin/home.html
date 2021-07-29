@@ -45,7 +45,7 @@
                         </div>
                     </li>
                     <li class="nav-item active open" id="nav-none">
-                        <a href="/admin" class="nav-link nav-toggle">
+                        <a th:href="@{/admin}" class="nav-link nav-toggle">
                             <i class="icon-home"></i>
                             <span class="uppercase title">Trang chủ</span>
                             <span class="selected"></span></a>
@@ -53,47 +53,29 @@
                     <li class="nav-item" id="nav-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef">
                         <a class="nav-link nav-toggle">
                             <i class="icon-user"></i>
-                            <span class="uppercase title">Quản lý bạn đọc</span>
+                            <span class="uppercase title">Quản lý xe</span>
                             <span class="arrow" id="nav-span-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef"></span>
                         </a>
-                        <ul class="sub-menu" style="display: none;">
+                        <ul class="sub-menu">
                             <li class="nav-item" id="nav-patronmanagement-insert">
-                                <a href="/admin/patronmanagement/insert" class="nav-link">
+                                <a th:href="@{/admin/oto/insert}" class="nav-link">
                                     <span class="title">Thêm mới</span>
                                 </a>
                             </li>
                             <li class="nav-item" id="nav-patronmanagement-list">
-                                <a href="/admin/patronmanagement/list" class="nav-link">
+                                <a th:href="@{/admin/oto/list}" class="nav-link">
                                     <span class="title">Danh sách</span>
                                 </a>
                             </li>
                             <li class="nav-item" id="nav-blockedtracking-list">
-                                <a href="/admin/blockedtracking/list" class="nav-link">
-                                    <span class="title">Nhật ký khóa thẻ</span>
+                                <a th:href="@{/admin/carcompany/list}" class="nav-link">
+                                    <span class="title">Hãng xe</span>
                                 </a>
                             </li>
                             <li class="nav-item" id="nav-renewcardlog-list">
-                                <a href="/admin/renewcardlog/list" class="nav-link">
-                                    <span class="title">Nhật ký gia hạn thẻ</span>
+                                <a th:href="@{/admin/category/list}" class="nav-link">
+                                    <span class="title">Loại xe</span>
                                 </a>
-                            </li>
-                            <li class="nav-item" id="nav-patronmanagement-tools">
-                                <a class="nav-link nav-toggle">
-                                    <span class="title">Công cụ</span>
-                                    <span class="arrow" id="nav-span-patronmanagement-tools"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item" id="nav-patronmanagement-patronmanagement-patrontypemanagement">
-                                        <a href="/admin/patrontypemanagement/list" class="nav-link ">
-                                            <span class="title">Loại bạn đọc</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item" id="nav-patronmanagement-patronmanagement-jobtitlemanagement">
-                                        <a href="/admin/jobtitlemanagement/list" class="nav-link ">
-                                            <span class="title">Chức vụ</span>
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                     </li>
@@ -203,13 +185,8 @@
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item" id="nav-usermanagement-list">
-                                <a href="/admin/usermanagement/list" class="nav-link">
+                                <a th:href="@{/admin/user/list}" class="nav-link">
                                     <span class="title">Người dùng</span>
-                                </a>
-                            </li>
-                            <li class="nav-item" id="nav-rolemanagement-list">
-                                <a href="/admin/rolemanagement/list" class="nav-link">
-                                    <span class="title">Phân quyền</span>
                                 </a>
                             </li>
                         </ul>

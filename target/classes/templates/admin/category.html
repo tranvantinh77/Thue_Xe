@@ -48,7 +48,7 @@
                             <span class="uppercase title">Trang chủ</span>
                             <span class="selected"></span></a>
                     </li>
-                    <li class="nav-item" id="nav-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef">
+                    <li class="nav-item active open" id="nav-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef">
                         <a class="nav-link nav-toggle">
                             <i class="icon-user"></i>
                             <span class="uppercase title">Quản lý xe</span>
@@ -70,7 +70,7 @@
                                     <span class="title">Hãng xe</span>
                                 </a>
                             </li>
-                            <li class="nav-item" id="nav-renewcardlog-list">
+                            <li class="nav-item active open" id="nav-renewcardlog-list">
                                 <a th:href="@{/admin/category/list}" class="nav-link">
                                     <span class="title">Loại xe</span>
                                 </a>
@@ -209,15 +209,12 @@
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <a href="">Cổng thông tin</a>
+                            <a href="">Quản lý xe</a>
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <a href="">Quản lý tin tức</a>
+                            <a href="">Loại xe</a>
                             <i class="fa fa-angle-right"></i>
-                        </li>
-                        <li>
-                            <a href="/admin/categorymanagement/list">Tác giả</a>
                         </li>
                     </ul>
                 </div>
@@ -228,7 +225,7 @@
                             <div class="portlet-body pb0">
                                 <!--SEARCH-->
                                 <div class="search-box">
-                                    <form th:action="@{/admin/discount/search}" method="GET">
+                                    <form action="" method="GET">
                                         <div class="row">
                                             <div class="col-md-12 xs-mt-12">
                                                 <div class="input-search-single">
@@ -252,7 +249,7 @@
                                                 <span aria-hidden="true" class="fa fa-user-secret"></span>
                                                 Tìm thấy tổng số <span id="lbl-getpaging-total"
                                                                        class="span-total"
-                                                                       th:text="${list.size()}"></span>biểu ghi
+                                                                       >1</span>biểu ghi
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -276,66 +273,22 @@
                                                             <thead class="flip-content1">
                                                             <tr>
                                                                 <th class="text-center" style="width: 40px">#</th>
-                                                                <th class="text-center">Mã giảm giá</th>
+                                                                <th class="text-center">Mã</th>
                                                                 <th class="text-center">Tên</th>
-                                                                <th class="text-center">Giảm giá (%)</th>
+                                                                <th class="text-center">Mô tả</th>
                                                                 <th class="text-center">Trạng thái</th>
-                                                                <th class="text-center">Người cập nhật</th>
-                                                                <th class="text-center">Ngày cập nhật</th>
                                                                 <th class="text-center">Thao tác</th>
                                                             </tr>
                                                             </thead>
 
                                                             <tbody id="bodyView">
-                                                            <tr th:each="listDis,iterStat : ${discount}">
-                                                                <td class="text-center"
-                                                                    th:text="${iterStat.count+(pagesize*(currentPage))}">
-                                                                    #
-                                                                </td>
-                                                                <td th:text="${listDis.code}">Mã giảm giá</td>
-                                                                <td th:text="${listDis.name}">Tên</td>
-                                                                <td class="text-center"
-                                                                    th:text="${listDis.price_discount}">Giảm giá (%)
-                                                                </td>
-                                                                <td class="text-center"
-                                                                    th:utext="${listDis.statusDisplay()}">Trạng thái
-                                                                </td>
-                                                                <td class="text-center" th:utext="${listDis.updateBy}">
-                                                                    Trạng thái
-                                                                </td>
-                                                                <td class="text-center"
-                                                                    th:utext="${#dates.format(listDis.updateDate, 'dd-MM-yyyy')}">
-                                                                    Trạng thái
-                                                                </td>
-
-                                                                <td class="text-right">
-                                                                    <button class="btn btn-xs btn-icon-only btn-info"
-                                                                            title="Cập nhật"
-                                                                            th:onclick="'core_lstpage.onUpdate('+${listDis.id}+')'">
-                                                                        <i class="icon icon-pencil mr5"></i>
-                                                                    </button>
-
-                                                                    <button class="btn btn-xs red btn-icon-only"
-                                                                            title="Xóa"
-                                                                            th:onclick="'core_lstpage.onDelete('+${listDis.id}+')'">
-                                                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                                                    </button>
-
-                                                                    <button th:if="${listDis.status == 1}"
-                                                                            class="btn btn-xs yellow btn-icon-only"
-                                                                            title="Duyệt"
-                                                                            th:onclick="'core_lstpage.onUpdateStatus('+${listDis.id}+','+${listDis.status}+')'">
-                                                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                                                    </button>
-
-                                                                    <button th:if="${listDis.status == 0}"
-                                                                            class="btn btn-xs green btn-icon-only"
-                                                                            title="Hủy duyệt"
-                                                                            th:onclick="'core_lstpage.onUpdateStatus('+${listDis.id}+','+${listDis.status}+')'">
-                                                                        <i class="fa fa-minus-square"
-                                                                           aria-hidden="true"></i>
-                                                                    </button>
-                                                                </td>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>mã</td>
+                                                                <td>tên</td>
+                                                                <td>mô tả</td>
+                                                                <td>trạng thái</td>
+                                                                <td>thao tác</td>
                                                             </tr>
                                                             </tbody>
                                                         </table>
@@ -345,28 +298,41 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12" th:if="${list.size()} > ${pagesize}">
+                                        <div class="col-md-12">
                                             <div class="pagination-control">
                                                 <div class="row">
                                                     <div class="col-md-12 pull-right">
                                                         <div id="page-selection" class="padding-top-15 clearboth">
                                                             <ul class="pagination">
-                                                                <li th:class="${isFirstPage}? 'page-item disabled' : 'page-item'">
-                                                                    <a th:href="@{/admin/discount/list(pageindex=1)}"
-                                                                       class="page-link">
-                                                                        <span class="ms-bold fa fa-angle-double-left"></span>
+                                                                <li class="first disabled">
+                                                                    <a href="#" class="page-link">
+                                                                        <span class="ms-bold fa fa-angle-double-left">
+
+                                                                        </span>
                                                                     </a>
                                                                 </li>
-                                                                <li th:each="page : ${pages}"
-                                                                    th:class="${page == currentPage ? 'page-item active' :'page-item' }">
-                                                                    <a th:href="@{/admin/discount/list(pageindex=${page + 1})}"
-                                                                       class="page-link">
-                                                                        <span th:utext="${page+1}"></span>
+                                                                <li class="prev disabled">
+                                                                    <a href="#" class="page-link">
+                                                                        <span class="ms-bold fa fa-angle-left"></span>
                                                                     </a>
                                                                 </li>
-                                                                <li th:class="${isLastPage}? 'page-item disabled' : 'page-item'">
-                                                                    <a th:href="@{/admin/discount/list(pageindex=${endPage})}"
-                                                                       class="page-link">
+                                                                <li class="page-item active">
+                                                                    <a href="#" class="page-link">1</a></li>
+                                                                <li class="page-item">
+                                                                    <a href="#" class="page-link">2</a></li>
+                                                                <li class="page-item">
+                                                                    <a href="#" class="page-link">3</a></li>
+                                                                <li class="page-item">
+                                                                    <a href="#"
+                                                                       class="page-link">4</a></li>
+                                                                <li class="page-item">
+                                                                    <a href="#" class="page-link">5</a></li>
+                                                                <li class="next">
+                                                                    <a href="#" class="page-link">
+                                                                        <span class="ms-bold fa fa-angle-right"></span></a>
+                                                                </li>
+                                                                <li class="last">
+                                                                    <a href="#" class="page-link">
                                                                         <span class="ms-bold fa fa-angle-double-right"></span></a>
                                                                 </li>
                                                             </ul>
@@ -392,7 +358,7 @@
                 <div class="modal-dialog ">
                     <div class="modal-content"
                          id="popupPageDetail">
-                        <form action="#" th:action="@{/discount/insert}" th:object="${discountEntity}" method="post">
+                        <form action="#" method="post">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                                 <h4 class="modal-title">Thêm mới</h4>
@@ -402,51 +368,57 @@
                                 <div class="modal-body detail-container">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="form-group">
+                                            <div class="form-group form-md-line-input">
                                                 <div class="input-group2">
-                                                    <label>
-                                                        Mã giảm giá
-                                                        <span class="symbol-valid">*</span>
-                                                    </label>
-                                                    <span class="field-validation-valid" data-valmsg-for="Name"
-                                                          data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                    <input class="form-control" data-val="true"
-                                                           data-val-required="Tên tác giả không được bỏ trống"
-                                                           type="text" value="" th:field="*{code}">
+                                                    <div class="input-group-control ">
+                                                        <span class="field-validation-valid" data-valmsg-for="Name"
+                                                              data-valmsg-replace="true" style="color: #e7505a"></span>
+                                                        <input class="form-control" data-val="true"
+                                                               data-val-required="Tên tác giả không được bỏ trống"
+                                                               type="text" value="" >
+                                                        <label>
+                                                            Mã giảm giá
+                                                            <span class="symbol-valid">*</span>
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="form-group">
+                                            <div class="form-group form-md-line-input">
                                                 <div class="input-group2">
-                                                    <label>
-                                                        Tên
-                                                        <span class="symbol-valid">*</span>
-                                                    </label>
-                                                    <span class="field-validation-valid" data-valmsg-for="Name"
-                                                          data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                    <input class="form-control" data-val="true"
-                                                           data-val-required="Tên tác giả không được bỏ trống"
-                                                           th:field="*{name}" type="text" value="">
+                                                    <div class="input-group-control ">
+                                                        <span class="field-validation-valid" data-valmsg-for="Name"
+                                                              data-valmsg-replace="true" style="color: #e7505a"></span>
+                                                        <input class="form-control" data-val="true"
+                                                               data-val-required="Tên tác giả không được bỏ trống"
+                                                               type="text" value="">
+                                                        <label>
+                                                            Tên
+                                                            <span class="symbol-valid">*</span>
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="form-group">
+                                            <div class="form-group form-md-line-input">
                                                 <div class="input-group2">
-                                                    <label>
-                                                        Giảm giá (%)
-                                                        <span class="symbol-valid">*</span>
-                                                    </label>
-                                                    <span class="field-validation-valid" data-valmsg-for="Name"
-                                                          data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                    <input class="form-control" data-val="true"
-                                                           data-val-required="Tên tác giả không được bỏ trống"
-                                                           th:field="*{price_discount}" type="number" value="">
+                                                    <div class="input-group-control ">
+                                                        <span class="field-validation-valid" data-valmsg-for="Name"
+                                                              data-valmsg-replace="true" style="color: #e7505a"></span>
+                                                        <input class="form-control" data-val="true"
+                                                               data-val-required="Tên tác giả không được bỏ trống"
+                                                               type="number" value="">
+                                                        <label>
+                                                            Giảm giá (%)
+                                                            <span class="symbol-valid">*</span>
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -460,11 +432,11 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn default" data-dismiss="modal" aria-hidden="true">
-                                        <i class="fa fa-close mr5"></i>Đóng
-                                    </button>
                                     <button type="submit" class="btn btn-mini btn-info">
                                         <i class="icon icon-pencil mr5"></i>Lưu
+                                    </button>
+                                    <button type="button" class="btn default" data-dismiss="modal" aria-hidden="true">
+                                        <i class="fa fa-close mr5"></i>Đóng
                                     </button>
                                 </div>
                             </div>
@@ -481,7 +453,7 @@
                     <div class="modal-dialog ">
                         <div class="modal-content"
                              id="popupPageDetailDiscount">
-                            <form th:action="@{/discount/update}" method="post">
+                            <form action="" method="post">
                                 <input style="display: none" name="discountId" id="discountId" value=""/>
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"
@@ -493,51 +465,57 @@
                                     <div class="modal-body detail-container">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="form-group">
+                                                <div class="form-group form-md-line-input">
                                                     <div class="input-group2">
-                                                        <label>
-                                                            Mã giảm giá
-                                                            <span class="symbol-valid">*</span>
-                                                        </label>
+                                                        <div class="input-group-control ">
                                                         <span class="field-validation-valid" data-valmsg-for="Name"
                                                               data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                        <input class="form-control" data-val="true"
-                                                               data-val-required="Tên tác giả không được bỏ trống"
-                                                               type="text" value="" id="code_discount" name="code">
+                                                            <input class="form-control" data-val="true"
+                                                                   data-val-required="Tên tác giả không được bỏ trống"
+                                                                   type="text" value="" id="code_discount" name="code">
+                                                            <label>
+                                                                Mã giảm giá
+                                                                <span class="symbol-valid">*</span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="form-group">
+                                                <div class="form-group form-md-line-input">
                                                     <div class="input-group2">
-                                                        <label>
-                                                            Tên
-                                                            <span class="symbol-valid">*</span>
-                                                        </label>
+                                                        <div class="input-group-control ">
                                                         <span class="field-validation-valid" data-valmsg-for="Name"
                                                               data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                        <input class="form-control" data-val="true"
-                                                               data-val-required="Tên tác giả không được bỏ trống"
-                                                               id="name_discount" name="name" type="text" value="">
+                                                            <input class="form-control" data-val="true"
+                                                                   data-val-required="Tên tác giả không được bỏ trống"
+                                                                   id="name_discount" name="name" type="text" value="">
+                                                            <label>
+                                                                Tên
+                                                                <span class="symbol-valid">*</span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="form-group">
+                                                <div class="form-group form-md-line-input">
                                                     <div class="input-group2">
-                                                        <label>
-                                                            Giảm giá (%)
-                                                            <span class="symbol-valid">*</span>
-                                                        </label>
+                                                        <div class="input-group-control ">
                                                         <span class="field-validation-valid" data-valmsg-for="Name"
                                                               data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                        <input class="form-control" data-val="true"
-                                                               data-val-required="Tên tác giả không được bỏ trống"
-                                                               id="price" name="price_discount" type="number" value="">
+                                                            <input class="form-control" data-val="true"
+                                                                   data-val-required="Tên tác giả không được bỏ trống"
+                                                                   id="price" name="price_discount" type="number" value="">
+                                                            <label>
+                                                                Giảm giá (%)
+                                                                <span class="symbol-valid">*</span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -551,12 +529,12 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
+                                        <button type="submit" class="btn btn-mini btn-info">
+                                            <i class="icon icon-pencil mr5"></i>Lưu
+                                        </button>
                                         <button type="button" class="btn default" data-dismiss="modal"
                                                 aria-hidden="true">
                                             <i class="fa fa-close mr5"></i>Đóng
-                                        </button>
-                                        <button type="submit" class="btn btn-mini btn-info">
-                                            <i class="icon icon-pencil mr5"></i>Lưu
                                         </button>
                                     </div>
                                 </div>
@@ -575,8 +553,8 @@
 </html>
 <script type="text/javascript">
     var ctorPage = {
-        UrlDelete: '/discount/delete',
-        updateStatus: '/discount/status',
+        // UrlDelete: '/discount/delete',
+        // updateStatus: '/discount/status',
         btnCssDefault: 'a.btn-df',
         TextYes: 'Có',
         TextNo: 'Không',
@@ -585,20 +563,20 @@
 
     var core_lstpage = {
 
-        onUpdate: function (id) {
-            $('.discountForm #stackPopupDiscount').modal();
-            var href = $(this).attr('href');
-            var url = "http://localhost:8082/admin/discount/update?id=" + id;
-            $.ajax({
-                url: url,
-                success: function (data) {
-                    document.getElementById("code_discount").value = data.code;
-                    document.getElementById("name_discount").value = data.name;
-                    document.getElementById("price").value = data.price_discount;
-                    document.getElementById("discountId").value = id;
-                }
-            })
-        },
+        // onUpdate: function (id) {
+        //     $('.discountForm #stackPopupDiscount').modal();
+        //     var href = $(this).attr('href');
+        //     var url = "http://localhost:8082/admin/discount/update?id=" + id;
+        //     $.ajax({
+        //         url: url,
+        //         success: function (data) {
+        //             document.getElementById("code_discount").value = data.code;
+        //             document.getElementById("name_discount").value = data.name;
+        //             document.getElementById("price").value = data.price_discount;
+        //             document.getElementById("discountId").value = id;
+        //         }
+        //     })
+        // },
 
         onDelete: function (id) {
             bootbox.confirm({
@@ -638,50 +616,50 @@
             });
         },
 
-        onUpdateStatus: function (_id, _status) {
-            var msg = 'Bạn có chắc chắn muốn duyệt mã giảm giá này không ?';
-            if (_status === 0) {
-                msg = 'Bạn có chắc chắn hủy duyệt mã giảm giá này không ?';
-            }
-            bootbox.confirm({
-                message: msg,
-                buttons: {
-                    confirm: {
-                        label: ctorPage.TextYes,
-                        className: 'btn-success'
-                    },
-                    cancel: {
-                        label: ctorPage.TextNo,
-                        className: 'btn-danger'
-                    }
-                },
-                callback: function (result) {
-                    if (result) {
-                        var Book = {
-                            id: _id,
-                            status: _status
-                        }
-                        console.log(_id);
-                        ShowLoading();
-                        core_services.postAsync(ctorPage.updateStatus, JSON.stringify(Book)
-                            , function (res) {
-                                HideLoading();
-                                if (res) {
-                                    core_lstpage.onReload()
-                                } else {
-                                    // core_notification.updateFail();
-                                    core_lstpage.onReload()
-                                }
-                                core_lstpage.onReload();
-                            }
-                            , function () {
-                                // core_notification.updateFail();
-                                core_lstpage.onReload();
-                            });
-                    }
-                }
-            });
-        },
+        // onUpdateStatus: function (_id, _status) {
+        //     var msg = 'Bạn có chắc chắn muốn duyệt mã giảm giá này không ?';
+        //     if (_status === 0) {
+        //         msg = 'Bạn có chắc chắn hủy duyệt mã giảm giá này không ?';
+        //     }
+        //     bootbox.confirm({
+        //         message: msg,
+        //         buttons: {
+        //             confirm: {
+        //                 label: ctorPage.TextYes,
+        //                 className: 'btn-success'
+        //             },
+        //             cancel: {
+        //                 label: ctorPage.TextNo,
+        //                 className: 'btn-danger'
+        //             }
+        //         },
+        //         callback: function (result) {
+        //             if (result) {
+        //                 var Book = {
+        //                     id: _id,
+        //                     status: _status
+        //                 }
+        //                 console.log(_id);
+        //                 ShowLoading();
+        //                 core_services.postAsync(ctorPage.updateStatus, JSON.stringify(Book)
+        //                     , function (res) {
+        //                         HideLoading();
+        //                         if (res) {
+        //                             core_lstpage.onReload()
+        //                         } else {
+        //                             // core_notification.updateFail();
+        //                             core_lstpage.onReload()
+        //                         }
+        //                         core_lstpage.onReload();
+        //                     }
+        //                     , function () {
+        //                         // core_notification.updateFail();
+        //                         core_lstpage.onReload();
+        //                     });
+        //             }
+        //         }
+        //     });
+        // },
 
         onReload: function () {
             HideLoading();
