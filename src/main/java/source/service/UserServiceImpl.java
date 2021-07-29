@@ -1,9 +1,11 @@
 package source.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import source.DAO.UserDAO;
 import source.entity.UserEntity;
+import source.entity.UserInfoEntity;
 import source.iService.UserService;
 
 import java.util.List;
@@ -13,12 +15,6 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     UserDAO userDAO;
-
-
-    @Override
-    public List<UserEntity> finAll() {
-        return userDAO.findAll();
-    }
 
     @Override
     public void save(UserEntity userEntity) {
@@ -41,12 +37,24 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<UserEntity> findAllByActiveFag() {
+    public List<UserEntity> findByActiveFag(Pageable pageable) {
+        return userDAO.findByActiveFag(pageable);
+    }
+
+    @Override
+    public List<UserEntity> findByActiveFag() {
         return userDAO.findByActiveFag();
+    }
+
+    @Override
+    public List<UserEntity> findByKeyword(String keyword, Pageable pageable) {
+        return userDAO.findByKeyword(keyword,pageable);
     }
 
     @Override
     public List<UserEntity> findByKeyword(String keyword) {
         return userDAO.findByKeyword(keyword);
     }
+
+
 }

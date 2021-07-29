@@ -1,12 +1,11 @@
 package source.iService;
 
+import org.springframework.data.domain.Pageable;
 import source.entity.UserEntity;
 
 import java.util.List;
 
 public interface UserService {
-
-    List<UserEntity> finAll();
 
     void save(UserEntity userEntity);
 
@@ -16,7 +15,11 @@ public interface UserService {
 
     UserEntity findByUserNameAndPassword(String user_name, String password);
 
-    List<UserEntity> findAllByActiveFag();
+    List<UserEntity> findByActiveFag(Pageable pageable);
+
+    List<UserEntity> findByActiveFag();
+
+    List<UserEntity> findByKeyword(String keyword, Pageable pageable);
 
     List<UserEntity> findByKeyword(String keyword);
 }
