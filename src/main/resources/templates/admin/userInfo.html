@@ -247,7 +247,7 @@
                             <div class="portlet-body pb0">
                                 <!--SEARCH-->
                                 <div class="search-box">
-                                    <form th:action="@{/admin/discount/search}" method="GET">
+                                    <form th:action="@{/admin/user/search}" method="GET">
                                         <div class="row">
                                             <div class="col-md-12 xs-mt-12">
                                                 <div class="input-search-single">
@@ -276,7 +276,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="doc-group-title pull-right">
-                                                <a href="" data-toggle="modal" data-target="#stackPopup"
+                                                <a href="#" data-toggle="modal" data-target="#stackPopup"
                                                    class="btn green">
                                                     <i class="icon icon-plus mr5"></i>
                                                     Thêm
@@ -295,50 +295,42 @@
                                                             <thead class="flip-content1">
                                                             <tr>
                                                                 <th class="text-center" style="width: 40px">#</th>
-                                                                <th class="text-center">Mã giảm giá</th>
                                                                 <th class="text-center">Tên</th>
-                                                                <th class="text-center">Giảm giá (%)</th>
+                                                                <th class="text-center">Email</th>
+                                                                <th class="text-center">Giới tính</th>
+                                                                <th class="text-center">Phân quyền</th>
                                                                 <th class="text-center">Trạng thái</th>
-                                                                <th class="text-center">Người cập nhật</th>
-                                                                <th class="text-center">Ngày cập nhật</th>
                                                                 <th class="text-center">Thao tác</th>
                                                             </tr>
                                                             </thead>
 
                                                             <tbody id="bodyView">
-                                                            <tr th:each="listDis,iterStat : ${discount}">
+                                                            <tr th:each="user,iterStat : ${userInfo}">
                                                                 <td class="text-center" th:text="${iterStat.count+(pagesize*(currentPage))}">#</td>
-                                                                <td th:text="${listDis.code}">Mã giảm giá</td>
-                                                                <td th:text="${listDis.name}">Tên</td>
-                                                                <td class="text-center" th:text="${listDis.price_discount}">Giảm giá (%)</td>
-                                                                <td class="text-center" th:utext="${listDis.statusDisplay()}">Trạng thái</td>
-                                                                <td class="text-center" th:utext="${listDis.updateBy}">Trạng thái</td>
-                                                                <td class="text-center" th:utext="${#dates.format(listDis.updateDate, 'dd-MM-yyyy')}">Trạng thái</td>
+                                                                <td th:text="${user.user_info_id.name}">Tên</td>
+                                                                <td th:text="${user.user_info_id.email}">Email</td>
+                                                                <td class="text-center" th:utext="${user.user_info_id.genderDisplay()}">Giới tính</td>
+                                                                <td class="text-center" th:text="${user.role_id.role_name}">Phân quyền</td>
+                                                                <td class="text-center" th:utext="${user.statusDisplay()}">Trạng thái</td>
 
                                                                 <td class="text-right">
-                                                                    <button class="btn btn-xs btn-icon-only btn-info"
-                                                                            title="Cập nhật"
-                                                                            th:onclick="'core_lstpage.onUpdate('+${listDis.id}+')'">
+                                                                    <a href="#"
+                                                                       class="btn btn-xs btn-icon-only btn-info"
+                                                                       title="Cập nhật">
                                                                         <i class="icon icon-pencil mr5"></i>
-                                                                    </button>
+                                                                    </a>
 
-                                                                    <button class="btn btn-xs red btn-icon-only"
-                                                                            title="Xóa"
-                                                                            th:onclick="'core_lstpage.onDelete('+${listDis.id}+')'">
-                                                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                                                    </button>
-
-                                                                    <button th:if="${listDis.status == 1}"
+                                                                    <button th:if="${user.status == 2}"
                                                                             class="btn btn-xs yellow btn-icon-only"
-                                                                            title="Duyệt"
-                                                                            th:onclick="'core_lstpage.onUpdateStatus('+${listDis.id}+','+${listDis.status}+')'">
+                                                                            title="Mở khóa"
+                                                                            th:onclick="'core_lstpage.onUpdateStatus('+${user.id}+','+${user.status}+')'">
                                                                         <i class="fa fa-check" aria-hidden="true"></i>
                                                                     </button>
 
-                                                                    <button th:if="${listDis.status == 0}"
-                                                                            class="btn btn-xs green btn-icon-only"
-                                                                            title="Hủy duyệt"
-                                                                            th:onclick="'core_lstpage.onUpdateStatus('+${listDis.id}+','+${listDis.status}+')'">
+                                                                    <button th:if="${user.status == 0}"
+                                                                            class="btn btn-xs red btn-icon-only"
+                                                                            title="Khóa"
+                                                                            th:onclick="'core_lstpage.onUpdateStatus('+${user.id}+','+${user.status}+')'">
                                                                         <i class="fa fa-minus-square" aria-hidden="true"></i>
                                                                     </button>
                                                                 </td>
@@ -390,199 +382,6 @@
             </div>
             <!-- END CONTENT BODY -->
             <!-- BEGIN MODAL -->
-            <div class="modal fade"
-                 id="stackPopup"
-                 tabindex="-1"
-                 role="dialog"
-                 data-backdrop="static">
-                <div class="modal-dialog ">
-                    <div class="modal-content"
-                         id="popupPageDetail">
-                        <form action="#" th:action="@{/discount/insert}" th:object="${discountEntity}" method="post">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                                <h4 class="modal-title">Thêm mới</h4>
-                            </div>
-                            <div class="content">
-
-                                <div class="modal-body detail-container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group form-md-line-input">
-                                                <div class="input-group2">
-                                                    <div class="input-group-control ">
-                                                        <span class="field-validation-valid" data-valmsg-for="Name"
-                                                              data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                        <input class="form-control" data-val="true"
-                                                               data-val-required="Tên tác giả không được bỏ trống"
-                                                               type="text" value="" th:field="*{code}">
-                                                        <label>
-                                                            Mã giảm giá
-                                                            <span class="symbol-valid">*</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group form-md-line-input">
-                                                <div class="input-group2">
-                                                    <div class="input-group-control ">
-                                                        <span class="field-validation-valid" data-valmsg-for="Name"
-                                                              data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                        <input class="form-control" data-val="true"
-                                                               data-val-required="Tên tác giả không được bỏ trống"
-                                                               th:field="*{name}" type="text" value="">
-                                                        <label>
-                                                            Tên
-                                                            <span class="symbol-valid">*</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group form-md-line-input">
-                                                <div class="input-group2">
-                                                    <div class="input-group-control ">
-                                                        <span class="field-validation-valid" data-valmsg-for="Name"
-                                                              data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                        <input class="form-control" data-val="true"
-                                                               data-val-required="Tên tác giả không được bỏ trống"
-                                                               th:field="*{price_discount}" type="number" value="">
-                                                        <label>
-                                                            Giảm giá (%)
-                                                            <span class="symbol-valid">*</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group text-center">
-                                            <div class="errMsg"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="submit" class="btn btn-mini btn-info">
-                                        <i class="icon icon-pencil mr5"></i>Lưu
-                                    </button>
-                                    <button type="button" class="btn default" data-dismiss="modal" aria-hidden="true">
-                                        <i class="fa fa-close mr5"></i>Đóng
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="discountForm">
-                <div class="modal fade"
-                     id="stackPopupDiscount"
-                     tabindex="-1"
-                     role="dialog"
-                     data-backdrop="static">
-                    <div class="modal-dialog ">
-                        <div class="modal-content"
-                             id="popupPageDetailDiscount">
-                            <form th:action="@{/discount/update}" method="post">
-                                <input style="display: none" name="discountId" id="discountId" value=""/>
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"
-                                            aria-hidden="true"></button>
-                                    <h4 class="modal-title">cập nhật</h4>
-                                </div>
-                                <div class="content">
-
-                                    <div class="modal-body detail-container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group form-md-line-input">
-                                                    <div class="input-group2">
-                                                        <div class="input-group-control ">
-                                                        <span class="field-validation-valid" data-valmsg-for="Name"
-                                                              data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                            <input class="form-control" data-val="true"
-                                                                   data-val-required="Tên tác giả không được bỏ trống"
-                                                                   type="text" value="" id="code_discount" name="code">
-                                                            <label>
-                                                                Mã giảm giá
-                                                                <span class="symbol-valid">*</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group form-md-line-input">
-                                                    <div class="input-group2">
-                                                        <div class="input-group-control ">
-                                                        <span class="field-validation-valid" data-valmsg-for="Name"
-                                                              data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                            <input class="form-control" data-val="true"
-                                                                   data-val-required="Tên tác giả không được bỏ trống"
-                                                                   id="name_discount" name="name" type="text" value="">
-                                                            <label>
-                                                                Tên
-                                                                <span class="symbol-valid">*</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group form-md-line-input">
-                                                    <div class="input-group2">
-                                                        <div class="input-group-control ">
-                                                        <span class="field-validation-valid" data-valmsg-for="Name"
-                                                              data-valmsg-replace="true" style="color: #e7505a"></span>
-                                                            <input class="form-control" data-val="true"
-                                                                   data-val-required="Tên tác giả không được bỏ trống"
-                                                                   id="price" name="price_discount" type="number" value="">
-                                                            <label>
-                                                                Giảm giá (%)
-                                                                <span class="symbol-valid">*</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group text-center">
-                                                <div class="errMsg"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="submit" class="btn btn-mini btn-info">
-                                            <i class="icon icon-pencil mr5"></i>Lưu
-                                        </button>
-                                        <button type="button" class="btn default" data-dismiss="modal"
-                                                aria-hidden="true">
-                                            <i class="fa fa-close mr5"></i>Đóng
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- END MODAL -->
         </div>
         <!-- END CONTENT -->
@@ -593,8 +392,7 @@
 </html>
 <script type="text/javascript">
     var ctorPage = {
-        UrlDelete: '/discount/delete',
-        updateStatus: '/discount/status',
+        updateStatus: '/user/status',
         btnCssDefault: 'a.btn-df',
         TextYes: 'Có',
         TextNo: 'Không',
@@ -603,63 +401,10 @@
 
     var core_lstpage = {
 
-        onUpdate: function (id) {
-            $('.discountForm #stackPopupDiscount').modal();
-            var href = $(this).attr('href');
-            var url = "http://localhost:8082/admin/discount/update?id=" + id;
-            $.ajax({
-                url: url,
-                success: function (data) {
-                    document.getElementById("code_discount").value = data.code;
-                    document.getElementById("name_discount").value = data.name;
-                    document.getElementById("price").value = data.price_discount;
-                    document.getElementById("discountId").value = id;
-                }
-            })
-        },
-
-        onDelete: function (id) {
-            bootbox.confirm({
-                message: ctorPage.TextDelAskMsg,
-                buttons: {
-                    confirm: {
-                        label: ctorPage.TextYes,
-                        className: 'btn-success'
-                    },
-                    cancel: {
-                        label: ctorPage.TextNo,
-                        className: 'btn-danger'
-                    }
-                },
-                callback: function (result) {
-                    if (result) {
-                        var param = {
-                            id: id
-                        }
-                        ShowLoading();
-                        core_services.postAsync(ctorPage.UrlDelete, JSON.stringify(param)
-                            , function (res) {
-                                HideLoading();
-                                if (res) {
-                                    core_lstpage.onReload();
-                                } else {
-                                    // showErrorToast();
-                                }
-                                ore_lstpage.onReload();
-                            }
-                            , function () {
-                                // showErrorToast();
-                                core_lstpage.onReload();
-                            });
-                    }
-                }
-            });
-        },
-
         onUpdateStatus: function (_id, _status) {
-            var msg = 'Bạn có chắc chắn muốn duyệt mã giảm giá này không ?';
+            var msg = 'Bạn có chắc chắn muốn mở khóa tài khoản này không ?';
             if (_status === 0) {
-                msg = 'Bạn có chắc chắn hủy duyệt mã giảm giá này không ?';
+                msg = 'Bạn có chắc chắn muốn khóa tài khoản này không ?';
             }
             bootbox.confirm({
                 message: msg,

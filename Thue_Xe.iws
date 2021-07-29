@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Thue_Xe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Thue_Xe.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
@@ -13,6 +14,18 @@
       <change beforePath="$PROJECT_DIR$/target/classes/source/entity/OtoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/OtoEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/source/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/UserEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/source/entity/UserInfoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/UserInfoEntity.class" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/DAO/UserInfoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/UserInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/iService/UserInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/service/UserInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/userInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/controller/admin/DiscountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/DiscountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/iService/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/iService/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/service/UserServiceImpl.java" afterDir="false" />
+>>>>>>> ea79ef4f503d1b08b47c97c9750977d411ee8fc0
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +49,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
         <option value="HTML File" />
       </list>
@@ -85,9 +98,11 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\Discount" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\js" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\css\404" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\webPortal" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="source.controller.webPortal" />
@@ -96,11 +111,9 @@
       <recent name="source.config" />
       <recent name="source.utils" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\js" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\css\404" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\webPortal" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\Discount" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.application">
@@ -162,9 +175,17 @@
       <workItem from="1627381629844" duration="2698000" />
       <workItem from="1627392152203" duration="10488000" />
       <workItem from="1627402869082" duration="7000" />
+<<<<<<< HEAD
       <workItem from="1627442039919" duration="1668000" />
       <workItem from="1627445850407" duration="519000" />
       <workItem from="1627463033202" duration="2667000" />
+=======
+      <workItem from="1627442039919" duration="1732000" />
+      <workItem from="1627478580916" duration="9434000" />
+      <workItem from="1627488072348" duration="725000" />
+      <workItem from="1627489020448" duration="1271000" />
+      <workItem from="1627522292932" duration="4203000" />
+>>>>>>> ea79ef4f503d1b08b47c97c9750977d411ee8fc0
     </task>
     <servers />
   </component>

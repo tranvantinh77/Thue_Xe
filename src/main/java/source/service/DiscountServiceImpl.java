@@ -34,4 +34,14 @@ public class DiscountServiceImpl implements DiscountService {
     public List<DiscountEntity> findByKeyword(String keyword) {
         return discountDAO.findByKeyword(keyword);
     }
+
+    @Override
+    public void save(DiscountEntity discountEntity) {
+        discountDAO.save(discountEntity);
+    }
+
+    @Override
+    public DiscountEntity findById(Long id) {
+        return discountDAO.findById1(id);
+    }
 }

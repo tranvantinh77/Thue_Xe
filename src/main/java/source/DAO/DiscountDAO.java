@@ -12,6 +12,9 @@ import java.util.List;
 @Repository
 public interface DiscountDAO extends JpaRepository<DiscountEntity,Long> {
 
+    @Query(value = "select * from discount where id =:id",nativeQuery = true)
+    DiscountEntity findById1(@Param("id") Long id);
+
     @Query(value = "select * from discount where active_fag = 0", nativeQuery = true)
     List<DiscountEntity> findByActiveFag(Pageable pageable);
 
