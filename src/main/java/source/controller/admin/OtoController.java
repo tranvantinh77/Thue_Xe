@@ -16,4 +16,9 @@ public class OtoController {
     public String insertOto() {
         return "admin/insertOto";
     }
+
+    @RequestMapping(value = "/admin/oto/update", method = RequestMethod.GET)
+    public String updateOto() {
+        return "admin/updateOto";
+    }
 }

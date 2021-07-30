@@ -1,10 +1,537 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta charset="UTF-8"/>
+    <title th:replace="~{fragments/layoutAdmin :: title}">Title</title>
 
+    <th:block th:insert="~{fragments/layoutAdmin :: meta}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: link}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: head/script}"></th:block>
+
+
+</head>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+<div class="page-wrapper">
+    <!-- BEGIN HEADER -->
+    <div th:insert="~{fragments/headerAdminPartial :: headerAdminPartial}"></div>
+    <!-- END HEADER -->
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"></div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN PROGRESSBAR -->
+        <div th:insert="~{fragments/loadingPartial :: loadingPartial}"></div>
+        <!-- END PROGRESSBAR -->
+        <!-- BEGIN PROGRESSBAR -->
+        <div th:insert="~{fragments/progressBarPartial :: progressBarPartial}"></div>
+        <!-- END PROGRESSBAR -->
+        <!-- BEGIN NOTIFICATION -->
+        <div th:insert="~{fragments/notificationPartial :: notificationPartial}"></div>
+        <!-- END NOTIFICATION -->
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar-wrapper">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar navbar-collapse collapse ">
+                <ul class="page-sidebar-menu page-header-fixed" data-keep-expanded="false" data-auto-scroll="true"
+                    data-slide-speed="200">
+                    <li class="sidebar-toggler-wrapper hide">
+                        <div class="sidebar-toggler">
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="nav-item" id="nav-none">
+                        <a th:href="@{/admin}" class="nav-link nav-toggle">
+                            <i class="icon-home"></i>
+                            <span class="uppercase title">Trang chủ</span>
+                            <span class="selected"></span></a>
+                    </li>
+                    <li class="nav-item active open" id="nav-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-user"></i>
+                            <span class="uppercase title">Quản lý xe</span>
+                            <span class="arrow" id="nav-span-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-patronmanagement-insert">
+                                <a th:href="@{/admin/oto/insert}" class="nav-link">
+                                    <span class="title">Thêm mới</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active open" id="nav-patronmanagement-list">
+                                <a th:href="@{/admin/oto/list}" class="nav-link">
+                                    <span class="title">Danh sách</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-blockedtracking-list">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Hãng xe</span>
+                                    <span class="arrow" id="nav-span-carcompany"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-insert">
+                                        <a th:href="@{/admin/carcompany/insert}" class="nav-link ">
+                                            <span class="title">Thêm mới</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-list">
+                                        <a th:href="@{/admin/carcompany/list}" class="nav-link ">
+                                            <span class="title">Danh sách</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item" id="nav-category">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Loại xe</span>
+                                    <span class="arrow" id="nav-span-category"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-cataloging-list">
+                                        <a th:href="@{/admin/category/list}" class="nav-link ">
+                                            <span class="title">Danh sách</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-0765c183-3c39-4a56-af3c-1fa4119698ca">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-notebook"></i>
+                            <span class="uppercase title">Quản lý sách giấy</span>
+                            <span class="arrow" id="nav-span-0765c183-3c39-4a56-af3c-1fa4119698ca"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-bibliographic-update">
+                                <a href="/admin/booksmanagement/insert" class="nav-link">
+                                    <span class="title">Thêm mới</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-bibliographic-list">
+                                <a href="/admin/booksmanagement/list" class="nav-link">
+                                    <span class="title">Danh sách</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-bibliographic-tools">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Công cụ</span>
+                                    <span class="arrow" id="nav-span-bibliographic-tools"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-materialmanagement">
+                                        <a href="/admin/materialmanagement/list" class="nav-link ">
+                                            <span class="title">Loại tài liệu</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-mediatypemanagement">
+                                        <a href="/admin/mediatypemanagement/list" class="nav-link ">
+                                            <span class="title">Thể loại lưu trữ</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfc">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-calculator"></i>
+                            <span class="uppercase title">Quản lý mượn trả</span>
+                            <span class="arrow" id="nav-span-0e19b78e-9757-4394-837d-d3d9ebc33dfc"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-checkout-index">
+                                <a href="/admin/checkout/index" class="nav-link">
+                                    <span class="title">Mượn trả</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-circulation-history">
+                                <a href="/admin/circulation/history" class="nav-link">
+                                    <span class="title">Nhật ký lưu thông</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfd">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-social-dribbble"></i>
+                            <span class="uppercase title">Quản lý cổng thông tin</span>
+                            <span class="arrow" id="nav-span-0e19b78e-9757-4394-837d-d3d9ebc33dfd"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-sitemanagement-list">
+                                <a href="/admin/sitemanagement/list" class="nav-link">
+                                    <span class="title">Quản lý site</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-newsmanagement-list">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Quản lý tin tức</span>
+                                    <span class="arrow" id="nav-span-newsmanagement-list"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-newsmanagement">
+                                        <a href="/admin/newsmanagement/list" class="nav-link ">
+                                            <span class="title">Tin tức</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-categorymanagement">
+                                        <a href="/admin/categorymanagement/list" class="nav-link ">
+                                            <span class="title">Chuyên mục</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-authormanagement">
+                                        <a href="/admin/authormanagement/list" class="nav-link ">
+                                            <span class="title">Tác giả</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item" id="nav-filesmanagement-list">
+                                <a href="/admin/filesmanagement/list" class="nav-link">
+                                    <span class="title">Quản lý tập tin</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-users"></i>
+                            <span class="uppercase title">Quản lý người dùng</span>
+                            <span class="arrow" id="nav-span-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-usermanagement-list">
+                                <a th:href="@{/admin/user/list}" class="nav-link">
+                                    <span class="title">Người dùng</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <!-- END SIDEBAR MENU -->
+                <!-- END SIDEBAR MENU -->
+            </div>
+            <!-- END SIDEBAR -->
+        </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <div class="page-content lv-pageContent">
+                <!-- BEGIN PAGE BAR -->
+                <div class="page-bar">
+                    <ul class="page-breadcrumb">
+                        <li>
+                            <a th:href="@{/admin}">Trang chủ</a>
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <a href="">Quản lý xe</a>
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <span>Danh sách</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END PAGE BAR -->
+                <div class="page-content-main page-search">
+                    <div class="page-content-1zone">
+                        <div class="portlet light pt0 pb0">
+                            <div class="portlet-body pb0">
+                                <!--SEARCH-->
+                                <div class="search-box">
+                                    <form th:action="@{/admin/discount/search}" method="GET">
+                                        <div class="row">
+                                            <div class="col-md-12 xs-mt-12">
+                                                <div class="input-search-single">
+                                                    <input autofocus type="text" name="keyword" id="keyword"
+                                                           class="form-control"
+                                                           placeholder="Nhập từ khóa ...">
+                                                    <button type="submit" class="btn green mr0 btn-search-text-single">
+                                                        <i class="icon-magnifier mr5"></i>Tìm kiếm
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div><!--END SEARCH-->
+                                <!--LIST CONTENT-->
+                                <div id="body-content">
+
+                                    <div class="row mt10">
+                                        <div class="col-md-6">
+                                            <div class="doc-group-title">
+                                                <span aria-hidden="true" class="fa fa-user-secret"></span>
+                                                Tìm thấy tổng số <span id="lbl-getpaging-total"
+                                                                       class="span-total"
+                                            >1</span>biểu ghi
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="doc-group-title pull-right">
+                                                <a th:href="@{/admin/oto/insert}"
+                                                   class="btn green">
+                                                    <i class="icon icon-plus mr5"></i>
+                                                    Thêm
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt10">
+                                        <div class="col-md-12">
+                                            <div class="searh-result">
+                                                <div id="table-scroll" class="table-scroll">
+                                                    <div class="table-scrollable" style="min-height:initial !important">
+                                                        <table class="table table-bordered main-table"
+                                                               style="width: 1600px">
+                                                            <thead class="flip-content1">
+                                                            <tr>
+                                                                <th class="text-center" style="width: 40px">#</th>
+                                                                <th class="text-center">Hình ảnh</th>
+                                                                <th class="text-center">Mã hãng xe</th>
+                                                                <th class="text-center">Tên hãng xe</th>
+                                                                <th class="text-center">Mô tả</th>
+                                                                <th class="text-center">Ngày cập nhật</th>
+                                                                <th class="text-center">Trạng thái</th>
+                                                                <th class="text-center">Thao tác</th>
+                                                            </tr>
+                                                            </thead>
+
+                                                            <tbody id="bodyView">
+                                                            <tr>
+                                                                <th>1</th>
+                                                                <th>hình ảnh</th>
+                                                                <th>mã</th>
+                                                                <th>tên</th>
+                                                                <th>mô tả</th>
+                                                                <th>ngày cập nhật</th>
+                                                                <th>trạng thái</th>
+                                                                <th>thao tác</th>
+                                                            </tr>
+                                                            <!--                                                            <tr th:each="listDis,iterStat : ${discount}">-->
+                                                            <!--                                                                <td class="text-center"-->
+                                                            <!--                                                                    th:text="${iterStat.count+(pagesize*(currentPage))}">-->
+                                                            <!--                                                                    #-->
+                                                            <!--                                                                </td>-->
+                                                            <!--                                                                <td th:text="${listDis.code}">Mã giảm giá</td>-->
+                                                            <!--                                                                <td th:text="${listDis.name}">Tên</td>-->
+                                                            <!--                                                                <td class="text-center"-->
+                                                            <!--                                                                    th:text="${listDis.price_discount}">Giảm giá (%)-->
+                                                            <!--                                                                </td>-->
+                                                            <!--                                                                <td class="text-center"-->
+                                                            <!--                                                                    th:utext="${listDis.statusDisplay()}">Trạng thái-->
+                                                            <!--                                                                </td>-->
+                                                            <!--                                                                <td class="text-center" th:utext="${listDis.updateBy}">-->
+                                                            <!--                                                                    Trạng thái-->
+                                                            <!--                                                                </td>-->
+                                                            <!--                                                                <td class="text-center"-->
+                                                            <!--                                                                    th:utext="${#dates.format(listDis.updateDate, 'dd-MM-yyyy')}">-->
+                                                            <!--                                                                    Trạng thái-->
+                                                            <!--                                                                </td>-->
+
+                                                            <!--                                                                <td class="text-right">-->
+                                                            <!--                                                                    <button class="btn btn-xs btn-icon-only btn-info"-->
+                                                            <!--                                                                            title="Cập nhật"-->
+                                                            <!--                                                                            th:onclick="'core_lstpage.onUpdate('+${listDis.id}+')'">-->
+                                                            <!--                                                                        <i class="icon icon-pencil mr5"></i>-->
+                                                            <!--                                                                    </button>-->
+
+                                                            <!--                                                                    <button class="btn btn-xs red btn-icon-only"-->
+                                                            <!--                                                                            title="Xóa"-->
+                                                            <!--                                                                            th:onclick="'core_lstpage.onDelete('+${listDis.id}+')'">-->
+                                                            <!--                                                                        <i class="fa fa-times" aria-hidden="true"></i>-->
+                                                            <!--                                                                    </button>-->
+
+                                                            <!--                                                                    <button th:if="${listDis.status == 1}"-->
+                                                            <!--                                                                            class="btn btn-xs yellow btn-icon-only"-->
+                                                            <!--                                                                            title="Duyệt"-->
+                                                            <!--                                                                            th:onclick="'core_lstpage.onUpdateStatus('+${listDis.id}+','+${listDis.status}+')'">-->
+                                                            <!--                                                                        <i class="fa fa-check" aria-hidden="true"></i>-->
+                                                            <!--                                                                    </button>-->
+
+                                                            <!--                                                                    <button th:if="${listDis.status == 0}"-->
+                                                            <!--                                                                            class="btn btn-xs green btn-icon-only"-->
+                                                            <!--                                                                            title="Hủy duyệt"-->
+                                                            <!--                                                                            th:onclick="'core_lstpage.onUpdateStatus('+${listDis.id}+','+${listDis.status}+')'">-->
+                                                            <!--                                                                        <i class="fa fa-minus-square"-->
+                                                            <!--                                                                           aria-hidden="true"></i>-->
+                                                            <!--                                                                    </button>-->
+                                                            <!--                                                                </td>-->
+                                                            <!--                                                            </tr>-->
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="pagination-control">
+                                                <div class="row">
+                                                    <div class="col-md-12 pull-right">
+                                                        <div id="page-selection" class="padding-top-15 clearboth">
+                                                            <ul class="pagination">
+                                                                <li class="first disabled">
+                                                                    <a href="#" class="page-link">
+                                                                        <span class="ms-bold fa fa-angle-double-left">
+
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="prev disabled">
+                                                                    <a href="#" class="page-link">
+                                                                        <span class="ms-bold fa fa-angle-left"></span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="page-item active">
+                                                                    <a href="#" class="page-link">1</a></li>
+                                                                <li class="page-item">
+                                                                    <a href="#" class="page-link">2</a></li>
+                                                                <li class="page-item">
+                                                                    <a href="#" class="page-link">3</a></li>
+                                                                <li class="page-item">
+                                                                    <a href="#"
+                                                                       class="page-link">4</a></li>
+                                                                <li class="page-item">
+                                                                    <a href="#" class="page-link">5</a></li>
+                                                                <li class="next">
+                                                                    <a href="#" class="page-link">
+                                                                        <span class="ms-bold fa fa-angle-right"></span></a>
+                                                                </li>
+                                                                <li class="last">
+                                                                    <a href="#" class="page-link">
+                                                                        <span class="ms-bold fa fa-angle-double-right"></span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--END LIST CONTENT-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTENT BODY -->
+            <!-- BEGIN MODAL -->
+            <!-- END MODAL -->
+        </div>
+        <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+</div>
 </body>
 </html>
+<script type="text/javascript">
+    var ctorPage = {
+        // UrlDelete: '/discount/delete',
+        // updateStatus: '/discount/status',
+        btnCssDefault: 'a.btn-df',
+        TextYes: 'Có',
+        TextNo: 'Không',
+        TextDelAskMsg: 'Bạn có chắc chắn XÓA biểu ghi này ?'
+    };
+
+    var core_lstpage = {
+
+        onDelete: function (id) {
+            bootbox.confirm({
+                message: ctorPage.TextDelAskMsg,
+                buttons: {
+                    confirm: {
+                        label: ctorPage.TextYes,
+                        className: 'btn-success'
+                    },
+                    cancel: {
+                        label: ctorPage.TextNo,
+                        className: 'btn-danger'
+                    }
+                },
+                callback: function (result) {
+                    if (result) {
+                        var param = {
+                            id: id
+                        }
+                        ShowLoading();
+                        core_services.postAsync(ctorPage.UrlDelete, JSON.stringify(param)
+                            , function (res) {
+                                HideLoading();
+                                if (res) {
+                                    core_lstpage.onReload();
+                                } else {
+                                    // showErrorToast();
+                                }
+                                ore_lstpage.onReload();
+                            }
+                            , function () {
+                                // showErrorToast();
+                                core_lstpage.onReload();
+                            });
+                    }
+                }
+            });
+        },
+
+        onUpdateStatus: function (_id, _status) {
+            var msg = 'Bạn có chắc chắn muốn duyệt mã giảm giá này không ?';
+            if (_status === 0) {
+                msg = 'Bạn có chắc chắn hủy duyệt mã giảm giá này không ?';
+            }
+            bootbox.confirm({
+                message: msg,
+                buttons: {
+                    confirm: {
+                        label: ctorPage.TextYes,
+                        className: 'btn-success'
+                    },
+                    cancel: {
+                        label: ctorPage.TextNo,
+                        className: 'btn-danger'
+                    }
+                },
+                callback: function (result) {
+                    if (result) {
+                        var Book = {
+                            id: _id,
+                            status: _status
+                        }
+                        console.log(_id);
+                        ShowLoading();
+                        core_services.postAsync(ctorPage.updateStatus, JSON.stringify(Book)
+                            , function (res) {
+                                HideLoading();
+                                if (res) {
+                                    core_lstpage.onReload()
+                                } else {
+                                    // core_notification.updateFail();
+                                    core_lstpage.onReload()
+                                }
+                                core_lstpage.onReload();
+                            }
+                            , function () {
+                                // core_notification.updateFail();
+                                core_lstpage.onReload();
+                            });
+                    }
+                }
+            });
+        },
+
+        onReload: function () {
+            HideLoading();
+            window.location.reload();
+
+        },
+
+    }
+</script>

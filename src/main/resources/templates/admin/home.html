@@ -68,14 +68,35 @@
                                 </a>
                             </li>
                             <li class="nav-item" id="nav-blockedtracking-list">
-                                <a th:href="@{/admin/carcompany/list}" class="nav-link">
+                                <a class="nav-link nav-toggle">
                                     <span class="title">Hãng xe</span>
+                                    <span class="arrow" id="nav-span-carcompany"></span>
                                 </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-insert">
+                                        <a th:href="@{/admin/carcompany/insert}" class="nav-link ">
+                                            <span class="title">Thêm mới</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-list">
+                                        <a th:href="@{/admin/carcompany/list}" class="nav-link ">
+                                            <span class="title">Danh sách</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="nav-item" id="nav-renewcardlog-list">
-                                <a th:href="@{/admin/category/list}" class="nav-link">
+                            <li class="nav-item" id="nav-category">
+                                <a class="nav-link nav-toggle">
                                     <span class="title">Loại xe</span>
+                                    <span class="arrow" id="nav-span-category"></span>
                                 </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-cataloging-list">
+                                        <a th:href="@{/admin/category/list}" class="nav-link ">
+                                            <span class="title">Danh sách</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li>

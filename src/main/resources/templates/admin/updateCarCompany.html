@@ -48,7 +48,7 @@
                             <span class="uppercase title">Trang chủ</span>
                             <span class="selected"></span></a>
                     </li>
-                    <li class="nav-item" id="nav-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef">
+                    <li class="nav-item active open" id="nav-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef">
                         <a class="nav-link nav-toggle">
                             <i class="icon-user"></i>
                             <span class="uppercase title">Quản lý xe</span>
@@ -65,7 +65,7 @@
                                     <span class="title">Danh sách</span>
                                 </a>
                             </li>
-                            <li class="nav-item" id="nav-blockedtracking-list">
+                            <li class="nav-item active open" id="nav-blockedtracking-list">
                                 <a class="nav-link nav-toggle">
                                     <span class="title">Hãng xe</span>
                                     <span class="arrow" id="nav-span-carcompany"></span>
@@ -196,7 +196,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item active open" id="nav-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef">
+                    <li class="nav-item" id="nav-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef">
                         <a class="nav-link nav-toggle">
                             <i class="icon-users"></i>
                             <span class="uppercase title">Quản lý người dùng</span>
@@ -230,15 +230,15 @@
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <a href="">Quản lý người dùng</a>
+                            <a href="">Quản lý xe</a>
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <a th:href="@{/admin/user/list}">Người dùng</a>
+                            <a th:href="@{/admin/carcompany/list}">Hãng xe</a>
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <span>Thêm mới</span>
+                            <span>Cập nhật</span>
                         </li>
                     </ul>
                 </div>
@@ -256,12 +256,12 @@
                                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                                         <div class="fileinput-new thumbnail"
                                                              style="width: 180px; height: 250px;">
-                                                            <img id="img-info-user" src="/images/default.png"
+                                                            <img id="img-info-carcompany" src="/images/default.png"
                                                                  alt="">
                                                         </div>
                                                         <div>
                                                 <span class="btn default btn-file">
-                                                    <input type="file" name="file" id="file-info-user"
+                                                    <input type="file" name="file" id="file-info-carcompany"
                                                            onchange="core_add.onChangeImage(this)">
                                                     <span class="fileinput-new">Chọn hình</span>
                                                 </span>
@@ -278,106 +278,43 @@
                                             <div class="portlet-body">
                                                 <div class="form-body">
                                                     <div class="row">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <div class="input-group2">
-                                                                    <label>Tên đăng nhập</label>
+                                                                    <label>Mã hãng xe</label>
                                                                     <span class="field-validation-valid"
-                                                                          id="UserNameMsg" style="color: #e7505a"></span>
+                                                                          id="CodeMsg" style="color: #e7505a"></span>
                                                                     <input class="form-control" readonly
-                                                                           id="username" name="username" type="text" value="">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <div class="input-group2">
-                                                                    <label>Họ tên</label>
-                                                                    <span class="field-validation-valid"
-                                                                          id="FullNameMsg" style="color: #e7505a"></span>
-                                                                    <input class="form-control"
-                                                                           id="name" name="name" type="text" value="">
+                                                                           id="code" name="code" type="text" value="">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <div class="input-group2">
-                                                                    <label>Email</label>
+                                                                    <label>Tên hãng xe</label>
                                                                     <span class="field-validation-valid"
-                                                                          id="EmailMsg"
-                                                                          style="color: #e7505a"></span>
-                                                                    <input class="form-control" readonly
-                                                                           id="email" name="email" type="email"
-                                                                           value=""/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <div class="input-group2">
-                                                                    <label>CMND/CCCD</label>
-                                                                    <span class="field-validation-valid"
-                                                                          id="CMNDMsg"
+                                                                          id="NameMsg"
                                                                           style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           id="cmnd" name="cmnd" type="number"
+                                                                           id="name" name="name" type="text"
                                                                            value=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <div class="input-group2">
-                                                                    <label>Ngày sinh</label>
+                                                                    <label>Mô tả</label>
                                                                     <span class="field-validation-valid"
-                                                                          id="BirthdayMsg" style="color: #e7505a"></span>
-                                                                    <input class="form-control"
-                                                                           id="birthday" name="birthday" type="date" value="">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <div class="input-group2">
-                                                                    <label>Giới tính</label>
-                                                                    <span class="field-validation-valid"
-                                                                          style="color: #e7505a"></span>
-                                                                    <select class="form-control"
-                                                                            id="gender" name="gender">
-                                                                        <option value="0">Nam</option>
-                                                                        <option value="1">Nữ</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <div class="input-group2">
-                                                                    <label>Địa chỉ</label>
-                                                                    <span class="field-validation-valid"
-                                                                          id="AddressMsg" style="color: #e7505a"></span>
-                                                                    <input class="form-control"
-                                                                           id="address" name="address" type="text" value="">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <div class="input-group2">
-                                                                    <label>Số điện thoại</label>
-                                                                    <span class="field-validation-valid"
-                                                                          id="PhoneMsg"
-                                                                          style="color: #e7505a"></span>
-                                                                    <input class="form-control"
-                                                                           id="phone" name="phone" type="number"
-                                                                           value=""/>
+                                                                          id="DescriptionMsg" style="color: #e7505a"></span>
+                                                                    <textarea class="form-control" rows="4"
+                                                                              id="description" name="description" type="text"
+                                                                              value=""></textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -420,7 +357,7 @@
 
     $('document').ready(function () {
         $(".fileinput-exists").click(function () {
-            $('#img-info-user').attr('src', defaultImageUrl);
+            $('#img-info-carcompany').attr('src', defaultImageUrl);
         });
     });
 
@@ -429,7 +366,7 @@
             if (this.files && this.files[0]) {
                 var reader = new FileReader();
                 reader.onload = function (e) {
-                    $('#img-info-user').attr('src', e.target.result);
+                    $('#img-info-carcompany').attr('src', e.target.result);
                 }
                 reader.readAsDataURL(this.files[0]);
             }
@@ -439,7 +376,7 @@
     var core_add = {
 
         onClose: function () {
-            window.location.href = "/admin/user/list";
+            window.location.href = "/admin/carcompany/list";
         },
 
     }

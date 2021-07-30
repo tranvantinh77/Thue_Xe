@@ -103,7 +103,7 @@ public class UserInfoController {
     }
 
     @RequestMapping(value = "/admin/user/update", method = RequestMethod.GET)
-    public String updatetUser() {
+    public String updateUser() {
         return "admin/updateUser";
     }
 

@@ -1,10 +1,437 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta charset="UTF-8"/>
+    <title th:replace="~{fragments/layoutAdmin :: title}">Title</title>
 
+    <th:block th:insert="~{fragments/layoutAdmin :: meta}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: link}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: head/script}"></th:block>
+
+
+</head>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+<div class="page-wrapper">
+    <!-- BEGIN HEADER -->
+    <div th:insert="~{fragments/headerAdminPartial :: headerAdminPartial}"></div>
+    <!-- END HEADER -->
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"></div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN PROGRESSBAR -->
+        <div th:insert="~{fragments/loadingPartial :: loadingPartial}"></div>
+        <!-- END PROGRESSBAR -->
+        <!-- BEGIN PROGRESSBAR -->
+        <div th:insert="~{fragments/progressBarPartial :: progressBarPartial}"></div>
+        <!-- END PROGRESSBAR -->
+        <!-- BEGIN NOTIFICATION -->
+        <div th:insert="~{fragments/notificationPartial :: notificationPartial}"></div>
+        <!-- END NOTIFICATION -->
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar-wrapper">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar navbar-collapse collapse ">
+                <ul class="page-sidebar-menu page-header-fixed" data-keep-expanded="false" data-auto-scroll="true"
+                    data-slide-speed="200">
+                    <li class="sidebar-toggler-wrapper hide">
+                        <div class="sidebar-toggler">
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="nav-item" id="nav-none">
+                        <a th:href="@{/admin}" class="nav-link nav-toggle">
+                            <i class="icon-home"></i>
+                            <span class="uppercase title">Trang chủ</span>
+                            <span class="selected"></span></a>
+                    </li>
+                    <li class="nav-item active open" id="nav-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-user"></i>
+                            <span class="uppercase title">Quản lý xe</span>
+                            <span class="arrow" id="nav-span-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item active open" id="nav-patronmanagement-insert">
+                                <a th:href="@{/admin/oto/insert}" class="nav-link">
+                                    <span class="title">Thêm mới</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-patronmanagement-list">
+                                <a th:href="@{/admin/oto/list}" class="nav-link">
+                                    <span class="title">Danh sách</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-blockedtracking-list">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Hãng xe</span>
+                                    <span class="arrow" id="nav-span-carcompany"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-insert">
+                                        <a th:href="@{/admin/carcompany/insert}" class="nav-link ">
+                                            <span class="title">Thêm mới</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-list">
+                                        <a th:href="@{/admin/carcompany/list}" class="nav-link ">
+                                            <span class="title">Danh sách</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item" id="nav-category">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Loại xe</span>
+                                    <span class="arrow" id="nav-span-category"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-cataloging-list">
+                                        <a th:href="@{/admin/category/list}" class="nav-link ">
+                                            <span class="title">Danh sách</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-0765c183-3c39-4a56-af3c-1fa4119698ca">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-notebook"></i>
+                            <span class="uppercase title">Quản lý sách giấy</span>
+                            <span class="arrow" id="nav-span-0765c183-3c39-4a56-af3c-1fa4119698ca"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-bibliographic-update">
+                                <a href="/admin/booksmanagement/insert" class="nav-link">
+                                    <span class="title">Thêm mới</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-bibliographic-list">
+                                <a href="/admin/booksmanagement/list" class="nav-link">
+                                    <span class="title">Danh sách</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-bibliographic-tools">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Công cụ</span>
+                                    <span class="arrow" id="nav-span-bibliographic-tools"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-materialmanagement">
+                                        <a href="/admin/materialmanagement/list" class="nav-link ">
+                                            <span class="title">Loại tài liệu</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-mediatypemanagement">
+                                        <a href="/admin/mediatypemanagement/list" class="nav-link ">
+                                            <span class="title">Thể loại lưu trữ</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfc">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-calculator"></i>
+                            <span class="uppercase title">Quản lý mượn trả</span>
+                            <span class="arrow" id="nav-span-0e19b78e-9757-4394-837d-d3d9ebc33dfc"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-checkout-index">
+                                <a href="/admin/checkout/index" class="nav-link">
+                                    <span class="title">Mượn trả</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-circulation-history">
+                                <a href="/admin/circulation/history" class="nav-link">
+                                    <span class="title">Nhật ký lưu thông</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfd">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-social-dribbble"></i>
+                            <span class="uppercase title">Quản lý cổng thông tin</span>
+                            <span class="arrow" id="nav-span-0e19b78e-9757-4394-837d-d3d9ebc33dfd"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-sitemanagement-list">
+                                <a href="/admin/sitemanagement/list" class="nav-link">
+                                    <span class="title">Quản lý site</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-newsmanagement-list">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Quản lý tin tức</span>
+                                    <span class="arrow" id="nav-span-newsmanagement-list"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-newsmanagement">
+                                        <a href="/admin/newsmanagement/list" class="nav-link ">
+                                            <span class="title">Tin tức</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-categorymanagement">
+                                        <a href="/admin/categorymanagement/list" class="nav-link ">
+                                            <span class="title">Chuyên mục</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-authormanagement">
+                                        <a href="/admin/authormanagement/list" class="nav-link ">
+                                            <span class="title">Tác giả</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item" id="nav-filesmanagement-list">
+                                <a href="/admin/filesmanagement/list" class="nav-link">
+                                    <span class="title">Quản lý tập tin</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-users"></i>
+                            <span class="uppercase title">Quản lý người dùng</span>
+                            <span class="arrow" id="nav-span-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-usermanagement-list">
+                                <a th:href="@{/admin/user/list}" class="nav-link">
+                                    <span class="title">Người dùng</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <!-- END SIDEBAR MENU -->
+                <!-- END SIDEBAR MENU -->
+            </div>
+            <!-- END SIDEBAR -->
+        </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <div class="page-content lv-pageContent">
+                <!-- BEGIN PAGE BAR -->
+                <div class="page-bar">
+                    <ul class="page-breadcrumb">
+                        <li>
+                            <a th:href="@{/admin}">Trang chủ</a>
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <a href="">Quản lý xe</a>
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <span>Thêm mới</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END PAGE BAR -->
+                <div class="content-main">
+                    <div class="portlet-body">
+                        <div class="tabbable-custom">
+                            <form action="#" method="post"
+                                  enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-md-3 xs-mt-12">
+                                        <div class="portlet light portlet-fit portlet-form">
+                                            <div class="portlet-body">
+                                                <div class="form-body">
+                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                        <div class="fileinput-new thumbnail"
+                                                             style="width: 180px; height: 250px;">
+                                                            <img id="img-info-oto" src="/images/default.png"
+                                                                 alt="">
+                                                        </div>
+                                                        <div>
+                                                <span class="btn default btn-file">
+                                                    <input type="file" name="file" id="file-info-oto"
+                                                           onchange="core_add.onChangeImage(this)">
+                                                    <span class="fileinput-new">Chọn hình</span>
+                                                </span>
+                                                            <a onclick="core_add.onDefaultImage()"
+                                                               class="btn default fileinput-exists"> Hủy bỏ </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 xs-mt-12">
+                                        <div class="portlet light portlet-fit portlet-form">
+                                            <div class="portlet-body">
+                                                <div class="form-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>Mã xe</label>
+                                                                    <span class="field-validation-valid"
+                                                                          id="CodeOtoMsg" style="color: #e7505a"></span>
+                                                                    <input class="form-control"
+                                                                           id="code" name="code" type="text" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>Tên xe</label>
+                                                                    <span class="field-validation-valid"
+                                                                          id="NameOtoMsg"
+                                                                          style="color: #e7505a"></span>
+                                                                    <input class="form-control"
+                                                                           id="name" name="name" type="text"
+                                                                           value=""/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>Biển số xe</label>
+                                                                    <span class="field-validation-valid"
+                                                                          id="LicensePlatesMsg" style="color: #e7505a"></span>
+                                                                    <input class="form-control"
+                                                                           id="licenseplates" name="licenseplates" type="text" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>Giá thuê xe</label>
+                                                                    <span class="field-validation-valid"
+                                                                          id="PriceMsg" style="color: #e7505a"></span>
+                                                                    <input class="form-control"
+                                                                           id="price" name="price" type="number" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>Mô tả xe</label>
+                                                                    <span class="field-validation-valid"
+                                                                          id="DescriptionMsg" style="color: #e7505a"></span>
+                                                                    <textarea class="form-control" rows="6"
+                                                                              id="description" name="description" value=""></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>Hãng xe</label>
+                                                                    <span class="field-validation-valid"
+                                                                          style="color: #e7505a"></span>
+                                                                    <select class="form-control"
+                                                                            id="carcompany" name="carcompany">
+                                                                        <option value="0">-----Hãng xe-----</option>
+                                                                        <option value="0">Huyndai</option>
+                                                                        <option value="1">Winfast</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>Loại xe</label>
+                                                                    <span class="field-validation-valid"
+                                                                          style="color: #e7505a"></span>
+                                                                    <select class="form-control"
+                                                                            id="category" name="category">
+                                                                        <option value="0">-----Loại xe-----</option>
+                                                                        <option value="0">Xe 4 chỗ</option>
+                                                                        <option value="1">Xe 7 chỗ</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="portlet-footer pull-right xs-mb-10">
+                                                    <button onclick="core_add.onClose()" type="button"
+                                                            class="btn btn-circle default" data-dismiss="modal"
+                                                            aria-hidden="true">
+                                                        <i class="fa fa-close mr5"></i>
+                                                        Trở lại
+                                                    </button>
+                                                    <button type="submit" class="btn btn-circle btn-mini btn-info">
+                                                        <i class="fa fa-save mr5"></i>
+                                                        Lưu
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTENT BODY -->
+            <!-- BEGIN MODAL -->
+            <!-- END MODAL -->
+        </div>
+        <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+</div>
 </body>
 </html>
+<script type="text/javascript">
+
+    var defaultImageUrl = '/images/default.png';
+
+    $('document').ready(function () {
+        $(".fileinput-exists").click(function () {
+            $('#img-info-oto').attr('src', defaultImageUrl);
+        });
+    });
+
+    $('document').ready(function () {
+        $(".btn-file input").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#img-info-oto').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
+
+    var core_add = {
+
+        onClose: function () {
+            window.location.href = "/admin/oto/list";
+        },
+
+    }
+
+</script>

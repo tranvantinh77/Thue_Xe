@@ -11,4 +11,14 @@ public class CarCompanyController {
     public String list() {
         return "admin/carCompany";
     }
+
+    @RequestMapping(value = "/admin/carcompany/insert", method = RequestMethod.GET)
+    public String insertCarCompany() {
+        return "admin/insertCarCompany";
+    }
+
+    @RequestMapping(value = "/admin/carcompany/update", method = RequestMethod.GET)
+    public String updateCarCompany() {
+        return "admin/updateCarCompany";
+    }
 }
