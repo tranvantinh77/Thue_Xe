@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/car.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/headerAdminPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/headerAdminPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/headerAdminPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/headerAdminPartial.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +180,7 @@
       <workItem from="1627561611761" duration="984000" />
       <workItem from="1627563203001" duration="5410000" />
       <workItem from="1627571900316" duration="84000" />
-      <workItem from="1627646020541" duration="6294000" />
+      <workItem from="1627646020541" duration="7175000" />
     </task>
     <servers />
   </component>
