@@ -2,9 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/car.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/BannerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/CheckoutController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/CirculationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/entity/BannerEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/insertBanner.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/updateBanner.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/authorManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/blockedTrackingManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/booksManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/discount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/insertCarCompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/insertCarCompany.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/insertOto.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/insertOto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/insertUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/insertUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/materialManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/banner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/newsManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/oto.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/oto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/patronManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/patronTypeManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/renewCardlogManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/circulation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/updateCarCompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/updateCarCompany.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/updateOto.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/updateOto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/updateUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/updateUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/userInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/userInfo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/headerAdminPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/headerAdminPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/authorManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/blockedTrackingManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/booksManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/carCompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/carCompany.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/discount.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/discount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/insertCarCompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/insertCarCompany.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/insertOto.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/insertOto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/insertUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/insertUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/materialManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/newsManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/oto.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/oto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/patronManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/patronTypeManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/renewCardlogManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/updateCarCompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/updateCarCompany.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/updateOto.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/updateOto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/updateUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/updateUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/userInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/userInfo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/headerAdminPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/headerAdminPartial.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +77,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -65,7 +110,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,9 +124,12 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\Discount" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\images" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\js" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\css\404" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\webPortal" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="source.controller.webPortal" />
@@ -90,12 +138,9 @@
       <recent name="source.config" />
       <recent name="source.utils" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\images" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\js" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\css\404" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\webPortal" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\Discount" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -180,7 +225,8 @@
       <workItem from="1627561611761" duration="984000" />
       <workItem from="1627563203001" duration="5410000" />
       <workItem from="1627571900316" duration="84000" />
-      <workItem from="1627646020541" duration="7175000" />
+      <workItem from="1627646020541" duration="7544000" />
+      <workItem from="1627700165875" duration="3223000" />
     </task>
     <servers />
   </component>

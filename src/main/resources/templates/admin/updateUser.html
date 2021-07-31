@@ -50,7 +50,7 @@
                     </li>
                     <li class="nav-item" id="nav-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef">
                         <a class="nav-link nav-toggle">
-                            <i class="icon-user"></i>
+                            <i class="fa fa-car"></i>
                             <span class="uppercase title">Quản lý xe</span>
                             <span class="arrow" id="nav-span-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef"></span>
                         </a>
@@ -98,43 +98,6 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item" id="nav-0765c183-3c39-4a56-af3c-1fa4119698ca">
-                        <a class="nav-link nav-toggle">
-                            <i class="icon-notebook"></i>
-                            <span class="uppercase title">Quản lý sách giấy</span>
-                            <span class="arrow" id="nav-span-0765c183-3c39-4a56-af3c-1fa4119698ca"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item" id="nav-bibliographic-update">
-                                <a href="/admin/booksmanagement/insert" class="nav-link">
-                                    <span class="title">Thêm mới</span>
-                                </a>
-                            </li>
-                            <li class="nav-item" id="nav-bibliographic-list">
-                                <a href="/admin/booksmanagement/list" class="nav-link">
-                                    <span class="title">Danh sách</span>
-                                </a>
-                            </li>
-                            <li class="nav-item" id="nav-bibliographic-tools">
-                                <a class="nav-link nav-toggle">
-                                    <span class="title">Công cụ</span>
-                                    <span class="arrow" id="nav-span-bibliographic-tools"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item" id="nav-cataloging-bibliographic-materialmanagement">
-                                        <a href="/admin/materialmanagement/list" class="nav-link ">
-                                            <span class="title">Loại tài liệu</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item" id="nav-cataloging-bibliographic-mediatypemanagement">
-                                        <a href="/admin/mediatypemanagement/list" class="nav-link ">
-                                            <span class="title">Thể loại lưu trữ</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
                     <li class="nav-item" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfc">
                         <a class="nav-link nav-toggle">
                             <i class="icon-calculator"></i>
@@ -143,13 +106,13 @@
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item" id="nav-checkout-index">
-                                <a href="/admin/checkout/index" class="nav-link">
-                                    <span class="title">Mượn trả</span>
+                                <a th:href="@{/admin/checkout/list}" class="nav-link">
+                                    <span class="title">Xe đang mượn</span>
                                 </a>
                             </li>
                             <li class="nav-item" id="nav-circulation-history">
-                                <a href="/admin/circulation/history" class="nav-link">
-                                    <span class="title">Nhật ký lưu thông</span>
+                                <a th:href="@{/admin/circulation/list}" class="nav-link">
+                                    <span class="title">Xe đã trả</span>
                                 </a>
                             </li>
                         </ul>
@@ -162,36 +125,13 @@
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item" id="nav-sitemanagement-list">
-                                <a href="/admin/sitemanagement/list" class="nav-link">
-                                    <span class="title">Quản lý site</span>
+                                <a th:href="@{/admin/banner/list}" class="nav-link">
+                                    <span class="title">Banner</span>
                                 </a>
-                            </li>
-                            <li class="nav-item" id="nav-newsmanagement-list">
-                                <a class="nav-link nav-toggle">
-                                    <span class="title">Quản lý tin tức</span>
-                                    <span class="arrow" id="nav-span-newsmanagement-list"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-newsmanagement">
-                                        <a href="/admin/newsmanagement/list" class="nav-link ">
-                                            <span class="title">Tin tức</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-categorymanagement">
-                                        <a href="/admin/categorymanagement/list" class="nav-link ">
-                                            <span class="title">Chuyên mục</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-authormanagement">
-                                        <a href="/admin/authormanagement/list" class="nav-link ">
-                                            <span class="title">Tác giả</span>
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
                             <li class="nav-item" id="nav-filesmanagement-list">
-                                <a href="/admin/filesmanagement/list" class="nav-link">
-                                    <span class="title">Quản lý tập tin</span>
+                                <a th:href="@{/admin/discount/list}" class="nav-link">
+                                    <span class="title">Mã giảm giá</span>
                                 </a>
                             </li>
                         </ul>
