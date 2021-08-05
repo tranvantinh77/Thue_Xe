@@ -72,12 +72,12 @@
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item" id="nav-cataloging-bibliographic-insert">
-                                        <a th:href="@{/admin/carcompany/insert}" class="nav-link ">
+                                        <a th:href="@{/admin/carCompany/insert}" class="nav-link ">
                                             <span class="title">Thêm mới</span>
                                         </a>
                                     </li>
                                     <li class="nav-item active open" id="nav-cataloging-bibliographic-list">
-                                        <a th:href="@{/admin/carcompany/list}" class="nav-link ">
+                                        <a th:href="@{/admin/carCompany/list}" class="nav-link ">
                                             <span class="title">Danh sách</span>
                                         </a>
                                     </li>
@@ -174,7 +174,7 @@
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <a th:href="@{/admin/carcompany/list}">Hãng xe</a>
+                            <a th:href="@{/admin/carCompany/list}">Hãng xe</a>
                         </li>
                     </ul>
                 </div>
@@ -185,7 +185,7 @@
                             <div class="portlet-body pb0">
                                 <!--SEARCH-->
                                 <div class="search-box">
-                                    <form th:action="@{/admin/discount/search}" method="GET">
+                                    <form th:action="@{/admin/carCompany/search}" method="GET">
                                         <div class="row">
                                             <div class="col-md-12 xs-mt-12">
                                                 <div class="input-search-single">
@@ -214,7 +214,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="doc-group-title pull-right">
-                                                <a th:href="@{/admin/carcompany/insert}"
+                                                <a th:href="@{/admin/carCompany/insert}"
                                                    class="btn green">
                                                     <i class="icon icon-plus mr5"></i>
                                                     Thêm
@@ -237,6 +237,7 @@
                                                                 <th class="text-center">Mã hãng xe</th>
                                                                 <th class="text-center">Tên hãng xe</th>
                                                                 <th class="text-center">Mô tả</th>
+                                                                <th class="text-center">Người cập nhật</th>
                                                                 <th class="text-center">Ngày cập nhật</th>
                                                                 <th class="text-center">Trạng thái</th>
                                                                 <th class="text-center">Thao tác</th>
@@ -244,66 +245,58 @@
                                                             </thead>
 
                                                             <tbody id="bodyView">
-                                                            <tr>
-                                                                <th>1</th>
-                                                                <th>hình ảnh</th>
-                                                                <th>mã</th>
-                                                                <th>tên</th>
-                                                                <th>mô tả</th>
-                                                                <th>ngày cập nhật</th>
-                                                                <th>trạng thái</th>
-                                                                <th>thao tác</th>
+                                                            <tr th:each="listCarCom,iterStat : ${carCompany}">
+                                                                <td class="text-center"
+                                                                    th:text="${iterStat.count+(pagesize*(currentPage))}">
+                                                                    #
+                                                                </td>
+                                                                <td>
+                                                                    <img style="height: 50px; width: 60px; object-fit: contain" th:src="@{${carCompany.getLogoImagePath()}}">
+                                                                </td>
+                                                                <td th:text="${listCarCom.code}">Mã hãng xe</td>
+                                                                <td th:text="${listCarCom.name}">Tên hãng xe</td>
+                                                                <td class="text-center"
+                                                                    th:text="${listCarCom.description}">Mô tả
+                                                                </td>
+                                                                <td class="text-center" th:utext="${listCarCom.updateBy}">
+                                                                    Người cập nhật
+                                                                </td>
+                                                                <td class="text-center"
+                                                                    th:utext="${#dates.format(listCarCom.updateDate, 'dd-MM-yyyy')}">
+                                                                    Ngày cập nhật
+                                                                </td>
+                                                                <td class="text-center"
+                                                                    th:utext="${listCarCom.statusDisplay()}">Trạng thái
+                                                                </td>
+                                                                <td class="text-right">
+                                                                    <button class="btn btn-xs btn-icon-only btn-info"
+                                                                            title="Cập nhật"
+                                                                            th:onclick="'core_lstpage.onUpdate('+${listCarCom.id}+')'">
+                                                                        <i class="icon icon-pencil mr5"></i>
+                                                                    </button>
+
+                                                                    <button class="btn btn-xs red btn-icon-only"
+                                                                            title="Xóa"
+                                                                            th:onclick="'core_lstpage.onDelete('+${listCarCom.id}+')'">
+                                                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                                                    </button>
+
+                                                                    <button th:if="${listCarCom.status == 1}"
+                                                                            class="btn btn-xs yellow btn-icon-only"
+                                                                            title="Duyệt"
+                                                                            th:onclick="'core_lstpage.onUpdateStatus('+${listCarCom.id}+','+${listCarCom.status}+')'">
+                                                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                                                    </button>
+
+                                                                    <button th:if="${listCarCom.status == 0}"
+                                                                            class="btn btn-xs green btn-icon-only"
+                                                                            title="Hủy duyệt"
+                                                                            th:onclick="'core_lstpage.onUpdateStatus('+${listCarCom.id}+','+${listCarCom.status}+')'">
+                                                                        <i class="fa fa-minus-square"
+                                                                           aria-hidden="true"></i>
+                                                                    </button>
+                                                                </td>
                                                             </tr>
-<!--                                                            <tr th:each="listDis,iterStat : ${discount}">-->
-<!--                                                                <td class="text-center"-->
-<!--                                                                    th:text="${iterStat.count+(pagesize*(currentPage))}">-->
-<!--                                                                    #-->
-<!--                                                                </td>-->
-<!--                                                                <td th:text="${listDis.code}">Mã giảm giá</td>-->
-<!--                                                                <td th:text="${listDis.name}">Tên</td>-->
-<!--                                                                <td class="text-center"-->
-<!--                                                                    th:text="${listDis.price_discount}">Giảm giá (%)-->
-<!--                                                                </td>-->
-<!--                                                                <td class="text-center"-->
-<!--                                                                    th:utext="${listDis.statusDisplay()}">Trạng thái-->
-<!--                                                                </td>-->
-<!--                                                                <td class="text-center" th:utext="${listDis.updateBy}">-->
-<!--                                                                    Trạng thái-->
-<!--                                                                </td>-->
-<!--                                                                <td class="text-center"-->
-<!--                                                                    th:utext="${#dates.format(listDis.updateDate, 'dd-MM-yyyy')}">-->
-<!--                                                                    Trạng thái-->
-<!--                                                                </td>-->
-
-<!--                                                                <td class="text-right">-->
-<!--                                                                    <button class="btn btn-xs btn-icon-only btn-info"-->
-<!--                                                                            title="Cập nhật"-->
-<!--                                                                            th:onclick="'core_lstpage.onUpdate('+${listDis.id}+')'">-->
-<!--                                                                        <i class="icon icon-pencil mr5"></i>-->
-<!--                                                                    </button>-->
-
-<!--                                                                    <button class="btn btn-xs red btn-icon-only"-->
-<!--                                                                            title="Xóa"-->
-<!--                                                                            th:onclick="'core_lstpage.onDelete('+${listDis.id}+')'">-->
-<!--                                                                        <i class="fa fa-times" aria-hidden="true"></i>-->
-<!--                                                                    </button>-->
-
-<!--                                                                    <button th:if="${listDis.status == 1}"-->
-<!--                                                                            class="btn btn-xs yellow btn-icon-only"-->
-<!--                                                                            title="Duyệt"-->
-<!--                                                                            th:onclick="'core_lstpage.onUpdateStatus('+${listDis.id}+','+${listDis.status}+')'">-->
-<!--                                                                        <i class="fa fa-check" aria-hidden="true"></i>-->
-<!--                                                                    </button>-->
-
-<!--                                                                    <button th:if="${listDis.status == 0}"-->
-<!--                                                                            class="btn btn-xs green btn-icon-only"-->
-<!--                                                                            title="Hủy duyệt"-->
-<!--                                                                            th:onclick="'core_lstpage.onUpdateStatus('+${listDis.id}+','+${listDis.status}+')'">-->
-<!--                                                                        <i class="fa fa-minus-square"-->
-<!--                                                                           aria-hidden="true"></i>-->
-<!--                                                                    </button>-->
-<!--                                                                </td>-->
-<!--                                                            </tr>-->
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -423,9 +416,9 @@
         },
 
         onUpdateStatus: function (_id, _status) {
-            var msg = 'Bạn có chắc chắn muốn duyệt mã giảm giá này không ?';
+            var msg = 'Bạn có chắc chắn muốn duyệt mã hãng xe này không ?';
             if (_status === 0) {
-                msg = 'Bạn có chắc chắn hủy duyệt mã giảm giá này không ?';
+                msg = 'Bạn có chắc chắn hủy duyệt mã hãng xe này không ?';
             }
             bootbox.confirm({
                 message: msg,
