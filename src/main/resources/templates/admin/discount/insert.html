@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<body>
+<div class="modal fade"
+     id="stackPopup"
+     tabindex="-1"
+     role="dialog"
+     data-backdrop="static">
+    <div class="modal-dialog ">
+        <div class="modal-content"
+             id="popupPageDetail">
+            <form action="#" th:action="@{/discount/insert}" th:object="${discountEntity}" method="post">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title">Thêm mới</h4>
+                </div>
+                <div class="content">
+
+                    <div class="modal-body detail-container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="input-group2">
+                                        <label>
+                                            Mã giảm giá
+                                            <span class="symbol-valid">*</span>
+                                        </label>
+                                        <span class="field-validation-valid" data-valmsg-for="Name"
+                                              data-valmsg-replace="true" style="color: #e7505a"></span>
+                                        <input class="form-control" data-val="true"
+                                               data-val-required="Tên tác giả không được bỏ trống"
+                                               type="text" value="" th:field="*{code}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="input-group2">
+                                        <label>
+                                            Tên
+                                            <span class="symbol-valid">*</span>
+                                        </label>
+                                        <span class="field-validation-valid" data-valmsg-for="Name"
+                                              data-valmsg-replace="true" style="color: #e7505a"></span>
+                                        <input class="form-control" data-val="true"
+                                               data-val-required="Tên tác giả không được bỏ trống"
+                                               th:field="*{name}" type="text" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="input-group2">
+                                        <label>
+                                            Giảm giá (%)
+                                            <span class="symbol-valid">*</span>
+                                        </label>
+                                        <span class="field-validation-valid" data-valmsg-for="Name"
+                                              data-valmsg-replace="true" style="color: #e7505a"></span>
+                                        <input class="form-control" data-val="true"
+                                               data-val-required="Tên tác giả không được bỏ trống"
+                                               th:field="*{price_discount}" type="number" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group text-center">
+                                <div class="errMsg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn default" data-dismiss="modal" aria-hidden="true">
+                            <i class="fa fa-close mr5"></i>Đóng
+                        </button>
+                        <button type="submit" class="btn btn-mini btn-info">
+                            <i class="icon icon-pencil mr5"></i>Lưu
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

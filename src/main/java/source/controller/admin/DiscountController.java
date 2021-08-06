@@ -19,7 +19,7 @@ public class DiscountController {
     @Autowired
     private DiscountService discountService;
 
-    @GetMapping("/admin/discount/list")
+    @RequestMapping(value = "/admin/discount/list", method = RequestMethod.GET)
     public String books(Model model, @RequestParam(name = "pageindex", required = false, defaultValue = "1") Integer page,
                         @RequestParam(name = "size", required = false, defaultValue = "10") Integer size) {
 
@@ -43,7 +43,7 @@ public class DiscountController {
         model.addAttribute("isLastPage", isLastPage);
         model.addAttribute("discountEntity", discountEntity);
 
-        return "admin/discount";
+        return "admin/discount/list";
     }
 
     @RequestMapping(value = "/admin/discount/search", method = RequestMethod.GET)
@@ -81,7 +81,7 @@ public class DiscountController {
         model.addAttribute("isLastPage", isLastPage);
         model.addAttribute("discountEntity", discountEntity);
 
-        return "admin/discount";
+        return "admin/discount/list";
     }
 
     @RequestMapping(value = "/discount/insert", method = RequestMethod.POST)

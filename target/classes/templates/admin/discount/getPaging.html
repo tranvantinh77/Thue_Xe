@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<body>
+<div class="row mt10">
+    <div class="col-md-6">
+        <div class="doc-group-title">
+            <span aria-hidden="true" class="fa fa-user-secret"></span>
+            Tìm thấy tổng số <span id="lbl-getpaging-total"
+                                   class="span-total"
+                                   th:text="${list.size()}"></span>biểu ghi
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="doc-group-title pull-right">
+            <a href="" data-toggle="modal" data-target="#stackPopup"
+               class="btn green">
+                <i class="icon icon-plus mr5"></i>
+                Thêm
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row mt10">
+    <div class="col-md-12">
+        <div class="searh-result">
+            <div id="table-scroll" class="table-scroll">
+                <div class="table-scrollable" style="min-height:initial !important">
+                    <table class="table table-bordered main-table"
+                           style="width: 1600px">
+                        <thead class="flip-content1">
+                        <tr>
+                            <th class="text-center" style="width: 40px">#</th>
+                            <th class="text-center">Mã giảm giá</th>
+                            <th class="text-center">Tên</th>
+                            <th class="text-center">Giảm giá (%)</th>
+                            <th class="text-center">Trạng thái</th>
+                            <th class="text-center">Người cập nhật</th>
+                            <th class="text-center">Ngày cập nhật</th>
+                            <th class="text-center">Thao tác</th>
+                        </tr>
+                        </thead>
+
+                        <tbody id="bodyView">
+                        <tr th:each="listDis,iterStat : ${discount}">
+                            <td class="text-center"
+                                th:text="${iterStat.count+(pagesize*(currentPage))}">
+                                #
+                            </td>
+                            <td th:text="${listDis.code}">Mã giảm giá</td>
+                            <td th:text="${listDis.name}">Tên</td>
+                            <td class="text-center"
+                                th:text="${listDis.price_discount}">Giảm giá (%)
+                            </td>
+                            <td class="text-center"
+                                th:utext="${listDis.statusDisplay()}">Trạng thái
+                            </td>
+                            <td class="text-center" th:utext="${listDis.updateBy}">
+                                Trạng thái
+                            </td>
+                            <td class="text-center"
+                                th:utext="${#dates.format(listDis.updateDate, 'dd-MM-yyyy')}">
+                                Trạng thái
+                            </td>
+
+                            <td class="text-right">
+                                <button class="btn btn-xs btn-icon-only btn-info"
+                                        title="Cập nhật"
+                                        th:onclick="'core_lstpage.onUpdate('+${listDis.id}+')'">
+                                    <i class="icon icon-pencil mr5"></i>
+                                </button>
+
+                                <button class="btn btn-xs red btn-icon-only"
+                                        title="Xóa"
+                                        th:onclick="'core_lstpage.onDelete('+${listDis.id}+')'">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </button>
+
+                                <button th:if="${listDis.status == 1}"
+                                        class="btn btn-xs yellow btn-icon-only"
+                                        title="Duyệt"
+                                        th:onclick="'core_lstpage.onUpdateStatus('+${listDis.id}+','+${listDis.status}+')'">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+
+                                <button th:if="${listDis.status == 0}"
+                                        class="btn btn-xs green btn-icon-only"
+                                        title="Hủy duyệt"
+                                        th:onclick="'core_lstpage.onUpdateStatus('+${listDis.id}+','+${listDis.status}+')'">
+                                    <i class="fa fa-minus-square"
+                                       aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" th:if="${list.size()} > ${pagesize}">
+        <div class="pagination-control">
+            <div class="row">
+                <div class="col-md-12 pull-right">
+                    <div id="page-selection" class="padding-top-15 clearboth">
+                        <ul class="pagination">
+                            <li th:class="${isFirstPage}? 'page-item disabled' : 'page-item'">
+                                <a th:href="@{/admin/discount/list(pageindex=1)}"
+                                   class="page-link">
+                                    <span class="ms-bold fa fa-angle-double-left"></span>
+                                </a>
+                            </li>
+                            <li th:each="page : ${pages}"
+                                th:class="${page == currentPage ? 'page-item active' :'page-item' }">
+                                <a th:href="@{/admin/discount/list(pageindex=${page + 1})}"
+                                   class="page-link">
+                                    <span th:utext="${page+1}"></span>
+                                </a>
+                            </li>
+                            <li th:class="${isLastPage}? 'page-item disabled' : 'page-item'">
+                                <a th:href="@{/admin/discount/list(pageindex=${endPage})}"
+                                   class="page-link">
+                                    <span class="ms-bold fa fa-angle-double-right"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
