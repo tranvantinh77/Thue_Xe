@@ -5,15 +5,21 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import source.entity.CarCompanyEntity;
 import source.entity.DiscountEntity;
 import source.iService.CarCompanyService;
 import source.utils.PagningUtils;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.Optional;
 
@@ -86,9 +92,40 @@ public class CarCompanyController {
         return "admin/carCompany";
     }
 
-    @RequestMapping(value = "/admin/carCompany/insert", method = RequestMethod.GET)
+    @GetMapping("/admin/carCompany/insert")
     public String insertCarCompany() {
         return "admin/insertCarCompany";
+    }
+
+    @PostMapping("/carCompany/insert")
+    public String insert(@ModelAttribute CarCompanyEntity carCompanyEntity,
+                         RedirectAttributes ra,
+                         @RequestParam("file") MultipartFile file,
+                         @RequestParam("code") String code,
+                         @RequestParam("description") String description,
+                         @RequestParam("name") String name) throws IOException {
+        carCompanyEntity.setCode(code);
+        carCompanyEntity.setName(name);
+        carCompanyEntity.setActiveFag(0);
+        carCompanyEntity.setDescription(description);
+        String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+        carCompanyEntity.setImage(fileName);
+        if(!fileName.equals("")) {
+            String uploadDir = "./src/main/resources/static/CarCompany-Image";
+//            category.setIcon(fileName);
+            Path uploadPath = Paths.get(uploadDir);
+            if (!Files.exists(uploadPath)) {
+                Files.createDirectories(uploadPath);
+            }
+            try (InputStream inputStream = file.getInputStream()) {
+                Path filePath = uploadPath.resolve(fileName);
+                Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING);
+            } catch (IOException ioe) {
+                throw new IOException("Could not save image file: " + fileName, ioe);
+            }
+        }
+        carCompanyService.save(carCompanyEntity);
+        return "redirect:/admin/carCompany";
     }
 
     @RequestMapping(value = "/admin/carCompany/update", method = RequestMethod.GET)
