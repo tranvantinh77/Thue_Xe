@@ -31,6 +31,22 @@
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/checkout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/circulation.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/circulation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/discount.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/discount.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount/breadcrumb.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount/getPaging.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount/insert.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount/menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/controller/admin/DiscountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/DiscountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/discount.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/controller/admin/DiscountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/controller/admin/DiscountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/banner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/circulation.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/circulation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/discount.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/insertBanner.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/insertBanner.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/insertCarCompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/insertCarCompany.html" afterDir="false" />
@@ -66,9 +82,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -100,7 +116,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/admin/discount" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -114,12 +130,10 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\discount" />
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\images" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\js" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\css\404" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\webPortal" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\Discount" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="source.controller.webPortal" />
@@ -128,10 +142,25 @@
       <recent name="source.config" />
       <recent name="source.utils" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\discount" />
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\Discount" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\images" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\js" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\css\404" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.application">
     <configuration name="EncrytedPasswordUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -257,38 +286,38 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1628175993816" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1628217475022">
+    <state width="1323" height="312" key="GridCell.Tab.0.bottom" timestamp="1628258783292">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1628217475022" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1628217475022">
+    <state width="1323" height="312" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1628258783292" />
+    <state width="1323" height="312" key="GridCell.Tab.0.center" timestamp="1628258783291">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1628217475022" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1628217475021">
+    <state width="1323" height="312" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1628258783291" />
+    <state width="1323" height="312" key="GridCell.Tab.0.left" timestamp="1628258783291">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1628217475021" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1628217475022">
+    <state width="1323" height="312" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1628258783291" />
+    <state width="1323" height="312" key="GridCell.Tab.0.right" timestamp="1628258783291">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1628217475022" />
-    <state width="1323" height="182" key="GridCell.Tab.1.bottom" timestamp="1628217475022">
+    <state width="1323" height="312" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1628258783291" />
+    <state width="1323" height="312" key="GridCell.Tab.1.bottom" timestamp="1628258783292">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1628217475022" />
-    <state width="1323" height="182" key="GridCell.Tab.1.center" timestamp="1628217475022">
+    <state width="1323" height="312" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1628258783292" />
+    <state width="1323" height="312" key="GridCell.Tab.1.center" timestamp="1628258783292">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1628217475022" />
-    <state width="1323" height="182" key="GridCell.Tab.1.left" timestamp="1628217475022">
+    <state width="1323" height="312" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1628258783292" />
+    <state width="1323" height="312" key="GridCell.Tab.1.left" timestamp="1628258783292">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1628217475022" />
-    <state width="1323" height="182" key="GridCell.Tab.1.right" timestamp="1628217475022">
+    <state width="1323" height="312" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1628258783292" />
+    <state width="1323" height="312" key="GridCell.Tab.1.right" timestamp="1628258783292">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1628217475022" />
+    <state width="1323" height="312" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1628258783292" />
     <state x="275" y="90" key="Vcs.Push.Dialog.v2" timestamp="1628176006712">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
