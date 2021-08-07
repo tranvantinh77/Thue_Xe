@@ -2,62 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/DAO/CarCompanyDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/iService/CarCompanyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/service/CarCompanyServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/controller/admin/CarCompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/CarCompanyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/banner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/circulation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/circulation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/discount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/insertBanner.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/insertBanner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/insertCarCompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/insertCarCompany.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/insertOto.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/insertOto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/insertUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/insertUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/oto.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/oto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/updateBanner.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/updateBanner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/updateCarCompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/updateCarCompany.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/updateOto.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/updateOto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/updateUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/updateUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/userInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/userInfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/controller/admin/CarCompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/controller/admin/CarCompanyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/banner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/carCompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/carCompany.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/circulation.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/circulation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/discount.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/discount.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount/breadcrumb.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount/getPaging.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount/insert.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount/menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/controller/admin/DiscountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/DiscountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/discount.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/controller/admin/DiscountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/controller/admin/DiscountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/banner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/circulation.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/circulation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/discount.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/insertBanner.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/insertBanner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/insertCarCompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/insertCarCompany.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/insertOto.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/insertOto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/insertUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/insertUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/oto.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/oto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/updateBanner.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/updateBanner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/updateCarCompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/updateCarCompany.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/updateOto.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/updateOto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/updateUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/updateUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/userInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/userInfo.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,18 +94,6 @@
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\js" />
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\css\404" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.application">
     <configuration name="EncrytedPasswordUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -286,38 +219,38 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1628175993816" />
-    <state width="1323" height="312" key="GridCell.Tab.0.bottom" timestamp="1628258783292">
+    <state width="1323" height="138" key="GridCell.Tab.0.bottom" timestamp="1628259833863">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="312" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1628258783292" />
-    <state width="1323" height="312" key="GridCell.Tab.0.center" timestamp="1628258783291">
+    <state width="1323" height="138" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1628259833863" />
+    <state width="1323" height="138" key="GridCell.Tab.0.center" timestamp="1628259833863">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="312" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1628258783291" />
-    <state width="1323" height="312" key="GridCell.Tab.0.left" timestamp="1628258783291">
+    <state width="1323" height="138" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1628259833863" />
+    <state width="1323" height="138" key="GridCell.Tab.0.left" timestamp="1628259833863">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="312" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1628258783291" />
-    <state width="1323" height="312" key="GridCell.Tab.0.right" timestamp="1628258783291">
+    <state width="1323" height="138" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1628259833863" />
+    <state width="1323" height="138" key="GridCell.Tab.0.right" timestamp="1628259833863">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="312" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1628258783291" />
-    <state width="1323" height="312" key="GridCell.Tab.1.bottom" timestamp="1628258783292">
+    <state width="1323" height="138" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1628259833863" />
+    <state width="1323" height="138" key="GridCell.Tab.1.bottom" timestamp="1628259833864">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="312" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1628258783292" />
-    <state width="1323" height="312" key="GridCell.Tab.1.center" timestamp="1628258783292">
+    <state width="1323" height="138" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1628259833864" />
+    <state width="1323" height="138" key="GridCell.Tab.1.center" timestamp="1628259833864">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="312" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1628258783292" />
-    <state width="1323" height="312" key="GridCell.Tab.1.left" timestamp="1628258783292">
+    <state width="1323" height="138" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1628259833864" />
+    <state width="1323" height="138" key="GridCell.Tab.1.left" timestamp="1628259833863">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="312" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1628258783292" />
-    <state width="1323" height="312" key="GridCell.Tab.1.right" timestamp="1628258783292">
+    <state width="1323" height="138" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1628259833863" />
+    <state width="1323" height="138" key="GridCell.Tab.1.right" timestamp="1628259833864">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="312" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1628258783292" />
+    <state width="1323" height="138" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1628259833864" />
     <state x="275" y="90" key="Vcs.Push.Dialog.v2" timestamp="1628176006712">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
