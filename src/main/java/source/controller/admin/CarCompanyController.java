@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import source.entity.CarCompanyEntity;
-import source.entity.DiscountEntity;
 import source.iService.CarCompanyService;
 import source.utils.PagningUtils;
 

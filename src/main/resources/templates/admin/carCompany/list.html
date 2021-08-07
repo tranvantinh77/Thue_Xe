@@ -34,7 +34,10 @@
         <!-- BEGIN SIDEBAR -->
         <div class="page-sidebar-wrapper">
             <!-- BEGIN SIDEBAR -->
-            <th:block th:include="/admin/discount/menu.html"></th:block>
+            <th:block th:include="/admin/carCompany/menu.html"></th:block>
+                <!-- END SIDEBAR MENU -->
+                <!-- END SIDEBAR MENU -->
+            </div>
             <!-- END SIDEBAR -->
         </div>
         <!-- END SIDEBAR -->
@@ -43,20 +46,17 @@
             <!-- BEGIN CONTENT BODY -->
             <div class="page-content lv-pageContent">
                 <!-- BEGIN PAGE BAR -->
-                <th:block th:include="/admin/discount/breadcrumb.html"></th:block>
+                <th:block th:include="/admin/carCompany/breadcrumb.html"></th:block>
                 <!-- END PAGE BAR -->
                 <div class="page-content-main page-search">
                     <div class="page-content-1zone">
                         <div class="portlet light pt0 pb0">
                             <div class="portlet-body pb0">
                                 <!--SEARCH-->
-                                <th:block th:include="/admin/discount/search.html"></th:block>
-                                <!--END SEARCH-->
+                                <th:block th:include="/admin/carCompany/search.html"></th:block><!--END SEARCH-->
                                 <!--LIST CONTENT-->
                                 <div id="body-content">
-
-                                       <th:block th:include="/admin/discount/getPaging.html"></th:block>
-
+                                    <th:block th:include="/admin/carCompany/getPaging.html"></th:block>
                                 </div><!--END LIST CONTENT-->
                             </div>
                         </div>
@@ -65,12 +65,6 @@
             </div>
             <!-- END CONTENT BODY -->
             <!-- BEGIN MODAL -->
-            <!--INSERT-->
-            <th:block th:include="admin/discount/insert.html"></th:block>
-
-            <!--UPDATE-->
-            <th:block th:include="/admin/discount/update.html"></th:block>
-
             <!-- END MODAL -->
         </div>
         <!-- END CONTENT -->
@@ -81,8 +75,8 @@
 </html>
 <script type="text/javascript">
     var ctorPage = {
-        UrlDelete: '/discount/delete',
-        updateStatus: '/discount/status',
+        // UrlDelete: '/discount/delete',
+        // updateStatus: '/discount/status',
         btnCssDefault: 'a.btn-df',
         TextYes: 'Có',
         TextNo: 'Không',
@@ -90,21 +84,6 @@
     };
 
     var core_lstpage = {
-
-        onUpdate: function (id) {
-            $('.discountForm #stackPopupDiscount').modal();
-            var href = $(this).attr('href');
-            var url = "http://localhost:8082/admin/discount/update?id=" + id;
-            $.ajax({
-                url: url,
-                success: function (data) {
-                    document.getElementById("code_discount").value = data.code;
-                    document.getElementById("name_discount").value = data.name;
-                    document.getElementById("price").value = data.price_discount;
-                    document.getElementById("discountId").value = id;
-                }
-            })
-        },
 
         onDelete: function (id) {
             bootbox.confirm({
@@ -145,9 +124,9 @@
         },
 
         onUpdateStatus: function (_id, _status) {
-            var msg = 'Bạn có chắc chắn muốn duyệt mã giảm giá này không ?';
+            var msg = 'Bạn có chắc chắn muốn duyệt mã hãng xe này không ?';
             if (_status === 0) {
-                msg = 'Bạn có chắc chắn hủy duyệt mã giảm giá này không ?';
+                msg = 'Bạn có chắc chắn hủy duyệt mã hãng xe này không ?';
             }
             bootbox.confirm({
                 message: msg,

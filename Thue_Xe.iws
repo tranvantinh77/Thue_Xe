@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany/breadcrumb.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany/getPaging.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany/menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/controller/admin/CarCompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/CarCompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/discount/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/discount/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/controller/admin/CarCompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/controller/admin/CarCompanyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/carCompany.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/discount/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/discount/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +72,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/admin/discount" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -75,10 +86,12 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Thue_Xe\src\main\resources\templates\admin\carCompany" />
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\discount" />
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\Discount" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\images" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\js" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="source.controller.webPortal" />
@@ -87,12 +100,12 @@
       <recent name="source.config" />
       <recent name="source.utils" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Thue_Xe\src\main\resources\templates\admin\carCompany" />
+      <recent name="E:\Thue_Xe\src\main\resources\templates\admin\list" />
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\discount" />
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\images" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\js" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\static\css\404" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\Discount" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.application">
@@ -174,6 +187,7 @@
       <workItem from="1627803719275" duration="626000" />
       <workItem from="1628131306605" duration="8318000" />
       <workItem from="1628131306605" duration="7637000" />
+      <workItem from="1628302694292" duration="6449000" />
     </task>
     <task id="LOCAL-00001" summary="updateCarCompany">
       <created>1628175996923</created>
@@ -219,46 +233,46 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1628175993816" />
-    <state width="1323" height="138" key="GridCell.Tab.0.bottom" timestamp="1628259833863">
+    <state width="1323" height="391" key="GridCell.Tab.0.bottom" timestamp="1628307891994">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="138" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1628259833863" />
-    <state width="1323" height="138" key="GridCell.Tab.0.center" timestamp="1628259833863">
+    <state width="1323" height="391" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1628307891994" />
+    <state width="1323" height="391" key="GridCell.Tab.0.center" timestamp="1628307891993">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="138" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1628259833863" />
-    <state width="1323" height="138" key="GridCell.Tab.0.left" timestamp="1628259833863">
+    <state width="1323" height="391" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1628307891993" />
+    <state width="1323" height="391" key="GridCell.Tab.0.left" timestamp="1628307891993">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="138" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1628259833863" />
-    <state width="1323" height="138" key="GridCell.Tab.0.right" timestamp="1628259833863">
+    <state width="1323" height="391" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1628307891993" />
+    <state width="1323" height="391" key="GridCell.Tab.0.right" timestamp="1628307891994">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="138" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1628259833863" />
-    <state width="1323" height="138" key="GridCell.Tab.1.bottom" timestamp="1628259833864">
+    <state width="1323" height="391" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1628307891994" />
+    <state width="1323" height="391" key="GridCell.Tab.1.bottom" timestamp="1628307891994">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="138" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1628259833864" />
-    <state width="1323" height="138" key="GridCell.Tab.1.center" timestamp="1628259833864">
+    <state width="1323" height="391" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1628307891994" />
+    <state width="1323" height="391" key="GridCell.Tab.1.center" timestamp="1628307891994">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="138" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1628259833864" />
-    <state width="1323" height="138" key="GridCell.Tab.1.left" timestamp="1628259833863">
+    <state width="1323" height="391" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1628307891994" />
+    <state width="1323" height="391" key="GridCell.Tab.1.left" timestamp="1628307891994">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="138" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1628259833863" />
-    <state width="1323" height="138" key="GridCell.Tab.1.right" timestamp="1628259833864">
+    <state width="1323" height="391" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1628307891994" />
+    <state width="1323" height="391" key="GridCell.Tab.1.right" timestamp="1628307891994">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="138" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1628259833864" />
+    <state width="1323" height="391" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1628307891994" />
     <state x="275" y="90" key="Vcs.Push.Dialog.v2" timestamp="1628176006712">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="90" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1628176006712" />
-    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1627803730286">
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1628302701627">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1627803730286" />
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1628302701627" />
     <state x="492" y="286" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1628175915980">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
