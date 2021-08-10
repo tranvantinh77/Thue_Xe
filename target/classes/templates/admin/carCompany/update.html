@@ -71,7 +71,7 @@
                                     <span class="arrow" id="nav-span-carcompany"></span>
                                 </a>
                                 <ul class="sub-menu">
-                                    <li class="nav-item active open" id="nav-cataloging-bibliographic-insert">
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-insert">
                                         <a th:href="@{/admin/carCompany/insert}" class="nav-link ">
                                             <span class="title">Thêm mới</span>
                                         </a>
@@ -174,11 +174,11 @@
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <a th:href="@{/admin/carCompany/list}">Hãng xe</a>
+                            <a th:href="@{/admin/carcompany/list}">Hãng xe</a>
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <span>Thêm mới</span>
+                            <span>Cập nhật</span>
                         </li>
                     </ul>
                 </div>
@@ -186,9 +186,10 @@
                 <div class="content-main">
                     <div class="portlet-body">
                         <div class="tabbable-custom">
-                            <form action="#" method="post"
+                            <form action="#" th:action="@{/carCompany/insert}" th:object="${carCompanyEntity}" method="post"
                                   enctype="multipart/form-data">
                                 <div class="row">
+                                    <input th:field = "*{id}" type="hidden">
                                     <div class="col-md-3 xs-mt-12">
                                         <div class="portlet light portlet-fit portlet-form">
                                             <div class="portlet-body">
@@ -224,8 +225,8 @@
                                                                     <label>Mã hãng xe</label>
                                                                     <span class="field-validation-valid"
                                                                           id="CodeMsg" style="color: #e7505a"></span>
-                                                                    <input class="form-control"
-                                                                           id="code" name="code" type="text" value="">
+                                                                    <input class="form-control" readonly
+                                                                           th:field="*{code}" type="text" value="">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -239,8 +240,8 @@
                                                                           id="NameMsg"
                                                                           style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           id="name" name="name" type="text"
-                                                                           value=""/>
+                                                                           th:field="*{name}" type="text" value=""
+                                                                           />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -253,8 +254,8 @@
                                                                     <span class="field-validation-valid"
                                                                           id="DescriptionMsg" style="color: #e7505a"></span>
                                                                     <textarea class="form-control" rows="4"
-                                                                              id="description" name="description" type="text"
-                                                                              value=""></textarea>
+                                                                              th:field="*{description}" type="text" value=""
+                                                                             ></textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -316,7 +317,7 @@
     var core_add = {
 
         onClose: function () {
-            window.location.href = "/admin/carCompany/list";
+            window.location.href = "/admin/carcompany/list";
         },
 
     }

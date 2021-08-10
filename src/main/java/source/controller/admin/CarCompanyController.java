@@ -9,7 +9,9 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import source.config.AppStatus;
 import source.entity.CarCompanyEntity;
+import source.entity.DiscountEntity;
 import source.iService.CarCompanyService;
 import source.utils.PagningUtils;
 
@@ -51,7 +53,7 @@ public class CarCompanyController {
         model.addAttribute("isLastPage", isLastPage);
         model.addAttribute("carCompanyEntity", carCompanyEntity);
 
-        return "admin/carCompany";
+        return "admin/carCompany/list";
     }
     @RequestMapping(value = "/admin/carCompany/search", method = RequestMethod.GET)
     public String search(@RequestParam("keyword") Optional<String> keyword, Model model,
@@ -88,47 +90,61 @@ public class CarCompanyController {
         model.addAttribute("isLastPage", isLastPage);
         model.addAttribute("carCompanyEntity", carCompanyEntity);
 
-        return "admin/carCompany";
+        return "admin/carCompany/list";
     }
 
     @GetMapping("/admin/carCompany/insert")
-    public String insertCarCompany() {
-        return "admin/insertCarCompany";
+    public String insertCarCompany(
+            @ModelAttribute(value = "carCompanyEntity") CarCompanyEntity carCompanyEntity,
+            Model model) {
+        model.addAttribute("carCompanyEntity", carCompanyEntity);
+
+        return "admin/carCompany/insert";
     }
 
     @PostMapping("/carCompany/insert")
-    public String insert(@ModelAttribute CarCompanyEntity carCompanyEntity,
-                         RedirectAttributes ra,
-                         @RequestParam("file") MultipartFile file,
-                         @RequestParam("code") String code,
-                         @RequestParam("description") String description,
-                         @RequestParam("name") String name) throws IOException {
-        carCompanyEntity.setCode(code);
-        carCompanyEntity.setName(name);
-        carCompanyEntity.setActiveFag(0);
-        carCompanyEntity.setDescription(description);
-        String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-        carCompanyEntity.setImage(fileName);
-        if(!fileName.equals("")) {
-            String uploadDir = "./src/main/resources/static/CarCompany-Image";
-//            category.setIcon(fileName);
-            Path uploadPath = Paths.get(uploadDir);
-            if (!Files.exists(uploadPath)) {
-                Files.createDirectories(uploadPath);
-            }
-            try (InputStream inputStream = file.getInputStream()) {
-                Path filePath = uploadPath.resolve(fileName);
-                Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING);
-            } catch (IOException ioe) {
-                throw new IOException("Could not save image file: " + fileName, ioe);
-            }
-        }
+    public String insert(@ModelAttribute(value = "carCompanyEntity") CarCompanyEntity carCompanyEntity)  {
+        carCompanyEntity.setActiveFag(AppStatus.ActiveFag);
+        carCompanyEntity.setStatus(AppStatus.carCompany.Active);
         carCompanyService.save(carCompanyEntity);
-        return "redirect:/admin/carCompany";
+
+
+        return "redirect:/admin/carCompany/list";
+    }
+    @GetMapping("/admin/carCompany/update/{id}")
+    public String updateCarCompany(
+            @PathVariable(value = "id") Long id,
+            Model model) {
+        CarCompanyEntity carCompanyEntity = carCompanyService.findById(id);
+        model.addAttribute("carCompanyEntity", carCompanyEntity);
+
+        return "admin/carCompany/update";
     }
 
     @RequestMapping(value = "/admin/carCompany/update", method = RequestMethod.GET)
     public String updateCarCompany() {
         return "admin/updateCarCompany";
+    }
+
+    @PostMapping("/carCompany/status")
+    @ResponseBody
+    public CarCompanyEntity banner(@RequestBody CarCompanyEntity carCompanyEntity1) {
+        CarCompanyEntity carCompanyEntity = carCompanyService.findById(carCompanyEntity1.getId());
+        if (carCompanyEntity1.getStatus() == AppStatus.carCompany.Active) {
+            carCompanyEntity.setStatus(AppStatus.carCompany.Blocked);
+        } else {
+            carCompanyEntity.setStatus(AppStatus.carCompany.Active);
+        }
+        carCompanyService.save(carCompanyEntity);
+        return carCompanyEntity;
+    }
+
+    @PostMapping("/carCompany/delete")
+    @ResponseBody
+    public CarCompanyEntity delete(@RequestBody CarCompanyEntity carCompanyEntity1) {
+        CarCompanyEntity carCompanyEntity = carCompanyService.findById(carCompanyEntity1.getId());
+        carCompanyEntity.setActiveFag(AppStatus.DeleteActiveFag);
+        carCompanyService.save(carCompanyEntity);
+        return carCompanyEntity;
     }
 }

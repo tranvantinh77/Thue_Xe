@@ -31,7 +31,7 @@ public class CarCompanyServiceImpl implements CarCompanyService {
 
     @Override
     public List<CarCompanyEntity> findByKeyword(String keyword) {
-        return findByKeyword(keyword);
+        return carCompanyDAO.findByKeyword(keyword);
     }
 
     @Override
