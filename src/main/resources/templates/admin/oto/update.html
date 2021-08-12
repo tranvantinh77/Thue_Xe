@@ -182,8 +182,9 @@
                 <div class="content-main">
                     <div class="portlet-body">
                         <div class="tabbable-custom">
-                            <form action="#" method="post"
+                            <form action="#" th:action="@{/oto/save}" th:object="${otoEntity}" method="post"
                                   enctype="multipart/form-data">
+                                <input class="form-control" name="id" type="hidden" th:value="${otoEntity.id}">
                                 <div class="row">
                                     <div class="col-md-3 xs-mt-12">
                                         <div class="portlet light portlet-fit portlet-form">
@@ -221,7 +222,7 @@
                                                                     <span class="field-validation-valid"
                                                                           id="CodeOtoMsg" style="color: #e7505a"></span>
                                                                     <input class="form-control" readonly
-                                                                           id="code" name="code" type="text" value="">
+                                                                           th:field="*{code}" type="text" value="">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -235,7 +236,7 @@
                                                                           id="NameOtoMsg"
                                                                           style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           id="name" name="name" type="text"
+                                                                           th:field="*{name}" type="text"
                                                                            value=""/>
                                                                 </div>
                                                             </div>
@@ -249,7 +250,7 @@
                                                                     <span class="field-validation-valid"
                                                                           id="LicensePlatesMsg" style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           id="licenseplates" name="licenseplates" type="text" value="">
+                                                                           th:field="*{license_plates}" type="text" value="">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -262,7 +263,7 @@
                                                                     <span class="field-validation-valid"
                                                                           id="PriceMsg" style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           id="price" name="price" type="number" value="">
+                                                                           th:field="*{price}" type="number" value="">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -275,7 +276,7 @@
                                                                     <span class="field-validation-valid"
                                                                           id="DescriptionMsg" style="color: #e7505a"></span>
                                                                     <textarea class="form-control" rows="6"
-                                                                              id="description" name="description" value=""></textarea>
+                                                                              th:field="*{description}" value=""></textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -288,10 +289,11 @@
                                                                     <span class="field-validation-valid"
                                                                           style="color: #e7505a"></span>
                                                                     <select class="form-control"
-                                                                            id="carcompany" name="carcompany">
-                                                                        <option value="0">-----Hãng xe-----</option>
-                                                                        <option value="0">Huyndai</option>
-                                                                        <option value="1">Winfast</option>
+                                                                            th:field="*{car_company_id}">
+                                                                        <option th:each="car_company : ${carCompany}"
+                                                                                th:value="${car_company.id}"
+                                                                                th:text="${car_company.name}"
+                                                                                th:selected="${otoEntity.car_company_id.id == car_company.id}"></option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -303,10 +305,11 @@
                                                                     <span class="field-validation-valid"
                                                                           style="color: #e7505a"></span>
                                                                     <select class="form-control"
-                                                                            id="category" name="category">
-                                                                        <option value="0">-----Loại xe-----</option>
-                                                                        <option value="0">Xe 4 chỗ</option>
-                                                                        <option value="1">Xe 7 chỗ</option>
+                                                                            th:field="*{category_id}">
+                                                                        <option th:each="categores : ${category}"
+                                                                                th:value="${categores.id}"
+                                                                                th:text="${categores.name}"
+                                                                                th:selected="${otoEntity.category_id.id == categores.id}"></option>
                                                                     </select>
                                                                 </div>
                                                             </div>
