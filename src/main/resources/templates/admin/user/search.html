@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<body>
+    <div class="search-box">
+    <form th:action="@{/admin/user/search}" method="GET">
+        <div class="row">
+            <div class="col-md-12 xs-mt-12">
+                <div class="input-search-single">
+                    <input autofocus type="text" name="keyword" id="keyword"
+                           class="form-control"
+                           placeholder="Nhập từ khóa ...">
+                    <button type="submit" class="btn green mr0 btn-search-text-single">
+                        <i class="icon-magnifier mr5"></i>Tìm kiếm
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

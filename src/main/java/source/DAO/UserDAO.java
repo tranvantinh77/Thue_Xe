@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import source.entity.UserEntity;
 import source.entity.UserEntity;
+import source.entity.UserInfoEntity;
 
 import java.util.List;
 
@@ -40,4 +41,7 @@ public interface UserDAO extends JpaRepository<UserEntity,Long> {
     @Query(value = "select * from user where user_name =:user_name and password =:password",nativeQuery = true)
     UserEntity findByUserNameAndPassword(@Param("user_name") String user_name,
                                 @Param("password") String password);
+
+    @Query(value = "select * from user where active_fag=0 and user_info_id_id =:user_info_id",nativeQuery = true)
+    UserEntity findByUserInfoId (@Param("user_info_id") Long user_info_id);
 }

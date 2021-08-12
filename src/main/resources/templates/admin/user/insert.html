@@ -186,7 +186,7 @@
                 <div class="content-main">
                     <div class="portlet-body">
                         <div class="tabbable-custom">
-                            <form action="#" method="post"
+                            <form action="#" th:action="@{/user/insert}" th:object="${userInfoEntity}" method="post"
                                   enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-md-3 xs-mt-12">
@@ -196,7 +196,7 @@
                                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                                         <div class="fileinput-new thumbnail"
                                                              style="width: 180px; height: 250px;">
-                                                            <img id="img-info-user" src="/images/default.png"
+                                                            <img id="img-info-user" src="/static/images/default.png"
                                                                  alt="">
                                                         </div>
                                                         <div>
@@ -236,7 +236,7 @@
                                                                     <span class="field-validation-valid"
                                                                           id="FullNameMsg" style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           id="name" name="name" type="text" value="">
+                                                                           th:field="*{name}" type="text" value="">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -250,7 +250,7 @@
                                                                           id="EmailMsg"
                                                                           style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           id="email" name="email" type="email"
+                                                                           th:field="*{email}" type="email"
                                                                            value=""/>
                                                                 </div>
                                                             </div>
@@ -263,7 +263,7 @@
                                                                           id="CMNDMsg"
                                                                           style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           id="cmnd" name="cmnd" type="number"
+                                                                           th:field="*{CMND_CCCD}" type="number"
                                                                            value=""/>
                                                                 </div>
                                                             </div>
@@ -277,7 +277,7 @@
                                                                     <span class="field-validation-valid"
                                                                           id="BirthdayMsg" style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           id="birthday" name="birthday" type="date" value="">
+                                                                           th:field="*{birthday}" type="date" value="">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -288,7 +288,7 @@
                                                                     <span class="field-validation-valid"
                                                                           style="color: #e7505a"></span>
                                                                     <select class="form-control"
-                                                                            id="gender" name="gender">
+                                                                            th:field="*{gender}">
                                                                         <option value="0">Nam</option>
                                                                         <option value="1">Nữ</option>
                                                                     </select>
@@ -304,7 +304,7 @@
                                                                     <span class="field-validation-valid"
                                                                           id="AddressMsg" style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           id="address" name="address" type="text" value="">
+                                                                           th:field="*{address}" type="text" value="">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -316,7 +316,7 @@
                                                                           id="PhoneMsg"
                                                                           style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           id="phone" name="phone" type="number"
+                                                                           th:field="*{phone}" type="number"
                                                                            value=""/>
                                                                 </div>
                                                             </div>
