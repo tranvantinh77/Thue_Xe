@@ -23,8 +23,8 @@
       <change beforePath="$PROJECT_DIR$/target/classes/source/iService/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/iService/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/source/service/UserInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/service/UserInfoServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/source/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/service/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/insertUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/insertUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/updateUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/updateUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/insertUser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/updateUser.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/userInfo.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -214,7 +214,7 @@
       <workItem from="1628472603850" duration="60000" />
       <workItem from="1628472708474" duration="2689000" />
       <workItem from="1628563429910" duration="14103000" />
-      <workItem from="1628731488047" duration="1828000" />
+      <workItem from="1628731488047" duration="2078000" />
     </task>
     <servers />
   </component>

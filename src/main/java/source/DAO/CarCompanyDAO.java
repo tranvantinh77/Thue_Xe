@@ -24,6 +24,6 @@ public interface CarCompanyDAO extends JpaRepository<CarCompanyEntity, Long> {
     @Query(value = "select * from car_company carCom where (carCom.active_fag=0) and (carCom.code like %:keyword% or carCom.name like %:keyword% )",nativeQuery = true)
     List<CarCompanyEntity> findByKeyword(@Param("keyword") String keyword, Pageable pageable);
 
-    @Query(value = "select * from car_company dis where (carCom.active_fag=0) and (carCom.code like %:keyword% or carCom.name like %:keyword% )",nativeQuery = true)
+    @Query(value = "select * from car_company carCom where (carCom.active_fag=0) and (carCom.code like %:keyword% or carCom.name like %:keyword% )",nativeQuery = true)
     List<CarCompanyEntity> findByKeyword(@Param("keyword") String keyword);
 }

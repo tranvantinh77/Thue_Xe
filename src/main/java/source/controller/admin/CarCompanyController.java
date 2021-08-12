@@ -5,15 +5,22 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import source.config.AppStatus;
 import source.entity.CarCompanyEntity;
 import source.entity.DiscountEntity;
 import source.iService.CarCompanyService;
 import source.utils.PagningUtils;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.Optional;
 
@@ -46,7 +53,7 @@ public class CarCompanyController {
         model.addAttribute("isLastPage", isLastPage);
         model.addAttribute("carCompanyEntity", carCompanyEntity);
 
-        return "admin/carCompany";
+        return "admin/carCompany/list";
     }
     @RequestMapping(value = "/admin/carCompany/search", method = RequestMethod.GET)
     public String search(@RequestParam("keyword") Optional<String> keyword, Model model,
@@ -83,16 +90,61 @@ public class CarCompanyController {
         model.addAttribute("isLastPage", isLastPage);
         model.addAttribute("carCompanyEntity", carCompanyEntity);
 
-        return "admin/carCompany";
+        return "admin/carCompany/list";
     }
 
-    @RequestMapping(value = "/admin/carCompany/insert", method = RequestMethod.GET)
-    public String insertCarCompany() {
-        return "admin/insertCarCompany";
+    @GetMapping("/admin/carCompany/insert")
+    public String insertCarCompany(
+            @ModelAttribute(value = "carCompanyEntity") CarCompanyEntity carCompanyEntity,
+            Model model) {
+        model.addAttribute("carCompanyEntity", carCompanyEntity);
+
+        return "admin/carCompany/insert";
+    }
+
+    @PostMapping("/carCompany/insert")
+    public String insert(@ModelAttribute(value = "carCompanyEntity") CarCompanyEntity carCompanyEntity)  {
+        carCompanyEntity.setActiveFag(AppStatus.ActiveFag);
+        carCompanyEntity.setStatus(AppStatus.carCompany.Active);
+        carCompanyService.save(carCompanyEntity);
+
+
+        return "redirect:/admin/carCompany/list";
+    }
+    @GetMapping("/admin/carCompany/update/{id}")
+    public String updateCarCompany(
+            @PathVariable(value = "id") Long id,
+            Model model) {
+        CarCompanyEntity carCompanyEntity = carCompanyService.findById(id);
+        model.addAttribute("carCompanyEntity", carCompanyEntity);
+
+        return "admin/carCompany/update";
     }
 
     @RequestMapping(value = "/admin/carCompany/update", method = RequestMethod.GET)
     public String updateCarCompany() {
         return "admin/updateCarCompany";
+    }
+
+    @PostMapping("/carCompany/status")
+    @ResponseBody
+    public CarCompanyEntity banner(@RequestBody CarCompanyEntity carCompanyEntity1) {
+        CarCompanyEntity carCompanyEntity = carCompanyService.findById(carCompanyEntity1.getId());
+        if (carCompanyEntity1.getStatus() == AppStatus.carCompany.Active) {
+            carCompanyEntity.setStatus(AppStatus.carCompany.Blocked);
+        } else {
+            carCompanyEntity.setStatus(AppStatus.carCompany.Active);
+        }
+        carCompanyService.save(carCompanyEntity);
+        return carCompanyEntity;
+    }
+
+    @PostMapping("/carCompany/delete")
+    @ResponseBody
+    public CarCompanyEntity delete(@RequestBody CarCompanyEntity carCompanyEntity1) {
+        CarCompanyEntity carCompanyEntity = carCompanyService.findById(carCompanyEntity1.getId());
+        carCompanyEntity.setActiveFag(AppStatus.DeleteActiveFag);
+        carCompanyService.save(carCompanyEntity);
+        return carCompanyEntity;
     }
 }
