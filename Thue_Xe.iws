@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/DAO/CategoryDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/DAO/OtoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/iService/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/iService/OtoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/service/CategoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/service/OtoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/oto/breadcrumb.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/oto/getPaging.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/oto/menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/oto/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/controller/admin/OtoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/OtoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/insertOto.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/oto/insert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/oto.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/oto/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/updateOto.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/oto/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/controller/admin/OtoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/controller/admin/OtoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/insertOto.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/oto.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/updateOto.html" beforeDir="false" />
-    </list>
+    <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +191,7 @@
       <workItem from="1628472708474" duration="2689000" />
       <workItem from="1628563429910" duration="14103000" />
       <workItem from="1628731488047" duration="4770000" />
-      <workItem from="1628752991199" duration="6089000" />
+      <workItem from="1628752991199" duration="6328000" />
     </task>
     <servers />
   </component>
