@@ -12,6 +12,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import source.config.AppStatus;
 import source.entity.CarCompanyEntity;
 import source.entity.DiscountEntity;
+import source.entity.OtoEntity;
 import source.iService.CarCompanyService;
 import source.utils.PagningUtils;
 
@@ -102,28 +103,29 @@ public class CarCompanyController {
         return "admin/carCompany/insert";
     }
 
-    @PostMapping("/carCompany/insert")
-    public String insert(@ModelAttribute(value = "carCompanyEntity") CarCompanyEntity carCompanyEntity)  {
-        carCompanyEntity.setActiveFag(AppStatus.ActiveFag);
-        carCompanyEntity.setStatus(AppStatus.carCompany.Active);
-        carCompanyService.save(carCompanyEntity);
-
-
-        return "redirect:/admin/carCompany/list";
-    }
-    @GetMapping("/admin/carCompany/update/{id}")
-    public String updateCarCompany(
-            @PathVariable(value = "id") Long id,
-            Model model) {
+    @RequestMapping(value = "/admin/carCompany/update", method = RequestMethod.GET)
+    public String updateCarCompany(@RequestParam(value = "id") Long id, Model model) {
         CarCompanyEntity carCompanyEntity = carCompanyService.findById(id);
-        model.addAttribute("carCompanyEntity", carCompanyEntity);
-
+        model.addAttribute("carCompanyEntity",carCompanyEntity);
         return "admin/carCompany/update";
     }
 
-    @RequestMapping(value = "/admin/carCompany/update", method = RequestMethod.GET)
-    public String updateCarCompany() {
-        return "admin/updateCarCompany";
+    @PostMapping("/carCompany/save")
+    public String insert(@ModelAttribute(value = "carCompanyEntity") CarCompanyEntity carCompanyEntity,
+                         @RequestParam("id") Long id)  {
+        if (id == null) {
+            carCompanyEntity.setActiveFag(AppStatus.ActiveFag);
+            carCompanyEntity.setStatus(AppStatus.carCompany.Active);
+            carCompanyService.save(carCompanyEntity);
+        }else {
+            CarCompanyEntity carCompany = carCompanyService.findById(id);
+            carCompany.setName(carCompanyEntity.getName());
+            carCompany.setCode(carCompanyEntity.getCode());
+            carCompany.setDescription(carCompanyEntity.getDescription());
+            carCompanyService.save(carCompany);
+        }
+
+        return "redirect:/admin/carCompany/list";
     }
 
     @PostMapping("/carCompany/status")

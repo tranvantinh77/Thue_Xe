@@ -186,10 +186,10 @@
                 <div class="content-main">
                     <div class="portlet-body">
                         <div class="tabbable-custom">
-                            <form action="#" th:action="@{/carCompany/insert}" th:object="${carCompanyEntity}" method="post"
+                            <form action="#" th:action="@{/carCompany/save}" th:object="${carCompanyEntity}" method="post"
                                   enctype="multipart/form-data">
+                                <input name="id" th:value="${carCompanyEntity.id}" type="hidden">
                                 <div class="row">
-                                    <input th:field = "*{id}" type="hidden">
                                     <div class="col-md-3 xs-mt-12">
                                         <div class="portlet light portlet-fit portlet-form">
                                             <div class="portlet-body">
@@ -225,7 +225,7 @@
                                                                     <label>Mã hãng xe</label>
                                                                     <span class="field-validation-valid"
                                                                           id="CodeMsg" style="color: #e7505a"></span>
-                                                                    <input class="form-control" readonly
+                                                                    <input class="form-control"
                                                                            th:field="*{code}" type="text" value="">
                                                                 </div>
                                                             </div>

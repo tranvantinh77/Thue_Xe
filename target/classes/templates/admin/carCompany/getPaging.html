@@ -31,7 +31,6 @@
                         <thead class="flip-content1">
                         <tr>
                             <th class="text-center" style="width: 40px">#</th>
-                            <th class="text-center">Hình ảnh</th>
                             <th class="text-center">Mã hãng xe</th>
                             <th class="text-center">Tên hãng xe</th>
                             <th class="text-center">Mô tả</th>
@@ -48,8 +47,11 @@
                                 th:text="${iterStat.count+(pagesize*(currentPage))}">
                                 #
                             </td>
-                            <td th:text="${listCarCom.image}">Hình ảnh</td>
-                            <td th:text="${listCarCom.code}">Mã hãng xe</td>
+                            <td class="text-center">
+                                <a th:href="@{/admin/carCompany/update(id=${listCarCom.id})}">
+                                    <span th:text="${listCarCom.code}"></span>
+                                </a>
+                            </td>
                             <td th:text="${listCarCom.name}">Tên hãng xe</td>
                             <td th:text="${listCarCom.description}">Mô tả</td>
                             <td class="text-center" th:utext="${listCarCom.updateBy}">
@@ -63,9 +65,9 @@
                                 th:utext="${listCarCom.statusDisplay()}">Trạng thái
                             </td>
                             <td class="text-right">
-                                <a class="btn btn-xs btn-icon-only btn-info"
-                                        title="Cập nhật"
-                                       th:href="@{/admin/carCompany/update/{id}(id = ${listCarCom.id})}">
+                                <a th:href="@{/admin/carCompany/update(id=${listCarCom.id})}"
+                                   class="btn btn-xs btn-icon-only btn-info"
+                                   title="Cập nhật">
                                     <i class="icon icon-pencil mr5"></i>
                                 </a>
 

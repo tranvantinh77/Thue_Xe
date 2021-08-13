@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:replace="~{fragments/layoutAdmin :: title}">Title</title>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: meta}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: link}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: head/script}"></th:block>
+
+
+</head>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+<div class="page-wrapper">
+    <!-- BEGIN HEADER -->
+    <div th:insert="~{fragments/headerAdminPartial :: headerAdminPartial}"></div>
+    <!-- END HEADER -->
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"></div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN PROGRESSBAR -->
+        <div th:insert="~{fragments/loadingPartial :: loadingPartial}"></div>
+        <!-- END PROGRESSBAR -->
+        <!-- BEGIN PROGRESSBAR -->
+        <div th:insert="~{fragments/progressBarPartial :: progressBarPartial}"></div>
+        <!-- END PROGRESSBAR -->
+        <!-- BEGIN NOTIFICATION -->
+        <div th:insert="~{fragments/notificationPartial :: notificationPartial}"></div>
+        <!-- END NOTIFICATION -->
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar-wrapper">
+            <!-- BEGIN SIDEBAR -->
+            <th:block th:include="/admin/banner/menu.html"></th:block>
+            <!-- END SIDEBAR -->
+        </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <div class="page-content lv-pageContent">
+                <!-- BEGIN PAGE BAR -->
+                <th:block th:include="/admin/banner/breadcrumb.html"></th:block>
+                <!-- END PAGE BAR -->
+                <div class="page-content-main page-search">
+                    <div class="page-content-1zone">
+                        <div class="portlet light pt0 pb0">
+                            <div class="portlet-body pb0">
+                                <!--SEARCH-->
+                                <th:block th:include="/admin/banner/search.html"></th:block>
+                                    <!--END SEARCH-->
+                                <!--LIST CONTENT-->
+                                <div id="body-content">
+
+                                    <div class="row mt10">
+                                        <div class="col-md-6">
+                                            <div class="doc-group-title">
+                                                <span aria-hidden="true" class="fa fa-user-secret"></span>
+                                                Tìm thấy tổng số <span id="lbl-getpaging-total"
+                                                                       class="span-total" th:text="${list.size()}"></span>biểu ghi
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="doc-group-title pull-right">
+                                                <a th:href="@{/admin/banner/insert}"
+                                                   class="btn green">
+                                                    <i class="icon icon-plus mr5"></i>
+                                                    Thêm
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt10">
+                                        <div class="col-md-12">
+                                            <div class="searh-result">
+                                                <div id="table-scroll" class="table-scroll">
+                                                    <div class="table-scrollable" style="min-height:initial !important">
+                                                        <table class="table table-bordered main-table"
+                                                               style="width: 1600px">
+                                                            <thead class="flip-content1">
+                                                            <tr>
+                                                                <th class="text-center" style="width: 40px">#</th>
+                                                                <th class="text-center">Hình ảnh</th>
+                                                                <th class="text-center">Mã banner</th>
+                                                                <th class="text-center">Tên banner</th>
+                                                                <th class="text-center">Ngày cập nhật</th>
+                                                                <th class="text-center">Trạng thái</th>
+                                                                <th class="text-center">Thao tác</th>
+                                                            </tr>
+                                                            </thead>
+
+                                                            <tbody id="bodyView">
+                                                            <tr th:each="listBanner,iterStat : ${banner}">
+                                                                <td class="text-center"
+                                                                    th:text="${iterStat.count+(pagesize*(currentPage))}">
+                                                                    #
+                                                                </td>
+                                                                <td th:text="${listBanner.image}">Hình ảnh</td>
+                                                                <td class="text-center" th:text="${listBanner.code}" >Mã banner</td>
+                                                                <td th:text="${listBanner.name}">Tên banner</td>
+                                                                <td class="text-center"
+                                                                    th:utext="${#dates.format(listBanner.updateDate, 'dd-MM-yyyy')}">
+                                                                    Ngày cập nhật
+                                                                </td>
+                                                                <td class="text-center"
+                                                                    th:utext="${listBanner.statusDisplay()}">Trạng thái
+                                                                </td>
+                                                                <td class="text-right">
+                                                                    <a class="btn btn-xs btn-icon-only btn-info"
+                                                                            title="Cập nhật"
+                                                                       th:href="@{/admin/banner/update(id=${listBanner.id})}">
+                                                                        <i class="icon icon-pencil mr5"></i>
+                                                                    </a>
+
+                                                                    <button class="btn btn-xs red btn-icon-only"
+                                                                            title="Xóa"
+                                                                            th:onclick="'core_lstpage.onDelete('+${listBanner.id}+')'">
+                                                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                                                    </button>
+
+                                                                    <button th:if="${listBanner.status == 1}"
+                                                                            class="btn btn-xs yellow btn-icon-only"
+                                                                            title="Duyệt"
+                                                                            th:onclick="'core_lstpage.onUpdateStatus('+${listBanner.id}+','+${listBanner.status}+')'">
+                                                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                                                    </button>
+
+                                                                    <button th:if="${listBanner.status == 0}"
+                                                                            class="btn btn-xs green btn-icon-only"
+                                                                            title="Hủy duyệt"
+                                                                            th:onclick="'core_lstpage.onUpdateStatus('+${listBanner.id}+','+${listBanner.status}+')'">
+                                                                        <i class="fa fa-minus-square"
+                                                                           aria-hidden="true"></i>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12" th:if="${list.size()} > ${pagesize}">
+                                            <div class="pagination-control">
+                                                <div class="row">
+                                                    <div class="col-md-12 pull-right">
+                                                        <div id="page-selection" class="padding-top-15 clearboth">
+                                                            <ul class="pagination">
+                                                                <li th:class="${isFirstPage}? 'page-item disabled' : 'page-item'">
+                                                                    <a th:href="@{/admin/banner/list(pageindex=1)}"
+                                                                       class="page-link">
+                                                                        <span class="ms-bold fa fa-angle-double-left"></span>
+                                                                    </a>
+                                                                </li>
+                                                                <li th:each="page : ${pages}"
+                                                                    th:class="${page == currentPage ? 'page-item active' :'page-item' }">
+                                                                    <a th:href="@{/admin/banner/list(pageindex=${page + 1})}"
+                                                                       class="page-link">
+                                                                        <span th:utext="${page+1}"></span>
+                                                                    </a>
+                                                                </li>
+                                                                <li th:class="${isLastPage}? 'page-item disabled' : 'page-item'">
+                                                                    <a th:href="@{/admin/banner/list(pageindex=${endPage})}"
+                                                                       class="page-link">
+                                                                        <span class="ms-bold fa fa-angle-double-right"></span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--END LIST CONTENT-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTENT BODY -->
+            <!-- BEGIN MODAL -->
+            <!-- END MODAL -->
+        </div>
+        <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    var ctorPage = {
+        UrlDelete: '/banner/delete',
+        updateStatus: '/banner/status',
+        btnCssDefault: 'a.btn-df',
+        TextYes: 'Có',
+        TextNo: 'Không',
+        TextDelAskMsg: 'Bạn có chắc chắn XÓA biểu ghi này ?'
+    };
+
+    var core_lstpage = {
+
+        onDelete: function (id) {
+            bootbox.confirm({
+                message: ctorPage.TextDelAskMsg,
+                buttons: {
+                    confirm: {
+                        label: ctorPage.TextYes,
+                        className: 'btn-success'
+                    },
+                    cancel: {
+                        label: ctorPage.TextNo,
+                        className: 'btn-danger'
+                    }
+                },
+                callback: function (result) {
+                    if (result) {
+                        var param = {
+                            id: id
+                        }
+                        ShowLoading();
+                        core_services.postAsync(ctorPage.UrlDelete, JSON.stringify(param)
+                            , function (res) {
+                                HideLoading();
+                                if (res) {
+                                    core_lstpage.onReload();
+                                } else {
+                                    // showErrorToast();
+                                }
+                                ore_lstpage.onReload();
+                            }
+                            , function () {
+                                // showErrorToast();
+                                core_lstpage.onReload();
+                            });
+                    }
+                }
+            });
+        },
+
+        onUpdateStatus: function (_id, _status) {
+            var msg = 'Bạn có chắc chắn muốn duyệt banner này không ?';
+            if (_status === 0) {
+                msg = 'Bạn có chắc chắn hủy duyệt banner này không ?';
+            }
+            bootbox.confirm({
+                message: msg,
+                buttons: {
+                    confirm: {
+                        label: ctorPage.TextYes,
+                        className: 'btn-success'
+                    },
+                    cancel: {
+                        label: ctorPage.TextNo,
+                        className: 'btn-danger'
+                    }
+                },
+                callback: function (result) {
+                    if (result) {
+                        var Book = {
+                            id: _id,
+                            status: _status
+                        }
+                        console.log(_id);
+                        ShowLoading();
+                        core_services.postAsync(ctorPage.updateStatus, JSON.stringify(Book)
+                            , function (res) {
+                                HideLoading();
+                                if (res) {
+                                    core_lstpage.onReload()
+                                } else {
+                                    // core_notification.updateFail();
+                                    core_lstpage.onReload()
+                                }
+                                core_lstpage.onReload();
+                            }
+                            , function () {
+                                // core_notification.updateFail();
+                                core_lstpage.onReload();
+                            });
+                    }
+                }
+            });
+        },
+
+        onReload: function () {
+            HideLoading();
+            window.location.reload();
+
+        },
+
+    }
+</script>
