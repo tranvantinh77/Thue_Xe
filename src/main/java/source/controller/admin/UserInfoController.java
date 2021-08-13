@@ -7,10 +7,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import source.config.AppStatus;
-import source.entity.DiscountEntity;
 import source.entity.UserEntity;
+import source.entity.UserInfoEntity;
+import source.iService.RoleService;
 import source.iService.UserInfoService;
 import source.iService.UserService;
+import source.utils.EncrytedPasswordUtils;
 import source.utils.PagningUtils;
 
 import java.util.List;
@@ -25,6 +27,9 @@ public class UserInfoController {
     @Autowired
     private UserInfoService userInfoService;
 
+    @Autowired
+    private RoleService roleService;
+
     @RequestMapping(value = "/admin/user/list", method = RequestMethod.GET)
     public String books(Model model, @RequestParam(name = "pageindex", required = false, defaultValue = "1") Integer page,
                         @RequestParam(name = "size", required = false, defaultValue = "20") Integer size) {
@@ -38,7 +43,7 @@ public class UserInfoController {
         PagningUtils pagning = new PagningUtils(page, size, list.size());
         List<Integer> listPages = pagning.pagning();
         boolean isFirstPage = pagning.checkPage(page, 0);
-        boolean isLastPage = pagning.checkPage(page, (pagning.getNum()-1));
+        boolean isLastPage = pagning.checkPage(page, (pagning.getNum() - 1));
         model.addAttribute("pagesize", size);
         model.addAttribute("pages", listPages);
         model.addAttribute("endPage", (pagning.getNum()));
@@ -47,7 +52,7 @@ public class UserInfoController {
         model.addAttribute("list", list);
         model.addAttribute("isLastPage", isLastPage);
 
-        return "admin/userInfo";
+        return "admin/user/list";
     }
 
     @RequestMapping(value = "/admin/user/search", method = RequestMethod.GET)
@@ -72,7 +77,7 @@ public class UserInfoController {
         PagningUtils pagning = new PagningUtils(page, size, list.size());
         List<Integer> listPages = pagning.pagning();
         boolean isFirstPage = pagning.checkPage(page, 0);
-        boolean isLastPage = pagning.checkPage(page, (pagning.getNum()-1));
+        boolean isLastPage = pagning.checkPage(page, (pagning.getNum() - 1));
         model.addAttribute("pagesize", size);
         model.addAttribute("pages", listPages);
         model.addAttribute("endPage", (pagning.getNum()));
@@ -81,7 +86,7 @@ public class UserInfoController {
         model.addAttribute("list", list);
         model.addAttribute("isLastPage", isLastPage);
 
-        return "admin/userInfo";
+        return "admin/user/list";
     }
 
     @PostMapping("/user/status")
@@ -98,13 +103,53 @@ public class UserInfoController {
     }
 
     @RequestMapping(value = "/admin/user/insert", method = RequestMethod.GET)
-    public String insertUser() {
-        return "admin/insertUser";
+    public String insertUser(Model model) {
+        UserInfoEntity userInfoEntity = new UserInfoEntity();
+        UserEntity userEntity = new UserEntity();
+        model.addAttribute("userInfoEntity", userInfoEntity);
+        model.addAttribute("userEntity", userEntity);
+        return "admin/user/insert";
+    }
+
+    @RequestMapping(value = "/user/insert", method = RequestMethod.POST)
+    public String insert(@ModelAttribute("userInfoEntity") UserInfoEntity userInfoEntity,
+                         @RequestParam("username") String username,
+                         @RequestParam("password") String password) {
+        userInfoEntity.setActiveFag(AppStatus.ActiveFag);
+        userInfoService.save(userInfoEntity);
+
+        UserEntity userEntity = new UserEntity();
+        userEntity.setUser_name(username);
+        userEntity.setPassword(EncrytedPasswordUtils.encrytePassword(password));
+        userEntity.setRole_id(roleService.findByRoleAddmin());
+        userEntity.setUser_info_id(userInfoService.findByEmail(userInfoEntity.getEmail()));
+        userEntity.setStatus(AppStatus.user.Active);
+        userEntity.setActiveFag(AppStatus.ActiveFag);
+        userService.save(userEntity);
+        return "redirect:/admin/user/list";
     }
 
     @RequestMapping(value = "/admin/user/update", method = RequestMethod.GET)
-    public String updateUser() {
-        return "admin/updateUser";
+    public String updateUser(@RequestParam(value = "id") Long id, Model model) {
+        UserInfoEntity userInfoEntity = userInfoService.findById(id);
+        UserEntity userEntity = userService.findByUserInfoId(id);
+        model.addAttribute("userInfoEntity", userInfoEntity);
+        model.addAttribute("userEntity", userEntity);
+        return "admin/user/update";
     }
 
+    @RequestMapping(value = "/user/update", method = RequestMethod.POST)
+    public String update(@ModelAttribute("userInfoEntity") UserInfoEntity userInfoEntity,
+                         @RequestParam("id") Long id) {
+        UserInfoEntity userInfo = userInfoService.findById(id);
+        userInfo.setName(userInfoEntity.getName());
+        userInfo.setEmail(userInfoEntity.getEmail());
+        userInfo.setBirthday(userInfoEntity.getBirthday());
+        userInfo.setGender(userInfoEntity.getGender());
+        userInfo.setPhone(userInfoEntity.getPhone());
+        userInfo.setCMND_CCCD(userInfoEntity.getCMND_CCCD());
+        userInfo.setAddress(userInfoEntity.getAddress());
+        userInfoService.save(userInfo);
+        return "redirect:/admin/user/list";
+    }
 }

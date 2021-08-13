@@ -13,6 +13,8 @@ public interface UserService {
 
     UserEntity findById(long id);
 
+    UserEntity findByUserInfoId(long user_info_id);
+
     UserEntity findByUserNameAndPassword(String user_name, String password);
 
     List<UserEntity> findByActiveFag(Pageable pageable);

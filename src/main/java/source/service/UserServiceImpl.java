@@ -32,6 +32,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public UserEntity findByUserInfoId(long user_info_id) {
+        return userDAO.findByUserInfoId(user_info_id);
+    }
+
+    @Override
     public UserEntity findByUserNameAndPassword(String user_name, String password) {
         return userDAO.findByUserNameAndPassword(user_name,password);
     }

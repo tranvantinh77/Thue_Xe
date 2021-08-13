@@ -8,6 +8,7 @@ import source.entity.UserInfoEntity;
 import source.iService.UserInfoService;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserInfoServiceImpl implements UserInfoService {
@@ -42,7 +43,14 @@ public class UserInfoServiceImpl implements UserInfoService {
 
     @Override
     public UserInfoEntity findById(Long id) {
-        return userInfoDAO.findById1(id);
+        Optional<UserInfoEntity> optional = userInfoDAO.findById(id);
+        UserInfoEntity userInfoEntity = null;
+        if (optional.isPresent()) {
+            userInfoEntity = optional.get();
+        }else {
+            throw new RuntimeException("UserInfo not found id:"+id);
+        }
+        return userInfoEntity;
     }
 
     @Override

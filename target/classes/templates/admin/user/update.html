@@ -48,14 +48,14 @@
                             <span class="uppercase title">Trang chủ</span>
                             <span class="selected"></span></a>
                     </li>
-                    <li class="nav-item active open" id="nav-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef">
+                    <li class="nav-item" id="nav-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef">
                         <a class="nav-link nav-toggle">
                             <i class="fa fa-car"></i>
                             <span class="uppercase title">Quản lý xe</span>
                             <span class="arrow" id="nav-span-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef"></span>
                         </a>
                         <ul class="sub-menu">
-                            <li class="nav-item active open" id="nav-patronmanagement-insert">
+                            <li class="nav-item" id="nav-patronmanagement-insert">
                                 <a th:href="@{/admin/oto/insert}" class="nav-link">
                                     <span class="title">Thêm mới</span>
                                 </a>
@@ -136,7 +136,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item" id="nav-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef">
+                    <li class="nav-item active open" id="nav-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef">
                         <a class="nav-link nav-toggle">
                             <i class="icon-users"></i>
                             <span class="uppercase title">Quản lý người dùng</span>
@@ -170,11 +170,15 @@
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <a href="">Quản lý xe</a>
+                            <a href="">Quản lý người dùng</a>
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <span>Thêm mới</span>
+                            <a th:href="@{/admin/user/list}">Người dùng</a>
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <span>Cập nhật</span>
                         </li>
                     </ul>
                 </div>
@@ -182,8 +186,9 @@
                 <div class="content-main">
                     <div class="portlet-body">
                         <div class="tabbable-custom">
-                            <form action="#" method="post"
+                            <form action="#" th:action="@{/user/update}" th:object="${userInfoEntity}" method="post"
                                   enctype="multipart/form-data">
+                                <input class="form-control" name="id" type="hidden" th:value="${userInfoEntity.id}">
                                 <div class="row">
                                     <div class="col-md-3 xs-mt-12">
                                         <div class="portlet light portlet-fit portlet-form">
@@ -192,12 +197,12 @@
                                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                                         <div class="fileinput-new thumbnail"
                                                              style="width: 180px; height: 250px;">
-                                                            <img id="img-info-oto" src="/images/default.png"
+                                                            <img id="img-info-user" src="/static/images/default.png"
                                                                  alt="">
                                                         </div>
                                                         <div>
                                                 <span class="btn default btn-file">
-                                                    <input type="file" name="file" id="file-info-oto"
+                                                    <input type="file" name="file" id="file-info-user"
                                                            onchange="core_add.onChangeImage(this)">
                                                     <span class="fileinput-new">Chọn hình</span>
                                                 </span>
@@ -214,68 +219,80 @@
                                             <div class="portlet-body">
                                                 <div class="form-body">
                                                     <div class="row">
-                                                        <div class="col-md-12">
+                                                        <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <div class="input-group2">
-                                                                    <label>Mã xe</label>
+                                                                    <label>Tên đăng nhập</label>
                                                                     <span class="field-validation-valid"
-                                                                          id="CodeOtoMsg" style="color: #e7505a"></span>
+                                                                          id="UserNameMsg" style="color: #e7505a"></span>
+                                                                    <input class="form-control" readonly
+                                                                           id="username" name="username" type="text" th:value="${userEntity.user_name}">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>Họ tên</label>
+                                                                    <span class="field-validation-valid"
+                                                                          id="FullNameMsg" style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           id="code" name="code" type="text" value="">
+                                                                           th:field="*{name}" type="text">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-12">
+                                                        <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <div class="input-group2">
-                                                                    <label>Tên xe</label>
+                                                                    <label>Email</label>
                                                                     <span class="field-validation-valid"
-                                                                          id="NameOtoMsg"
+                                                                          id="EmailMsg"
+                                                                          style="color: #e7505a"></span>
+                                                                    <input class="form-control" readonly
+                                                                           th:field="*{email}" type="email"
+                                                                           value=""/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>CMND/CCCD</label>
+                                                                    <span class="field-validation-valid"
+                                                                          id="CMNDMsg"
                                                                           style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           id="name" name="name" type="text"
+                                                                           th:field="*{CMND_CCCD}" type="number"
                                                                            value=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-12">
+                                                        <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <div class="input-group2">
-                                                                    <label>Biển số xe</label>
+                                                                    <label>Ngày sinh</label>
                                                                     <span class="field-validation-valid"
-                                                                          id="LicensePlatesMsg" style="color: #e7505a"></span>
+                                                                          id="BirthdayMsg" style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           id="licenseplates" name="licenseplates" type="text" value="">
+                                                                           th:field="*{birthday}" type="date" value="">
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
+                                                        <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <div class="input-group2">
-                                                                    <label>Giá thuê xe</label>
+                                                                    <label>Giới tính</label>
                                                                     <span class="field-validation-valid"
-                                                                          id="PriceMsg" style="color: #e7505a"></span>
-                                                                    <input class="form-control"
-                                                                           id="price" name="price" type="number" value="">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="form-group">
-                                                                <div class="input-group2">
-                                                                    <label>Mô tả xe</label>
-                                                                    <span class="field-validation-valid"
-                                                                          id="DescriptionMsg" style="color: #e7505a"></span>
-                                                                    <textarea class="form-control" rows="6"
-                                                                              id="description" name="description" value=""></textarea>
+                                                                          style="color: #e7505a"></span>
+                                                                    <select class="form-control"
+                                                                            th:field="*{gender}">
+                                                                        <option value="0" th:selected="${userInfoEntity.gender == 0}">Nam</option>
+                                                                        <option value="1" th:selected="${userInfoEntity.gender == 1}">Nữ</option>
+                                                                    </select>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -284,30 +301,24 @@
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <div class="input-group2">
-                                                                    <label>Hãng xe</label>
+                                                                    <label>Địa chỉ</label>
                                                                     <span class="field-validation-valid"
-                                                                          style="color: #e7505a"></span>
-                                                                    <select class="form-control"
-                                                                            id="carcompany" name="carcompany">
-                                                                        <option value="0">-----Hãng xe-----</option>
-                                                                        <option value="0">Huyndai</option>
-                                                                        <option value="1">Winfast</option>
-                                                                    </select>
+                                                                          id="AddressMsg" style="color: #e7505a"></span>
+                                                                    <input class="form-control"
+                                                                           th:field="*{address}" type="text" value="">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <div class="input-group2">
-                                                                    <label>Loại xe</label>
+                                                                    <label>Số điện thoại</label>
                                                                     <span class="field-validation-valid"
+                                                                          id="PhoneMsg"
                                                                           style="color: #e7505a"></span>
-                                                                    <select class="form-control"
-                                                                            id="category" name="category">
-                                                                        <option value="0">-----Loại xe-----</option>
-                                                                        <option value="0">Xe 4 chỗ</option>
-                                                                        <option value="1">Xe 7 chỗ</option>
-                                                                    </select>
+                                                                    <input class="form-control"
+                                                                           th:field="*{phone}" type="number"
+                                                                           value=""/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -350,7 +361,7 @@
 
     $('document').ready(function () {
         $(".fileinput-exists").click(function () {
-            $('#img-info-oto').attr('src', defaultImageUrl);
+            $('#img-info-user').attr('src', defaultImageUrl);
         });
     });
 
@@ -359,7 +370,7 @@
             if (this.files && this.files[0]) {
                 var reader = new FileReader();
                 reader.onload = function (e) {
-                    $('#img-info-oto').attr('src', e.target.result);
+                    $('#img-info-user').attr('src', e.target.result);
                 }
                 reader.readAsDataURL(this.files[0]);
             }
@@ -369,7 +380,7 @@
     var core_add = {
 
         onClose: function () {
-            window.location.href = "/admin/oto/list";
+            window.location.href = "/admin/user/list";
         },
 
     }
