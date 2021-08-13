@@ -1,5 +1,7 @@
 package source.entity;
 
+import source.config.AppStatus;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -61,5 +63,18 @@ public class BannerEntity extends BaseEntity {
 
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    public String statusDisplay() {
+        String result = "";
+        switch (getStatus()){
+            case AppStatus.banner.Approved:
+                result =String.format("<span class=\"label label-sm label-success\">Đã duyệt</span>");
+                break;
+            case AppStatus.banner.Unapproved:
+                result =String .format("<span class=\"label label-sm label-danger\">Chưa duyệt</span>");
+                break;
+        }
+        return result;
     }
 }

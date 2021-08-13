@@ -186,8 +186,9 @@
                 <div class="content-main">
                     <div class="portlet-body">
                         <div class="tabbable-custom">
-                            <form action="#" method="post"
+                            <form action="#" th:object="${bannerEntity}" th:action="@{/banner/save}" method="post"
                                   enctype="multipart/form-data">
+                                <input class="form-control" name="id" type="hidden" th:value="${bannerEntity.id}">
                                 <div class="row">
                                     <div class="col-md-3 xs-mt-12">
                                         <div class="portlet light portlet-fit portlet-form">
@@ -225,7 +226,7 @@
                                                                     <span class="field-validation-valid"
                                                                           id="CodeMsg" style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           id="code" name="code" type="text" value="">
+                                                                           th:field="*{code}" type="text" value="">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -239,7 +240,7 @@
                                                                           id="NameMsg"
                                                                           style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           id="name" name="name" type="text"
+                                                                           th:field="*{name}" type="text"
                                                                            value=""/>
                                                                 </div>
                                                             </div>
@@ -253,7 +254,7 @@
                                                                     <span class="field-validation-valid"
                                                                           id="DescriptionMsg" style="color: #e7505a"></span>
                                                                     <textarea class="form-control" rows="4"
-                                                                              id="description" name="description" type="text"
+                                                                              th:field="*{description}" type="text"
                                                                               value=""></textarea>
                                                                 </div>
                                                             </div>

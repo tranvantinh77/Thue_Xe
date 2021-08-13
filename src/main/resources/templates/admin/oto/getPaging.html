@@ -115,20 +115,20 @@
                     <div id="page-selection" class="padding-top-15 clearboth">
                         <ul class="pagination">
                             <li th:class="${isFirstPage}? 'page-item disabled' : 'page-item'">
-                                <a th:href="@{/admin/discount/list(pageindex=1)}"
+                                <a th:href="@{/admin/oto/list(pageindex=1)}"
                                    class="page-link">
                                     <span class="ms-bold fa fa-angle-double-left"></span>
                                 </a>
                             </li>
                             <li th:each="page : ${pages}"
                                 th:class="${page == currentPage ? 'page-item active' :'page-item' }">
-                                <a th:href="@{/admin/discount/list(pageindex=${page + 1})}"
+                                <a th:href="@{/admin/oto/list(pageindex=${page + 1})}"
                                    class="page-link">
                                     <span th:utext="${page+1}"></span>
                                 </a>
                             </li>
                             <li th:class="${isLastPage}? 'page-item disabled' : 'page-item'">
-                                <a th:href="@{/admin/discount/list(pageindex=${endPage})}"
+                                <a th:href="@{/admin/oto/list(pageindex=${endPage})}"
                                    class="page-link">
                                     <span class="ms-bold fa fa-angle-double-right"></span></a>
                             </li>

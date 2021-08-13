@@ -46,4 +46,9 @@ public class AppStatus {
         public static final int Blocked = 1;
     }
 
+    public class banner{
+        public static final int Approved = 0;
+        public static final int Unapproved = 1;
+    }
+
 }
