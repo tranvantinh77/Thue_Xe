@@ -186,8 +186,9 @@
                 <div class="content-main">
                     <div class="portlet-body">
                         <div class="tabbable-custom">
-                            <form action="#" th:action="@{/carCompany/insert}" th:object="${carCompanyEntity}" method="post"
+                            <form action="#" th:action="@{/carCompany/save}" th:object="${carCompanyEntity}" method="post"
                                   enctype="multipart/form-data">
+                                <input name="id" th:value="${carCompanyEntity.id}" type="hidden">
                                 <div class="row">
                                     <div class="col-md-3 xs-mt-12">
                                         <div class="portlet light portlet-fit portlet-form">
