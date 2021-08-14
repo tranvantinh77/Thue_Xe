@@ -95,6 +95,7 @@ public class DiscountController {
     @GetMapping("/admin/discount/update")
     @ResponseBody
     public DiscountEntity authorUpdate(@RequestParam("id") long id) {
+
         return discountService.findById(id);
     }
 
