@@ -17,7 +17,15 @@
       <change beforePath="$PROJECT_DIR$/target/classes/source/controller/admin/DiscountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/controller/admin/DiscountController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/source/service/CategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/service/CategoryServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/category.html" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/banner/getPaging.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/banner/getPaging.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/DAO/BannerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/DAO/BannerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/banner/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/banner/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/DAO/BannerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/DAO/BannerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/banner/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/banner/list.html" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,6 +120,18 @@
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\user" />
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\discount" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.application">
     <configuration name="EncrytedPasswordUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
