@@ -11,6 +11,8 @@ public interface OtoService {
 
     List<OtoEntity> findByActiveFag();
 
+    List<OtoEntity> findAll();
+
     List<OtoEntity> findByKeyword(String keyword, Pageable pageable);
 
     List<OtoEntity> findByKeyword(String keyword);

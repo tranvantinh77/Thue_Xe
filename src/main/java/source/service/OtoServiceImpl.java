@@ -26,6 +26,11 @@ public class OtoServiceImpl implements OtoService {
     }
 
     @Override
+    public List<OtoEntity> findAll() {
+        return otoDAO.findAll();
+    }
+
+    @Override
     public List<OtoEntity> findByKeyword(String keyword, Pageable pageable) {
         return otoDAO.findByKeyword(keyword,pageable);
     }

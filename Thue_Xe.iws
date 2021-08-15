@@ -2,13 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/banner/getPaging.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/banner/getPaging.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/utils/UploadFileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/10/Code Dạo Kí Sự - Lập Trình Viên Đâu Phải Chỉ Biết Code (Tái Bản).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/11/Chuyên Ngành Kỹ Thuật Môi Trường.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/12/GT quản trị nhân lực.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/16/Khoa Học Khám Phá - Mật Mã - Từ Cổ Điển Đến Lượng Tử (Tái Bản).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/9/Chuyên Ngành Kỹ Thuật Ô Tô Và Xe Máy Hiện Đại - Tủ Sách Nhất Nghệ Tinh (Tái Bản 2020).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/Kỹ Thuật Chẩn Đoán Lỗi Và Sửa Chữa Ô Tô.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/lam thue hay khoi nghiep.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/DAO/BannerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/DAO/BannerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/banner/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/banner/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/DAO/BannerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/DAO/BannerDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/banner/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/banner/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/config/ImageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/config/ImageConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/controller/admin/OtoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/OtoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/entity/OtoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/entity/OtoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/iService/OtoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/iService/OtoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/service/OtoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/service/OtoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/oto/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/oto/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/config/ImageConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/config/ImageConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/controller/admin/OtoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/controller/admin/OtoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/OtoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/OtoEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/iService/OtoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/iService/OtoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/service/OtoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/service/OtoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/carCompany/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/carCompany/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/oto/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/oto/update.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +100,7 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Thue_Xe\src\main\resources\templates\admin\banner" />
       <recent name="E:\Thue_Xe\src\main\resources\templates\admin\category" />
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\oto" />
@@ -98,7 +114,7 @@
       <recent name="source.config" />
       <recent name="source.utils" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Thue_Xe\src\main\resources\templates\admin\banner" />
       <recent name="E:\Thue_Xe\src\main\resources\templates\admin\category" />
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\oto" />
@@ -142,12 +158,16 @@
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="source.application" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateTriggerFile" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.EncrytedPasswordUtils" />
+      <item itemvalue="Spring Boot.application" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.application" />
@@ -201,6 +221,7 @@
       <workItem from="1628493084418" duration="173000" />
       <workItem from="1628598118488" duration="5485000" />
       <workItem from="1628774151688" duration="208000" />
+      <workItem from="1628994575598" duration="5230000" />
     </task>
     <task id="LOCAL-00001" summary="updateCarCompany">
       <created>1628175996923</created>
