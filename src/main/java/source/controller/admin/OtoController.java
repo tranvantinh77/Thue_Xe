@@ -5,14 +5,24 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import source.config.AppStatus;
 import source.entity.OtoEntity;
 import source.iService.CarCompanyService;
 import source.iService.CategoryService;
 import source.iService.OtoService;
 import source.utils.PagningUtils;
+import source.utils.UploadFileUtils;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.Optional;
 
@@ -129,11 +139,18 @@ public class OtoController {
 
     @RequestMapping(value = "/oto/save", method = RequestMethod.POST)
     public String insert(@ModelAttribute("otoEntity") OtoEntity otoEntity,
-                         @RequestParam("id") Long id) {
+                         @RequestParam("file") MultipartFile file,
+                         @RequestParam("id") Long id) throws IOException {
         if (id == null) {
             otoEntity.setStatus(AppStatus.oto.Unapproved);
             otoEntity.setActiveFag(AppStatus.ActiveFag);
+            String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+            otoEntity.setImage(fileName);
             otoService.save(otoEntity);
+            if(!fileName.equals("")) {
+                String uploadDir = "./src/main/resources/static/Oto-Image/" + otoEntity.getId();
+                UploadFileUtils.saveFile(uploadDir,file,fileName);
+            }
         }else {
             OtoEntity oto = otoService.findById(id);
             oto.setCode(otoEntity.getCode());
@@ -143,6 +160,17 @@ public class OtoController {
             oto.setDescription(otoEntity.getDescription());
             oto.setCar_company_id(otoEntity.getCar_company_id());
             oto.setCategory_id(otoEntity.getCategory_id());
+
+            String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+            if(!fileName.equals("")) {
+                String uploadDir = "./src/main/resources/static/Oto-Image/" + oto.getId();
+                File sFile = new File(uploadDir + "/" + oto.getImage());
+                if (sFile.exists() && sFile.isFile()) {
+                    sFile.delete();
+                }
+                oto.setImage(fileName);
+                UploadFileUtils.saveFile(uploadDir,file,fileName);
+            }
             otoService.save(oto);
         }
 

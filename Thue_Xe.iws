@@ -2,7 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/utils/UploadFileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/1/z2584825500629_487b218f9dc89422bfa09cfd7888b14b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/10/Code Dạo Kí Sự - Lập Trình Viên Đâu Phải Chỉ Biết Code (Tái Bản).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/11/Chuyên Ngành Kỹ Thuật Môi Trường.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/12/GT quản trị nhân lực.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/16/Khoa Học Khám Phá - Mật Mã - Từ Cổ Điển Đến Lượng Tử (Tái Bản).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/9/Chuyên Ngành Kỹ Thuật Ô Tô Và Xe Máy Hiện Đại - Tủ Sách Nhất Nghệ Tinh (Tái Bản 2020).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/source/utils/UploadFileUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/Oto-Image/10/Code Dạo Kí Sự - Lập Trình Viên Đâu Phải Chỉ Biết Code (Tái Bản).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/Oto-Image/11/Chuyên Ngành Kỹ Thuật Môi Trường.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/Oto-Image/12/GT quản trị nhân lực.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/Oto-Image/16/Khoa Học Khám Phá - Mật Mã - Từ Cổ Điển Đến Lượng Tử (Tái Bản).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/Oto-Image/9/Chuyên Ngành Kỹ Thuật Ô Tô Và Xe Máy Hiện Đại - Tủ Sách Nhất Nghệ Tinh (Tái Bản 2020).jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/config/ImageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/config/ImageConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/controller/admin/OtoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/OtoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/entity/OtoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/entity/OtoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/iService/OtoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/iService/OtoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/service/OtoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/service/OtoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/oto/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/oto/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/config/ImageConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/config/ImageConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/controller/admin/OtoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/controller/admin/OtoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/OtoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/OtoEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/iService/OtoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/iService/OtoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/service/OtoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/service/OtoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/carCompany/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/carCompany/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/oto/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/oto/update.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +104,8 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Thue_Xe\src\main\resources\templates\admin\banner" />
       <recent name="E:\Thue_Xe\src\main\resources\templates\admin\category" />
       <recent name="E:\Thue_Xe\src\main\resources\templates\admin\banner" />
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\oto" />
@@ -91,7 +119,8 @@
       <recent name="source.config" />
       <recent name="source.utils" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Thue_Xe\src\main\resources\templates\admin\banner" />
       <recent name="E:\Thue_Xe\src\main\resources\templates\admin\category" />
       <recent name="E:\Thue_Xe\src\main\resources\templates\admin\banner" />
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\oto" />
@@ -123,12 +152,16 @@
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="source.application" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateTriggerFile" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.EncrytedPasswordUtils" />
+      <item itemvalue="Spring Boot.application" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.application" />
@@ -182,8 +215,8 @@
       <workItem from="1628493084418" duration="173000" />
       <workItem from="1628598118488" duration="5485000" />
       <workItem from="1628774151688" duration="208000" />
+      <workItem from="1628994575598" duration="5683000" />
       <workItem from="1628907228355" duration="11871000" />
-      <workItem from="1628995463203" duration="882000" />
     </task>
     <task id="LOCAL-00001" summary="updateCarCompany">
       <created>1628175996923</created>
@@ -236,10 +269,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1627446040905">
+    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1629100522455">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1627446040905" />
+    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1629100522455" />
     <state x="488" y="78" key="#com.intellij.ide.util.MemberChooser" timestamp="1628865677619">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -252,38 +285,38 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1628349068383" />
-    <state width="1323" height="12" key="GridCell.Tab.0.bottom" timestamp="1629042949311">
+    <state width="1323" height="454" key="GridCell.Tab.0.bottom" timestamp="1629100474171">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="12" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629042949311" />
-    <state width="1323" height="12" key="GridCell.Tab.0.center" timestamp="1629042949311">
+    <state width="1323" height="454" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629100474171" />
+    <state width="1323" height="454" key="GridCell.Tab.0.center" timestamp="1629100474171">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="12" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1629042949310" />
-    <state width="1323" height="12" key="GridCell.Tab.0.left" timestamp="1629042949310">
+    <state width="1323" height="454" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1629100474171" />
+    <state width="1323" height="454" key="GridCell.Tab.0.left" timestamp="1629100474171">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="12" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1629042949310" />
-    <state width="1323" height="12" key="GridCell.Tab.0.right" timestamp="1629042949311">
+    <state width="1323" height="454" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1629100474171" />
+    <state width="1323" height="454" key="GridCell.Tab.0.right" timestamp="1629100474171">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="12" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1629042949311" />
-    <state width="1323" height="12" key="GridCell.Tab.1.bottom" timestamp="1629042949311">
+    <state width="1323" height="454" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1629100474171" />
+    <state width="1323" height="454" key="GridCell.Tab.1.bottom" timestamp="1629100474172">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="12" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629042949311" />
-    <state width="1323" height="12" key="GridCell.Tab.1.center" timestamp="1629042949311">
+    <state width="1323" height="454" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629100474172" />
+    <state width="1323" height="454" key="GridCell.Tab.1.center" timestamp="1629100474172">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="12" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1629042949311" />
-    <state width="1323" height="12" key="GridCell.Tab.1.left" timestamp="1629042949311">
+    <state width="1323" height="454" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1629100474172" />
+    <state width="1323" height="454" key="GridCell.Tab.1.left" timestamp="1629100474171">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="12" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1629042949311" />
-    <state width="1323" height="12" key="GridCell.Tab.1.right" timestamp="1629042949311">
+    <state width="1323" height="454" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1629100474171" />
+    <state width="1323" height="454" key="GridCell.Tab.1.right" timestamp="1629100474172">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="12" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1629042949311" />
+    <state width="1323" height="454" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1629100474172" />
     <state x="513" y="80" key="RollbackChangesDialog" timestamp="1628864884037">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -296,10 +329,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="90" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1628349077801" />
-    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1628995488915">
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1628907236129">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1628995488915" />
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1628907236129" />
     <state x="492" y="286" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1628871416636">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

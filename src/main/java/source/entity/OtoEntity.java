@@ -3,6 +3,7 @@ package source.entity;
 import source.config.AppStatus;
 
 import javax.persistence.*;
+import java.beans.Transient;
 
 @Entity
 @Table(name = "oto")
@@ -120,5 +121,12 @@ public class OtoEntity extends BaseEntity {
                 break;
         }
         return result;
+    }
+
+    @Transient
+    public String getOtoImagePath() {
+        if (getImage() == null ) return "/images/default.png";
+
+        return "/Oto-Image/" +getId()+ "/" + image;
     }
 }
