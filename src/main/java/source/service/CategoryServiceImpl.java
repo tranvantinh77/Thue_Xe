@@ -38,11 +38,13 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public void save(CategoryEntity categoryEntity) {
+        categoryDAO.save(categoryEntity);
 
     }
 
     @Override
     public CategoryEntity findById(Long id) {
+
         return categoryDAO.findById1(id);
     }
 }

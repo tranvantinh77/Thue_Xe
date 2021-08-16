@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<body>
+<div class="categoryForm">
+    <div class="modal fade"
+         id="stackPopupCategory"
+         tabindex="-1"
+         role="dialog"
+         data-backdrop="static">
+        <div class="modal-dialog ">
+            <div class="modal-content"
+                 id="popupPageDetailCategory">
+                <form th:action="@{/category/update}" method="post">
+                    <input style="display: none" name="id" id="id" value=""/>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-hidden="true"></button>
+                        <h4 class="modal-title">cập nhật</h4>
+                    </div>
+                    <div class="content">
+
+                        <div class="modal-body detail-container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="input-group2">
+                                            <label>
+                                                Mã loại
+                                                <span class="symbol-valid">*</span>
+                                            </label>
+                                            <span class="field-validation-valid" data-valmsg-for="Name"
+                                                  data-valmsg-replace="true" style="color: #e7505a"></span>
+                                            <input class="form-control" data-val="true"
+                                                   data-val-required="Tên tác giả không được bỏ trống"
+                                                   type="text" value="" id="code_category" name="code">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="input-group2">
+                                            <label>
+                                                Tên loại
+                                                <span class="symbol-valid">*</span>
+                                            </label>
+                                            <span class="field-validation-valid" data-valmsg-for="Name"
+                                                  data-valmsg-replace="true" style="color: #e7505a"></span>
+                                            <input class="form-control" data-val="true"
+                                                   data-val-required="Tên tác giả không được bỏ trống"
+                                                   id="name_category" name="name" type="text" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="input-group2">
+                                            <label>
+                                                Mô tả
+                                                <span class="symbol-valid">*</span>
+                                            </label>
+                                            <span class="field-validation-valid" data-valmsg-for="Name"
+                                                  data-valmsg-replace="true" style="color: #e7505a"></span>
+                                            <textarea class="form-control" data-val="true" rows="4"
+                                                      data-val-required="Tên tác giả không được bỏ trống"
+                                                      id="description_category" name="description" type="text" value=""></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group text-center">
+                                    <div class="errMsg"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn default" data-dismiss="modal"
+                                    aria-hidden="true">
+                                <i class="fa fa-close mr5"></i>Đóng
+                            </button>
+                            <button type="submit" class="btn btn-mini btn-info">
+                                <i class="icon icon-pencil mr5"></i>Lưu
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
