@@ -5,6 +5,7 @@ import source.config.AppStatus;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.beans.Transient;
 
 @Entity
 @Table(name = "car_company")
@@ -76,5 +77,11 @@ public class CarCompanyEntity extends BaseEntity {
                 break;
         }
         return result;
+    }
+    @Transient
+    public String getCarCompanyImagePath() {
+        if (getImage() == null ) return "/images/default.png";
+
+        return "/CarCompany-Image/" +getId()+ "/" + image;
     }
 }

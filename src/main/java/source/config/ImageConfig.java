@@ -13,6 +13,8 @@ public class ImageConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         exposeDirectory("./Oto-Image", registry);
+        exposeDirectory("./CarCompany-Image",registry);
+        exposeDirectory("./Banner-Image", registry);
 
     }
 

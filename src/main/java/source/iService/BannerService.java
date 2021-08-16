@@ -2,6 +2,7 @@ package source.iService;
 
 import org.springframework.data.domain.Pageable;
 import source.entity.BannerEntity;
+import source.entity.CarCompanyEntity;
 
 import java.util.List;
 
@@ -17,4 +18,6 @@ public interface BannerService {
     void save(BannerEntity bannerEntity);
 
     BannerEntity findById(Long id);
+
+    List<BannerEntity> findAll();
 }

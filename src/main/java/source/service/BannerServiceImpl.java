@@ -45,4 +45,9 @@ public class BannerServiceImpl implements BannerService {
     public BannerEntity findById(Long id) {
         return bannerDAO.findById1(id);
     }
-}
+
+     @Override
+     public List<BannerEntity> findAll() {
+         return bannerDAO.findAll();
+     }
+ }

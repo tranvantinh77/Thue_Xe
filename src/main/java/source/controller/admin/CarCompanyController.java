@@ -15,7 +15,9 @@ import source.entity.DiscountEntity;
 import source.entity.OtoEntity;
 import source.iService.CarCompanyService;
 import source.utils.PagningUtils;
+import source.utils.UploadFileUtils;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -112,16 +114,34 @@ public class CarCompanyController {
 
     @PostMapping("/carCompany/save")
     public String insert(@ModelAttribute(value = "carCompanyEntity") CarCompanyEntity carCompanyEntity,
-                         @RequestParam("id") Long id)  {
+                         @RequestParam("file") MultipartFile file,
+                         @RequestParam("id") Long id) throws IOException {
         if (id == null) {
             carCompanyEntity.setActiveFag(AppStatus.ActiveFag);
             carCompanyEntity.setStatus(AppStatus.carCompany.Active);
+            String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+            carCompanyEntity.setImage(fileName);
             carCompanyService.save(carCompanyEntity);
+            if(!fileName.equals("")) {
+                String uploadDir = "./src/main/resources/static/CarCompany-Image/" + carCompanyEntity.getId();
+                UploadFileUtils.saveFile(uploadDir,file,fileName);
+            }
         }else {
             CarCompanyEntity carCompany = carCompanyService.findById(id);
             carCompany.setName(carCompanyEntity.getName());
             carCompany.setCode(carCompanyEntity.getCode());
             carCompany.setDescription(carCompanyEntity.getDescription());
+
+            String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+            if(!fileName.equals("")) {
+                String uploadDir = "./src/main/resources/static/CarCompany-Image/" + carCompany.getId();
+                File sFile = new File(uploadDir + "/" + carCompany.getImage());
+                if (sFile.exists() && sFile.isFile()) {
+                    sFile.delete();
+                }
+                carCompany.setImage(fileName);
+                UploadFileUtils.saveFile(uploadDir,file,fileName);
+            }
             carCompanyService.save(carCompany);
         }
 

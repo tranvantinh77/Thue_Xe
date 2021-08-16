@@ -5,6 +5,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import source.DAO.CarCompanyDAO;
 import source.entity.CarCompanyEntity;
+import source.entity.OtoEntity;
 import source.iService.CarCompanyService;
 
 import java.util.List;
@@ -31,6 +32,7 @@ public class CarCompanyServiceImpl implements CarCompanyService {
 
     @Override
     public List<CarCompanyEntity> findByKeyword(String keyword) {
+
         return carCompanyDAO.findByKeyword(keyword);
     }
 
@@ -41,7 +43,13 @@ public class CarCompanyServiceImpl implements CarCompanyService {
     }
 
     @Override
+    public List<CarCompanyEntity> findAll() {
+        return carCompanyDAO.findAll();
+    }
+
+    @Override
     public CarCompanyEntity findById(Long id) {
+
         return carCompanyDAO.findById1(id);
     }
 }

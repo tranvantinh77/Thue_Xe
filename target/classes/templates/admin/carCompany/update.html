@@ -197,7 +197,7 @@
                                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                                         <div class="fileinput-new thumbnail"
                                                              style="width: 180px; height: 250px;">
-                                                            <img id="img-info-carcompany" src="/images/default.png"
+                                                            <img id="img-info-carcompany" th:src="@{${carCompanyEntity.getCarCompanyImagePath()}}"
                                                                  alt="">
                                                         </div>
                                                         <div>
@@ -317,7 +317,7 @@
     var core_add = {
 
         onClose: function () {
-            window.location.href = "/admin/carcompany/list";
+            window.location.href = "/admin/carCompany/list";
         },
 
     }

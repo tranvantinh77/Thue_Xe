@@ -22,11 +22,13 @@ public class OtoServiceImpl implements OtoService {
 
     @Override
     public List<OtoEntity> findByActiveFag() {
+
         return otoDAO.findByActiveFag();
     }
 
     @Override
     public List<OtoEntity> findAll() {
+
         return otoDAO.findAll();
     }
 
@@ -37,6 +39,7 @@ public class OtoServiceImpl implements OtoService {
 
     @Override
     public List<OtoEntity> findByKeyword(String keyword) {
+
         return otoDAO.findByKeyword(keyword);
     }
 

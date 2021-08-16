@@ -5,13 +5,18 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import source.config.AppStatus;
 import source.entity.BannerEntity;
 import source.entity.OtoEntity;
 import source.iService.BannerService;
 import source.utils.PagningUtils;
+import source.utils.UploadFileUtils;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -97,17 +102,37 @@ public class BannerController {
 
     @RequestMapping(value = "/banner/save", method = RequestMethod.POST)
     public String insert(@ModelAttribute("bannerEntity") BannerEntity bannerEntity,
-                         @RequestParam("id") Long id) {
+                         @RequestParam("file") MultipartFile file,
+                         @RequestParam("id") Long id) throws IOException {
         if (id == null) {
             bannerEntity.setStatus(AppStatus.oto.Unapproved);
             bannerEntity.setActiveFag(AppStatus.ActiveFag);
+            String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+            bannerEntity.setImage(fileName);
             bannerService.save(bannerEntity);
+            if(!fileName.equals("")) {
+                String uploadDir = "./src/main/resources/static/Banner-Image/" + bannerEntity.getId();
+                UploadFileUtils.saveFile(uploadDir,file,fileName);
+            }
         }else {
             BannerEntity banner = bannerService.findById(id);
             banner.setCode(bannerEntity.getCode());
             banner.setName(bannerEntity.getName());
             banner.setDescription(bannerEntity.getDescription());
+
+            String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+            if(!fileName.equals("")) {
+                String uploadDir = "./src/main/resources/static/Banner-Image/" + banner.getId();
+                File sFile = new File(uploadDir + "/" + banner.getImage());
+                if (sFile.exists() && sFile.isFile()) {
+                    sFile.delete();
+                }
+                banner.setImage(fileName);
+                UploadFileUtils.saveFile(uploadDir,file,fileName);
+            }
+
             bannerService.save(banner);
+
         }
 
         return "redirect:/admin/banner/list";

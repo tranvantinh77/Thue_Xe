@@ -197,7 +197,7 @@
                                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                                         <div class="fileinput-new thumbnail"
                                                              style="width: 220px; height: 145px;">
-                                                            <img id="img-info-banner" src="/static/images/news.png"
+                                                            <img id="img-info-banner" th:src="@{${bannerEntity.getBannerImagePath()}}"
                                                                  alt="">
                                                         </div>
                                                         <div>
