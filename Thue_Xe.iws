@@ -1,39 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Banner-Image/3/z2584825496252_b2309901727065cf02c626d877b82a2a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/8/IMG_20210627_150210.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/8/z2584825491090_af25158f606f0fdea0bbf87b44d042a6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/9/IMG_20210627_150003.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/config/ImageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/config/ImageConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/controller/admin/BannerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/BannerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/controller/admin/CarCompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/CarCompanyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/controller/admin/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/UserInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/entity/BannerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/entity/BannerEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/entity/CarCompanyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/entity/CarCompanyEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/iService/BannerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/iService/BannerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/iService/CarCompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/iService/CarCompanyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/service/BannerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/service/BannerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/service/CarCompanyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/service/CarCompanyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/service/OtoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/service/OtoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/banner/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/banner/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/config/ImageConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/config/ImageConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/controller/admin/BannerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/controller/admin/BannerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/controller/admin/CarCompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/controller/admin/CarCompanyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/controller/admin/UserInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/controller/admin/UserInfoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/BannerEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/BannerEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/CarCompanyEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/CarCompanyEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/iService/BannerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/iService/BannerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/iService/CarCompanyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/iService/CarCompanyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/service/BannerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/service/BannerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/service/CarCompanyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/service/CarCompanyServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/service/OtoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/service/OtoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/banner/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/banner/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/carCompany/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/carCompany/update.html" afterDir="false" />
-    </list>
+    <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -288,38 +256,38 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1628349068383" />
-    <state width="1323" height="108" key="GridCell.Tab.0.bottom" timestamp="1629116308963">
+    <state width="1323" height="108" key="GridCell.Tab.0.bottom" timestamp="1629125484837">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="108" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629116308963" />
-    <state width="1323" height="108" key="GridCell.Tab.0.center" timestamp="1629116308962">
+    <state width="1323" height="108" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629125484837" />
+    <state width="1323" height="108" key="GridCell.Tab.0.center" timestamp="1629125484837">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="108" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1629116308962" />
-    <state width="1323" height="108" key="GridCell.Tab.0.left" timestamp="1629116308962">
+    <state width="1323" height="108" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1629125484837" />
+    <state width="1323" height="108" key="GridCell.Tab.0.left" timestamp="1629125484837">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="108" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1629116308962" />
-    <state width="1323" height="108" key="GridCell.Tab.0.right" timestamp="1629116308962">
+    <state width="1323" height="108" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1629125484837" />
+    <state width="1323" height="108" key="GridCell.Tab.0.right" timestamp="1629125484837">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="108" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1629116308962" />
-    <state width="1323" height="108" key="GridCell.Tab.1.bottom" timestamp="1629116308963">
+    <state width="1323" height="108" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1629125484837" />
+    <state width="1323" height="108" key="GridCell.Tab.1.bottom" timestamp="1629125484837">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="108" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629116308963" />
-    <state width="1323" height="108" key="GridCell.Tab.1.center" timestamp="1629116308963">
+    <state width="1323" height="108" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629125484837" />
+    <state width="1323" height="108" key="GridCell.Tab.1.center" timestamp="1629125484837">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="108" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1629116308963" />
-    <state width="1323" height="108" key="GridCell.Tab.1.left" timestamp="1629116308963">
+    <state width="1323" height="108" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1629125484837" />
+    <state width="1323" height="108" key="GridCell.Tab.1.left" timestamp="1629125484837">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="108" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1629116308963" />
-    <state width="1323" height="108" key="GridCell.Tab.1.right" timestamp="1629116308963">
+    <state width="1323" height="108" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1629125484837" />
+    <state width="1323" height="108" key="GridCell.Tab.1.right" timestamp="1629125484837">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="108" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1629116308963" />
+    <state width="1323" height="108" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1629125484837" />
     <state x="513" y="80" key="RollbackChangesDialog" timestamp="1628864884037">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -332,10 +300,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="90" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1628349077801" />
-    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1628907236129">
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1629169184934">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1628907236129" />
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1629169184934" />
     <state x="492" y="286" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1628871416636">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
