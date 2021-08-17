@@ -57,4 +57,9 @@ public class UserInfoServiceImpl implements UserInfoService {
     public UserInfoEntity findByEmail(String email) {
         return userInfoDAO.findByEmail(email);
     }
+
+    @Override
+    public List<UserInfoEntity> findAll() {
+        return userInfoDAO.findAll();
+    }
 }

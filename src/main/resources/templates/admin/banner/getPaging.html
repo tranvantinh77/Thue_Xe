@@ -45,7 +45,9 @@
                                 th:text="${iterStat.count+(pagesize*(currentPage))}">
                                 #
                             </td>
-                            <td th:text="${listBanner.image}">Hình ảnh</td>
+                            <td>
+                                <img style="height: 50px; width: 60px; object-fit: contain" th:src="@{${listBanner.getBannerImagePath()}}">
+                            </td>
                             <td class="text-center" th:text="${listBanner.code}" >Mã banner</td>
                             <td th:text="${listBanner.name}">Tên banner</td>
                             <td class="text-center"

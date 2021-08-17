@@ -1,6 +1,7 @@
 package source.iService;
 
 import org.springframework.data.domain.Pageable;
+import source.entity.OtoEntity;
 import source.entity.UserInfoEntity;
 
 import java.util.List;
@@ -19,4 +20,6 @@ public interface UserInfoService {
     UserInfoEntity findById(Long id);
 
     UserInfoEntity findByEmail(String email);
+
+    List<UserInfoEntity> findAll();
 }

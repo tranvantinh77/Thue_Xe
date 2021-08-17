@@ -5,6 +5,7 @@ import source.config.AppStatus;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.beans.Transient;
 import java.sql.Date;
 
 @Entity
@@ -111,5 +112,11 @@ public class UserInfoEntity extends BaseEntity {
                 break;
         }
         return result;
+    }
+    @Transient
+    public String getUserImagePath() {
+        if (getImage() == null ) return "/images/default.png";
+
+        return "/User-Image/" +getId()+ "/" + image;
     }
 }

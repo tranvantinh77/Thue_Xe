@@ -120,10 +120,16 @@ public class UserInfoController {
     @RequestMapping(value = "/user/insert", method = RequestMethod.POST)
     public String insert(@ModelAttribute("userInfoEntity") UserInfoEntity userInfoEntity,
                          @RequestParam("username") String username,
-                         @RequestParam("password") String password) {
+                         @RequestParam("file") MultipartFile file,
+                         @RequestParam("password") String password) throws IOException {
         userInfoEntity.setActiveFag(AppStatus.ActiveFag);
+        String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+        userInfoEntity.setImage(fileName);
         userInfoService.save(userInfoEntity);
-
+        if(!fileName.equals("")) {
+            String uploadDir = "./src/main/resources/static/User-Image/" + userInfoEntity.getId();
+            UploadFileUtils.saveFile(uploadDir,file,fileName);
+        }
         UserEntity userEntity = new UserEntity();
         userEntity.setUser_name(username);
         userEntity.setPassword(EncrytedPasswordUtils.encrytePassword(password));
@@ -146,7 +152,8 @@ public class UserInfoController {
 
     @RequestMapping(value = "/user/update", method = RequestMethod.POST)
     public String update(@ModelAttribute("userInfoEntity") UserInfoEntity userInfoEntity,
-                         @RequestParam("id") Long id) {
+                         @RequestParam("file") MultipartFile file,
+                         @RequestParam("id") Long id) throws IOException {
         UserInfoEntity userInfo = userInfoService.findById(id);
         userInfo.setName(userInfoEntity.getName());
         userInfo.setEmail(userInfoEntity.getEmail());
@@ -155,6 +162,17 @@ public class UserInfoController {
         userInfo.setPhone(userInfoEntity.getPhone());
         userInfo.setCMND_CCCD(userInfoEntity.getCMND_CCCD());
         userInfo.setAddress(userInfoEntity.getAddress());
+
+        String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+        if(!fileName.equals("")) {
+            String uploadDir = "./src/main/resources/static/User-Image/" + userInfo.getId();
+            File sFile = new File(uploadDir + "/" + userInfo.getImage());
+            if (sFile.exists() && sFile.isFile()) {
+                sFile.delete();
+            }
+            userInfo.setImage(fileName);
+            UploadFileUtils.saveFile(uploadDir,file,fileName);
+        }
         userInfoService.save(userInfo);
         return "redirect:/admin/user/list";
     }

@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="" />
+    <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/config/ImageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/config/ImageConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/controller/admin/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/UserInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/entity/UserInfoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/entity/UserInfoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/iService/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/iService/UserInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/service/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/service/UserInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/banner/getPaging.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/banner/getPaging.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/user/insert.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/user/insert.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/user/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/user/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/config/ImageConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/config/ImageConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/controller/admin/UserInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/controller/admin/UserInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/UserInfoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/UserInfoEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/service/UserInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/service/UserInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/banner/getPaging.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/banner/getPaging.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -188,6 +203,7 @@
       <workItem from="1628774151688" duration="208000" />
       <workItem from="1628994575598" duration="5683000" />
       <workItem from="1628907228355" duration="11871000" />
+      <workItem from="1629169009068" duration="6715000" />
     </task>
     <task id="LOCAL-00001" summary="updateCarCompany">
       <created>1628175996923</created>
@@ -244,10 +260,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1629100522455" />
-    <state x="488" y="78" key="#com.intellij.ide.util.MemberChooser" timestamp="1629115840504">
+    <state x="488" y="78" key="#com.intellij.ide.util.MemberChooser" timestamp="1629187282379">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="488" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1629115840504" />
+    <state x="488" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1629187282379" />
     <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1628859812222">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -256,42 +272,42 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1628349068383" />
-    <state width="1323" height="108" key="GridCell.Tab.0.bottom" timestamp="1629125484837">
+    <state width="1323" height="150" key="GridCell.Tab.0.bottom" timestamp="1629191153521">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="108" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629125484837" />
-    <state width="1323" height="108" key="GridCell.Tab.0.center" timestamp="1629125484837">
+    <state width="1323" height="150" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629191153521" />
+    <state width="1323" height="150" key="GridCell.Tab.0.center" timestamp="1629191153521">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="108" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1629125484837" />
-    <state width="1323" height="108" key="GridCell.Tab.0.left" timestamp="1629125484837">
+    <state width="1323" height="150" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1629191153521" />
+    <state width="1323" height="150" key="GridCell.Tab.0.left" timestamp="1629191153521">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="108" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1629125484837" />
-    <state width="1323" height="108" key="GridCell.Tab.0.right" timestamp="1629125484837">
+    <state width="1323" height="150" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1629191153521" />
+    <state width="1323" height="150" key="GridCell.Tab.0.right" timestamp="1629191153521">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="108" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1629125484837" />
-    <state width="1323" height="108" key="GridCell.Tab.1.bottom" timestamp="1629125484837">
+    <state width="1323" height="150" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1629191153521" />
+    <state width="1323" height="150" key="GridCell.Tab.1.bottom" timestamp="1629191153521">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="108" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629125484837" />
-    <state width="1323" height="108" key="GridCell.Tab.1.center" timestamp="1629125484837">
+    <state width="1323" height="150" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629191153521" />
+    <state width="1323" height="150" key="GridCell.Tab.1.center" timestamp="1629191153521">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="108" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1629125484837" />
-    <state width="1323" height="108" key="GridCell.Tab.1.left" timestamp="1629125484837">
+    <state width="1323" height="150" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1629191153521" />
+    <state width="1323" height="150" key="GridCell.Tab.1.left" timestamp="1629191153521">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="108" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1629125484837" />
-    <state width="1323" height="108" key="GridCell.Tab.1.right" timestamp="1629125484837">
+    <state width="1323" height="150" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1629191153521" />
+    <state width="1323" height="150" key="GridCell.Tab.1.right" timestamp="1629191153521">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="108" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1629125484837" />
-    <state x="513" y="80" key="RollbackChangesDialog" timestamp="1628864884037">
+    <state width="1323" height="150" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1629191153521" />
+    <state x="513" y="80" key="RollbackChangesDialog" timestamp="1629190787827">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="513" y="80" key="RollbackChangesDialog/0.0.1366.738@0.0.1366.738" timestamp="1628864884037" />
+    <state x="513" y="80" key="RollbackChangesDialog/0.0.1366.738@0.0.1366.738" timestamp="1629190787827" />
     <state x="470" y="85" key="VCS.ChangeListViewerDialog" timestamp="1628871399659">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

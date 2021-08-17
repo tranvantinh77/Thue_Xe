@@ -15,6 +15,7 @@ public class ImageConfig implements WebMvcConfigurer {
         exposeDirectory("./Oto-Image", registry);
         exposeDirectory("./CarCompany-Image",registry);
         exposeDirectory("./Banner-Image", registry);
+        exposeDirectory("./User-Image", registry);
 
     }
 
