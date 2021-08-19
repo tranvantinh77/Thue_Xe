@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:replace="~{fragments/layoutAdmin :: title}">Title</title>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: meta}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: link}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: head/script}"></th:block>
+
+
+</head>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+<div class="page-wrapper">
+    <!-- BEGIN HEADER -->
+    <div th:insert="~{fragments/headerAdminPartial :: headerAdminPartial}"></div>
+    <!-- END HEADER -->
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"></div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN PROGRESSBAR -->
+        <div th:insert="~{fragments/loadingPartial :: loadingPartial}"></div>
+        <!-- END PROGRESSBAR -->
+        <!-- BEGIN PROGRESSBAR -->
+        <div th:insert="~{fragments/progressBarPartial :: progressBarPartial}"></div>
+        <!-- END PROGRESSBAR -->
+        <!-- BEGIN NOTIFICATION -->
+        <div th:insert="~{fragments/notificationPartial :: notificationPartial}"></div>
+        <!-- END NOTIFICATION -->
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar-wrapper">
+            <!-- BEGIN SIDEBAR -->
+            <th:block th:include="/admin/checkout/menu.html"></th:block>
+            <!-- END SIDEBAR -->
+        </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <div class="page-content lv-pageContent">
+                <!-- BEGIN PAGE BAR -->
+                <th:block th:include="/admin/checkout/breadcrumb.html"></th:block>
+                <!-- END PAGE BAR -->
+                <div class="page-content-main page-search">
+                    <div class="page-content-1zone">
+                        <div class="portlet light pt0 pb0">
+                            <div class="portlet-body pb0">
+                                <!--SEARCH-->
+                                <th:block th:include="/admin/checkout/search.html"></th:block>
+                                <!--END SEARCH-->
+                                <!--LIST CONTENT-->
+                                <div id="body-content">
+                                    <th:block th:include="/admin/checkout/getPaging.html"></th:block>
+                                </div><!--END LIST CONTENT-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTENT BODY -->
+            <!-- BEGIN MODAL -->
+            <!-- END MODAL -->
+        </div>
+        <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    var ctorPage = {
+        GiveCarBack: '/giveCarBack',
+        updateStatus: '/checkout/status',
+        btnCssDefault: 'a.btn-df',
+        TextYes: 'Có',
+        TextNo: 'Không',
+        TextDelAskMsg: 'Bạn có chắc chắn XÓA biểu ghi này ?'
+    };
+
+    var core_lstpage = {
+
+        onUpdateStatus: function (_id, _status) {
+            if (_status === 0) {
+                msg = 'Bạn có chắc chắn muốn cho thuê xe này không ?';
+            }
+            bootbox.confirm({
+                message: msg,
+                buttons: {
+                    confirm: {
+                        label: ctorPage.TextYes,
+                        className: 'btn-success'
+                    },
+                    cancel: {
+                        label: ctorPage.TextNo,
+                        className: 'btn-danger'
+                    }
+                },
+                callback: function (result) {
+                    if (result) {
+                        var Book = {
+                            id: _id,
+                            status: _status
+                        }
+                        console.log(_id);
+                        ShowLoading();
+                        core_services.postAsync(ctorPage.updateStatus, JSON.stringify(Book)
+                            , function (res) {
+                                HideLoading();
+                                if (res) {
+                                    core_lstpage.onReload()
+                                } else {
+                                    // core_notification.updateFail();
+                                    core_lstpage.onReload()
+                                }
+                                core_lstpage.onReload();
+                            }
+                            , function () {
+                                // core_notification.updateFail();
+                                core_lstpage.onReload();
+                            });
+                    }
+                }
+            });
+        },
+
+        onGiveCarBack: function (_id, _status) {
+            msg = 'Bạn có chắc chắn muốn trả xe này không ?';
+
+            bootbox.confirm({
+                message: msg,
+                buttons: {
+                    confirm: {
+                        label: ctorPage.TextYes,
+                        className: 'btn-success'
+                    },
+                    cancel: {
+                        label: ctorPage.TextNo,
+                        className: 'btn-danger'
+                    }
+                },
+                callback: function (result) {
+                    if (result) {
+                        var Book = {
+                            id: _id,
+                            status: _status
+                        }
+                        console.log(_id);
+                        ShowLoading();
+                        core_services.postAsync(ctorPage.GiveCarBack, JSON.stringify(Book)
+                            , function (res) {
+                                HideLoading();
+                                if (res) {
+                                    core_lstpage.onReload()
+                                } else {
+                                    // core_notification.updateFail();
+                                    core_lstpage.onReload()
+                                }
+                                core_lstpage.onReload();
+                            }
+                            , function () {
+                                // core_notification.updateFail();
+                                core_lstpage.onReload();
+                            });
+                    }
+                }
+            });
+        },
+
+        onReload: function () {
+            HideLoading();
+            window.location.reload();
+
+        },
+
+    }
+</script>

@@ -1,5 +1,7 @@
 package source.entity;
 
+import source.config.AppStatus;
+
 import javax.persistence.*;
 import java.sql.Date;
 
@@ -23,6 +25,12 @@ public class CirculationEntity extends BaseEntity {
 
     @Column
     private double total_money;
+
+    @Column
+    private int action;
+
+    @Column
+    private double penalty;
 
     public UserEntity getUser_id() {
         return user_id;
@@ -62,5 +70,34 @@ public class CirculationEntity extends BaseEntity {
 
     public void setTotal_money(double total_money) {
         this.total_money = total_money;
+    }
+
+    public int getAction() {
+        return action;
+    }
+
+    public void setAction(int action) {
+        this.action = action;
+    }
+
+    public double getPenalty() {
+        return penalty;
+    }
+
+    public void setPenalty(double penalty) {
+        this.penalty = penalty;
+    }
+
+    public String actionDisplay() {
+        String result = "";
+        switch (getAction()){
+            case AppStatus.circulation.UnRegistration:
+                result =String.format("<span class=\"label label-sm label-warning\">Hủy đăng ký</span>");
+                break;
+            case AppStatus.circulation.GiveCarBack:
+                result =String .format("<span class=\"label label-sm label-success\">Trả xe</span>");
+                break;
+        }
+        return result;
     }
 }

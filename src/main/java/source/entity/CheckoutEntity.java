@@ -29,6 +29,9 @@ public class CheckoutEntity extends BaseEntity {
     @Column
     private double total_money;
 
+    @Column
+    private double penalty;
+
     public UserEntity getUser_id() {
         return user_id;
     }
@@ -75,6 +78,14 @@ public class CheckoutEntity extends BaseEntity {
 
     public void setTotal_money(double total_money) {
         this.total_money = total_money;
+    }
+
+    public double getPenalty() {
+        return penalty;
+    }
+
+    public void setPenalty(double penalty) {
+        this.penalty = penalty;
     }
 
     public String statusDisplay() {

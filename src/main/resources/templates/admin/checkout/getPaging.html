@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<body>
+<div class="row mt10">
+    <div class="col-md-6">
+        <div class="doc-group-title">
+            <span aria-hidden="true" class="fa fa-user-secret"></span>
+            Tìm thấy tổng số <span id="lbl-getpaging-total"
+                                   class="span-total" th:text="${list.size()}"
+        >1</span>biểu ghi
+        </div>
+    </div>
+</div>
+
+<div class="row mt10">
+    <div class="col-md-12">
+        <div class="searh-result">
+            <div id="table-scroll" class="table-scroll">
+                <div class="table-scrollable" style="min-height:initial !important">
+                    <table class="table table-bordered main-table"
+                           style="width: 1600px">
+                        <thead class="flip-content1">
+                        <tr>
+                            <th class="text-center" style="width: 40px">#</th>
+                            <th class="text-center">Tên khách hàng</th>
+                            <th class="text-center">Tên xe</th>
+                            <th class="text-center">Loại xe</th>
+                            <th class="text-center">Ngày mượn</th>
+                            <th class="text-center">Ngày trả</th>
+                            <th class="text-center">Thành tiền (VND)</th>
+                            <th class="text-center">Phí phạt (VND)</th>
+                            <th class="text-center">Trạng thái</th>
+                            <th class="text-center">Thao tác</th>
+                        </tr>
+                        </thead>
+
+                        <tbody id="bodyView">
+                        <tr th:each="listCheckout,iterStat : ${checkout}">
+                            <td class="text-center"
+                                th:text="${iterStat.count+(pagesize*(currentPage))}">#
+                            </td>
+                            <td th:text="${listCheckout.user_id.user_info_id.name}"></td>
+                            <td th:text="${listCheckout.oto_id.name}"></td>
+                            <td th:text="${listCheckout.oto_id.category_id.name}"></td>
+                            <td class="text-center" th:text="${#dates.format(listCheckout.checkout_date, 'dd-MM-yyyy')}"></td>
+                            <td class="text-center" th:text="${#dates.format(listCheckout.due_date, 'dd-MM-yyyy')}"></td>
+                            <td class="text-center" th:text="${#numbers.formatDecimal(listCheckout.total_money,3,'POINT',0,'POINT')}"></td>
+                            <td class="text-center" th:text="${#numbers.formatDecimal(listCheckout.penalty,3,'POINT',0,'POINT')}"></td>
+                            <td class="text-center"
+                                th:utext="${listCheckout.statusDisplay()}">Trạng thái
+                            </td>
+                            <td class="text-center">
+                                <button th:if="${listCheckout.status == 0}"
+                                        class="btn btn-xs green btn-icon-only"
+                                        title="Cho thuê"
+                                        th:onclick="'core_lstpage.onUpdateStatus('+${listCheckout.id}+','+${listCheckout.status}+')'">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                                <button th:if="${listCheckout.status == 1 || listCheckout.status == 2}"
+                                        class="btn btn-xs yellow btn-icon-only"
+                                        title="Trả xe"
+                                        th:onclick="'core_lstpage.onGiveCarBack('+${listCheckout.id}+')'">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" th:if="${list.size()} > ${pagesize}">
+        <div class="pagination-control">
+            <div class="row">
+                <div class="col-md-12 pull-right">
+                    <div id="page-selection" class="padding-top-15 clearboth">
+                        <ul class="pagination">
+                            <li th:class="${isFirstPage}? 'page-item disabled' : 'page-item'">
+                                <a th:href="@{/admin/checkout/list(pageindex=1)}"
+                                   class="page-link">
+                                    <span class="ms-bold fa fa-angle-double-left"></span>
+                                </a>
+                            </li>
+                            <li th:each="page : ${pages}"
+                                th:class="${page == currentPage ? 'page-item active' :'page-item' }">
+                                <a th:href="@{/admin/checkout/list(pageindex=${page + 1})}"
+                                   class="page-link">
+                                    <span th:utext="${page+1}"></span>
+                                </a>
+                            </li>
+                            <li th:class="${isLastPage}? 'page-item disabled' : 'page-item'">
+                                <a th:href="@{/admin/checkout/list(pageindex=${endPage})}"
+                                   class="page-link">
+                                    <span class="ms-bold fa fa-angle-double-right"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
