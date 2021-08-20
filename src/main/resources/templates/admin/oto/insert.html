@@ -192,8 +192,8 @@
                                                 <div class="form-body">
                                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                                         <div class="fileinput-new thumbnail"
-                                                             style="width: 180px; height: 250px;">
-                                                            <img id="img-info-oto" src="/images/default.png"
+                                                             style="width: 200px; height: 150px;">
+                                                            <img id="img-info-oto" src="/images/oto.png"
                                                                  alt="">
                                                         </div>
                                                         <div>
@@ -222,7 +222,7 @@
                                                                     <span class="field-validation-valid"
                                                                           id="CodeOtoMsg" style="color: #e7505a"></span>
                                                                     <input class="form-control"
-                                                                           th:field="*{code}" type="text" value="">
+                                                                           id="codeOto" name="codeOto" type="text" th:value="${code_oto}" readonly>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -282,7 +282,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <div class="input-group2">
                                                                     <label>Hãng xe</label>
@@ -297,7 +297,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <div class="input-group2">
                                                                     <label>Loại xe</label>
@@ -308,6 +308,20 @@
                                                                         <option th:each="categores : ${category}"
                                                                                 th:value="${categores.id}"
                                                                                 th:text="${categores.name}"></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <div class="input-group2">
+                                                                    <label>Trạng thái</label>
+                                                                    <span class="field-validation-valid"
+                                                                          style="color: #e7505a"></span>
+                                                                    <select class="form-control"
+                                                                            th:field="*{status}">
+                                                                        <option value="0">Duyệt</option>
+                                                                        <option value="1">Chưa duyệt</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -347,7 +361,7 @@
 </html>
 <script type="text/javascript">
 
-    var defaultImageUrl = '/images/default.png';
+    var defaultImageUrl = '/images/oto.png';
 
     $('document').ready(function () {
         $(".fileinput-exists").click(function () {
