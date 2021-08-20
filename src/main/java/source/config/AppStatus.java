@@ -20,35 +20,40 @@ public class AppStatus {
         public static final int Unapproved = 1;
     }
 
-    public class role{
+    public class role {
         public static final int Customer = 1;
         public static final int Admin = 2;
     }
 
-    public class user{
+    public class user {
         public static final int Active = 0;
         public static final int Disable = 2;
     }
 
-    public class checkout{
+    public class checkout {
         public static final int PreRegistration = 0;
         public static final int Borrowed = 1;
         public static final int OutOfDate = 2;
     }
 
-    public class carCompany{
+    public class carCompany {
         public static final int Active = 0;
         public static final int Blocked = 1;
     }
 
-    public class category{
+    public class category {
         public static final int Active = 0;
         public static final int Blocked = 1;
     }
 
-    public class banner{
+    public class banner {
         public static final int Approved = 0;
         public static final int Unapproved = 1;
+    }
+
+    public class circulation {
+        public static final int UnRegistration = 0;
+        public static final int GiveCarBack = 2;
     }
 
 }

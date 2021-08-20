@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<body>
+<div class="page-sidebar navbar-collapse collapse ">
+    <ul class="page-sidebar-menu page-header-fixed" data-keep-expanded="false" data-auto-scroll="true"
+        data-slide-speed="200">
+        <li class="sidebar-toggler-wrapper hide">
+            <div class="sidebar-toggler">
+                <span></span>
+            </div>
+        </li>
+        <li class="nav-item" id="nav-none">
+            <a th:href="@{/admin}" class="nav-link nav-toggle">
+                <i class="icon-home"></i>
+                <span class="uppercase title">Trang chủ</span>
+                <span class="selected"></span></a>
+        </li>
+        <li class="nav-item" id="nav-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef">
+            <a class="nav-link nav-toggle">
+                <i class="fa fa-car"></i>
+                <span class="uppercase title">Quản lý xe</span>
+                <span class="arrow" id="nav-span-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef"></span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item" id="nav-patronmanagement-insert">
+                    <a th:href="@{/admin/oto/insert}" class="nav-link">
+                        <span class="title">Thêm mới</span>
+                    </a>
+                </li>
+                <li class="nav-item" id="nav-patronmanagement-list">
+                    <a th:href="@{/admin/oto/list}" class="nav-link">
+                        <span class="title">Danh sách</span>
+                    </a>
+                </li>
+                <li class="nav-item" id="nav-blockedtracking-list">
+                    <a class="nav-link nav-toggle">
+                        <span class="title">Hãng xe</span>
+                        <span class="arrow" id="nav-span-carcompany"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item" id="nav-cataloging-bibliographic-insert">
+                            <a th:href="@{/admin/carCompany/insert}" class="nav-link ">
+                                <span class="title">Thêm mới</span>
+                            </a>
+                        </li>
+                        <li class="nav-item active open" id="nav-cataloging-bibliographic-list">
+                            <a th:href="@{/admin/carCompany/list}" class="nav-link ">
+                                <span class="title">Danh sách</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" id="nav-category">
+                    <a class="nav-link nav-toggle">
+                        <span class="title">Loại xe</span>
+                        <span class="arrow" id="nav-span-category"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item" id="nav-cataloging-list">
+                            <a th:href="@{/admin/category/list}" class="nav-link ">
+                                <span class="title">Danh sách</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item active open" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfc">
+            <a class="nav-link nav-toggle">
+                <i class="icon-calculator"></i>
+                <span class="uppercase title">Quản lý mượn trả</span>
+                <span class="arrow" id="nav-span-0e19b78e-9757-4394-837d-d3d9ebc33dfc"></span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item active open" id="nav-checkout-index">
+                    <a th:href="@{/admin/checkout/list}" class="nav-link">
+                        <span class="title">Xe đang mượn</span>
+                    </a>
+                </li>
+                <li class="nav-item" id="nav-circulation-history">
+                    <a th:href="@{/admin/circulation/list}" class="nav-link">
+                        <span class="title">Xe đã trả</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfd">
+            <a class="nav-link nav-toggle">
+                <i class="icon-social-dribbble"></i>
+                <span class="uppercase title">Quản lý cổng thông tin</span>
+                <span class="arrow" id="nav-span-0e19b78e-9757-4394-837d-d3d9ebc33dfd"></span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item" id="nav-sitemanagement-list">
+                    <a th:href="@{/admin/banner/list}" class="nav-link">
+                        <span class="title">Banner</span>
+                    </a>
+                </li>
+                <li class="nav-item" id="nav-filesmanagement-list">
+                    <a th:href="@{/admin/discount/list}" class="nav-link">
+                        <span class="title">Mã giảm giá</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item" id="nav-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef">
+            <a class="nav-link nav-toggle">
+                <i class="icon-users"></i>
+                <span class="uppercase title">Quản lý người dùng</span>
+                <span class="arrow" id="nav-span-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef"></span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item" id="nav-usermanagement-list">
+                    <a th:href="@{/admin/user/list}" class="nav-link">
+                        <span class="title">Người dùng</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    <!-- END SIDEBAR MENU -->
+    <!-- END SIDEBAR MENU -->
+</div>
+</body>
+</html>
