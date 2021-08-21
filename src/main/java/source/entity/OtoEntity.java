@@ -125,8 +125,9 @@ public class OtoEntity extends BaseEntity {
 
     @Transient
     public String getOtoImagePath() {
-        if (getImage() == null ) return "/images/default.png";
+        if (getImage() == null ) return "/images/oto.png";
 
         return "/Oto-Image/" +getId()+ "/" + image;
     }
+
 }

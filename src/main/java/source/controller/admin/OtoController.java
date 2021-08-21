@@ -14,6 +14,7 @@ import source.iService.CarCompanyService;
 import source.iService.CategoryService;
 import source.iService.OtoService;
 import source.utils.PagningUtils;
+import source.utils.RandomCodeUtils;
 import source.utils.UploadFileUtils;
 
 import java.io.File;
@@ -125,6 +126,7 @@ public class OtoController {
     public String insertOto(@ModelAttribute("otoEntity") OtoEntity otoEntity, Model model) {
         model.addAttribute("category", categoryService.findByActiveFag());
         model.addAttribute("carCompany", carCompanyService.findByActiveFag());
+        model.addAttribute("code_oto", RandomCodeUtils.codeOto());
         return "admin/oto/insert";
     }
 
@@ -140,9 +142,10 @@ public class OtoController {
     @RequestMapping(value = "/oto/save", method = RequestMethod.POST)
     public String insert(@ModelAttribute("otoEntity") OtoEntity otoEntity,
                          @RequestParam("file") MultipartFile file,
+                         @RequestParam("codeOto") String codeOto,
                          @RequestParam("id") Long id) throws IOException {
         if (id == null) {
-            otoEntity.setStatus(AppStatus.oto.Unapproved);
+            otoEntity.setCode(codeOto);
             otoEntity.setActiveFag(AppStatus.ActiveFag);
             String fileName = StringUtils.cleanPath(file.getOriginalFilename());
             otoEntity.setImage(fileName);
@@ -153,10 +156,10 @@ public class OtoController {
             }
         }else {
             OtoEntity oto = otoService.findById(id);
-            oto.setCode(otoEntity.getCode());
             oto.setName(otoEntity.getName());
             oto.setLicense_plates(otoEntity.getLicense_plates());
             oto.setPrice(otoEntity.getPrice());
+            oto.setStatus(otoEntity.getStatus());
             oto.setDescription(otoEntity.getDescription());
             oto.setCar_company_id(otoEntity.getCar_company_id());
             oto.setCategory_id(otoEntity.getCategory_id());

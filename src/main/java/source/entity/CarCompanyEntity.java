@@ -80,7 +80,7 @@ public class CarCompanyEntity extends BaseEntity {
     }
     @Transient
     public String getCarCompanyImagePath() {
-        if (getImage() == null ) return "/images/default.png";
+        if (getImage() == null ) return "/images/carcompanydefault.jpg";
 
         return "/CarCompany-Image/" +getId()+ "/" + image;
     }
