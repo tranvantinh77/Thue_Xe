@@ -2,50 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/source/utils/RandomCodeUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/1/BMW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/10/Mercedes.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/11/Mitsubishi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/12/Nissan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/13/Suzuki.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/14/Toyota.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/15/vinfast.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/2/Chevrolet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/3/Daewoo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/4/Ford.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/5/Honda.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/6/Hyundai.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/7/Isuzu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/8/KIA.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/9/Mazda.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/3/bmw_320i2013_4c_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/4/bmw_320i2013_4c_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/carcompanydefault.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/cardefault.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/oto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/7/bmw_320i2016_4c_1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/controller/admin/OtoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/OtoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/entity/CarCompanyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/entity/CarCompanyEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/source/entity/OtoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/entity/OtoEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/8/IMG_20210627_150210.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/8/z2584825491090_af25158f606f0fdea0bbf87b44d042a6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CarCompany-Image/9/IMG_20210627_150003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany/insert.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany/insert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/carCompany/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/oto/insert.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/oto/insert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/oto/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/oto/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/controller/admin/OtoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/controller/admin/OtoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/CarCompanyEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/CarCompanyEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/OtoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/OtoEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/CarCompany-Image/8/IMG_20210627_150210.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/CarCompany-Image/8/z2584825491090_af25158f606f0fdea0bbf87b44d042a6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/CarCompany-Image/9/IMG_20210627_150003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/carCompany/insert.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/carCompany/insert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/carCompany/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/carCompany/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/oto/insert.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/oto/insert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/oto/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/oto/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/utils/RandomCodeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/utils/RandomCodeUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,10 +79,10 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Thue_Xe\src\main\resources\static\images" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\circulation" />
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\checkout" />
+      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\home" />
       <recent name="E:\Thue_Xe\src\main\resources\templates\admin\banner" />
       <recent name="E:\Thue_Xe\src\main\resources\templates\admin\category" />
       <recent name="E:\Thue_Xe\src\main\resources\templates\admin\banner" />
@@ -138,10 +97,10 @@
       <recent name="source.controller.webPortal" />
       <recent name="source.config" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Thue_Xe\src\main\resources\static\images" />
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\circulation" />
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\checkout" />
-      <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\home" />
       <recent name="E:\Thue_Xe\src\main\resources\templates\admin\banner" />
       <recent name="E:\Thue_Xe\src\main\resources\templates\admin\category" />
       <recent name="E:\Thue_Xe\src\main\resources\templates\admin\banner" />
@@ -150,7 +109,7 @@
       <recent name="C:\Users\E6530\Desktop\Thue_Xe\src\main\resources\templates\admin\discount" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.application">
+  <component name="RunManager" selected="Application.RandomCodeUtils">
     <configuration name="EncrytedPasswordUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="source.utils.EncrytedPasswordUtils" />
       <module name="Thue_Xe" />
@@ -195,13 +154,13 @@
     </configuration>
     <list>
       <item itemvalue="Application.EncrytedPasswordUtils" />
-      <item itemvalue="Spring Boot.application" />
       <item itemvalue="Application.RandomCodeUtils" />
+      <item itemvalue="Spring Boot.application" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.application" />
         <item itemvalue="Application.RandomCodeUtils" />
+        <item itemvalue="Spring Boot.application" />
         <item itemvalue="Application.EncrytedPasswordUtils" />
       </list>
     </recent_temporary>
@@ -260,6 +219,7 @@
       <workItem from="1629254070257" duration="4505000" />
       <workItem from="1629287038011" duration="8233000" />
       <workItem from="1629379775117" duration="1207000" />
+      <workItem from="1629548694518" duration="3776000" />
     </task>
     <task id="LOCAL-00001" summary="updateCarCompany">
       <created>1628175996923</created>
@@ -328,38 +288,38 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1628349068383" />
-    <state width="1323" height="419" key="GridCell.Tab.0.bottom" timestamp="1629455149518">
+    <state width="1323" height="405" key="GridCell.Tab.0.bottom" timestamp="1629562078873">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="419" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629455149518" />
-    <state width="1323" height="419" key="GridCell.Tab.0.center" timestamp="1629455149518">
+    <state width="1323" height="405" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629562078873" />
+    <state width="1323" height="405" key="GridCell.Tab.0.center" timestamp="1629562078872">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="419" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1629455149518" />
-    <state width="1323" height="419" key="GridCell.Tab.0.left" timestamp="1629455149517">
+    <state width="1323" height="405" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1629562078872" />
+    <state width="1323" height="405" key="GridCell.Tab.0.left" timestamp="1629562078872">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="419" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1629455149517" />
-    <state width="1323" height="419" key="GridCell.Tab.0.right" timestamp="1629455149518">
+    <state width="1323" height="405" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1629562078872" />
+    <state width="1323" height="405" key="GridCell.Tab.0.right" timestamp="1629562078872">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="419" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1629455149518" />
-    <state width="1323" height="419" key="GridCell.Tab.1.bottom" timestamp="1629455149518">
+    <state width="1323" height="405" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1629562078872" />
+    <state width="1323" height="421" key="GridCell.Tab.1.bottom" timestamp="1629562078865">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="419" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629455149518" />
-    <state width="1323" height="419" key="GridCell.Tab.1.center" timestamp="1629455149518">
+    <state width="1323" height="421" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629562078865" />
+    <state width="1323" height="421" key="GridCell.Tab.1.center" timestamp="1629562078864">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="419" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1629455149518" />
-    <state width="1323" height="419" key="GridCell.Tab.1.left" timestamp="1629455149518">
+    <state width="1323" height="421" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1629562078864" />
+    <state width="1323" height="421" key="GridCell.Tab.1.left" timestamp="1629562078864">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="419" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1629455149518" />
-    <state width="1323" height="419" key="GridCell.Tab.1.right" timestamp="1629455149518">
+    <state width="1323" height="421" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1629562078864" />
+    <state width="1323" height="421" key="GridCell.Tab.1.right" timestamp="1629562078864">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="419" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1629455149518" />
+    <state width="1323" height="421" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1629562078864" />
     <state x="513" y="80" key="RollbackChangesDialog" timestamp="1629190787827">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -372,10 +332,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="90" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1628349077801" />
-    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1629169184934">
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1629548752553">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1629169184934" />
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1629548752553" />
     <state x="492" y="286" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1628871416636">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
