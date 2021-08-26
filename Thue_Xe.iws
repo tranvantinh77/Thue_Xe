@@ -2,36 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73808886-487d-472b-b848-3f03dc45693a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/121/suzuki_ertiga2021_7c_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/122/suzuki_ertiga21019_7c_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/123/suzuki_swift2020_5c_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/124/suzuki_swift2016_4c_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/125/suzuki_xl72020_7c_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/126/suzuki_xl72021_7c_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/127/toyota_avanza2019_7c_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/128/toyota_camry2020_4c_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/129/toyota_camry2019_4c_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/130/toyota_corollar2017_4c_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/131/toyota_corollar2009_4c_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/132/toyota_cross2020_4c_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/133/toyota_fortuner2021_7c_bac_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/134/toyota_fortune2018_7c_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/135/toyota_hilux2017_4c_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/136/toyota_innova2018_7c_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/137/toyota_innova2017_7c_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/138/toyota_rush2019_7c_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/139/toyota_rush2020_4c_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/140/toyota_vios2020_4c_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/141/toyota_vios2019_4c_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/142/toyota_wigo2021_4c_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/143/toyota_wigo2020_4c_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/144/toyota_yaris2018_4c_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/145/vinfast_fadil2020_4c_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/146/vinfast_fadil2021_4c_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/147/vinfast_luxa2021_4c_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/148/vinfast_luxa2020_5c_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/149/vinfast_luxsa2019_7c_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Oto-Image/150/vinfast_luxsa2021_7c_1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Thue_Xe.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Thue_Xe.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -250,7 +220,7 @@
       <workItem from="1629548694518" duration="3776000" />
       <workItem from="1629598420880" duration="731000" />
       <workItem from="1629686121856" duration="11965000" />
-      <workItem from="1629774502784" duration="1655000" />
+      <workItem from="1629774502784" duration="2846000" />
     </task>
     <task id="LOCAL-00001" summary="updateCarCompany">
       <created>1628175996923</created>
@@ -319,38 +289,38 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1628349068383" />
-    <state width="1323" height="231" key="GridCell.Tab.0.bottom" timestamp="1629738952295">
+    <state width="1323" height="231" key="GridCell.Tab.0.bottom" timestamp="1629808855900">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629738952295" />
-    <state width="1323" height="231" key="GridCell.Tab.0.center" timestamp="1629738952295">
+    <state width="1323" height="231" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629808855900" />
+    <state width="1323" height="231" key="GridCell.Tab.0.center" timestamp="1629808855900">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1629738952295" />
-    <state width="1323" height="231" key="GridCell.Tab.0.left" timestamp="1629738952295">
+    <state width="1323" height="231" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1629808855900" />
+    <state width="1323" height="231" key="GridCell.Tab.0.left" timestamp="1629808855900">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1629738952295" />
-    <state width="1323" height="231" key="GridCell.Tab.0.right" timestamp="1629738952295">
+    <state width="1323" height="231" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1629808855900" />
+    <state width="1323" height="231" key="GridCell.Tab.0.right" timestamp="1629808855900">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1629738952295" />
-    <state width="1323" height="231" key="GridCell.Tab.1.bottom" timestamp="1629738952295">
+    <state width="1323" height="231" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1629808855900" />
+    <state width="1323" height="231" key="GridCell.Tab.1.bottom" timestamp="1629808855901">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629738952295" />
-    <state width="1323" height="231" key="GridCell.Tab.1.center" timestamp="1629738952295">
+    <state width="1323" height="231" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629808855901" />
+    <state width="1323" height="231" key="GridCell.Tab.1.center" timestamp="1629808855901">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1629738952295" />
-    <state width="1323" height="231" key="GridCell.Tab.1.left" timestamp="1629738952295">
+    <state width="1323" height="231" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1629808855901" />
+    <state width="1323" height="231" key="GridCell.Tab.1.left" timestamp="1629808855900">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1629738952295" />
-    <state width="1323" height="231" key="GridCell.Tab.1.right" timestamp="1629738952295">
+    <state width="1323" height="231" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1629808855900" />
+    <state width="1323" height="231" key="GridCell.Tab.1.right" timestamp="1629808855901">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="231" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1629738952295" />
+    <state width="1323" height="231" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1629808855901" />
     <state x="513" y="80" key="RollbackChangesDialog" timestamp="1629190787827">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
