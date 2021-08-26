@@ -1,135 +1,50 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <div th:fragment="headerwebportal">
-    <style>
-        .dropbtn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center">
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            right: 0;
-            background-color: #ffffff;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
+            <h1 class="logo me-auto"><a th:href="@{/}">CAR RENTAL</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto"><img src="webportal/assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-        .dropdown-content a {
-            margin-top: 8px;
-            color: black;
-            padding: 12px 18px;
-            text-decoration: none;
-            display: block;
-        }
+            <form action="" method="post">
+                <input type="text" name="search" id="search" placeholder="Tìm kiếm..."
+                       style="width: 350px;margin-right: 2px"><input class="btn-danger" type="submit" value="Tìm">
+            </form>
 
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
 
-        .dropdown:hover .dropbtn {
-            background-color: #3e8e41;
-        }
-    </style>
-    <header class="c-layout-header c-layout-header-4 c-layout-header-default-mobile" data-minimize-offset="80">
-        <div class="c-navbar">
-            <div class="container">
-                <div class="justify-content-between align-items-center"
-                     style="padding-top: 10px; padding-left: 10px; padding-right: 10px">
-                    <div class="col-lg-6 col-md-6">
-                        <p class="mb-0 py-2 text-center text-md-left"><strong>Call:</strong> 1800-875-6117 | <strong>Email:</strong>
-                            info@thuvien.com</p>
-                    </div>
+                    <li class="dropdown"><a href="#"><span>Hãng xe</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="testimonials.html">Testimonials</a></li>
 
-                    <div class="col-lg-6 col-md-6">
-                        <div class="top-menu hidden-sm hidden-xs" th:if="${#request.userPrincipal == null}">
-                            <p class="mb-0 py-2 text-center text-md-right">
-                                <a href="/account/login"
-                                >Đăng nhập</a></p>
-                        </div>
-                        <div class="dropdown" style="float:right;" th:if="${#request.userPrincipal != null}">
-                            <p class="mb-0 py-2 text-center text-md-right" th:text="${#request.userPrincipal.name}"></p>
-                            <div class="dropdown-content">
-                                <a href="/">Đổi mật khẩu</a>
-                                <a href="/">Thay đổi thông tin</a>
-                                <a th:href="@{/account/logout}">Đăng xuất</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- BEGIN: BRAND -->
-                <div class="c-navbar-wrapper clearfix">
-                    <div class="c-brand c-pull-left">
-                        <a href="/" class="c-logo">
-                            <img src="../../webportal/img/logo.jpg" alt="Home" class="c-desktop-logo">
-                            <img src="../../webportal/img/logo.jpg" alt="Home" class="c-desktop-logo-inverse">
-                            <img src="../../webportal/img/logo.jpg" alt="Home" class="c-mobile-logo">
-                        </a>
-                        <button class="c-hor-nav-toggler" type="button" data-target=".c-mega-menu">
-                            <span class="c-line"></span>
-                            <span class="c-line"></span>
-                            <span class="c-line"></span>
-                        </button>
-                        <button class="c-topbar-toggler" type="button">
-                            <i class="fa fa-ellipsis-v"></i>
-                        </button>
-                        <button class="c-search-toggler" type="button">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </div>
-                    <!-- END: BRAND -->
-                    <!-- BEGIN: QUICK SEARCH -->
-                    <form class="c-quick-search" action="#">
-                        <input type="text" name="query" placeholder="Type to search..." value="" class="form-control"
-                               autocomplete="off">
-                        <span class="c-theme-link">&times;</span>
-                    </form>
-                    <!-- END: QUICK SEARCH -->
-                    <!-- BEGIN: HOR NAV -->
-                    <!-- BEGIN: LAYOUT/HEADERS/MEGA-MENU -->
-                    <!-- BEGIN: MEGA MENU -->
-                    <!-- Dropdown menu toggle on mobile: c-toggler class can be applied to the link arrow or link itself depending on toggle mode -->
-                    <nav class="c-mega-menu c-pull-right c-mega-menu-dark c-mega-menu-dark-mobile c-fonts-uppercase c-fonts-bold">
-                        <ul class="nav navbar-nav c-theme-nav">
-                            <li>
-                                <a href="/" class="c-link active">Trang chủ</a>
-                            </li>
-                            <li>
-                                <a href="/webportal/about" class="c-link">Giới thiệu</a>
-                            </li>
-                            <li>
-                                <a href="/webportal/books" class="c-link">Sách giấy</a>
-                            </li>
-<!--                            <li>-->
-<!--                                <a href="/" class="c-link">Sách số</a>-->
-<!--                            </li>-->
-                            <li>
-                                <a href="/webportal/news" class="c-link">Tin tức</a>
-                            </li>
-                            <li>
-                                <a href="/webportal/contact" class="c-link">Liên hệ</a>
+                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
+                                    class="bi bi-chevron-right"></i></a>
+                                <ul>
+                                    <li><a href="#">Deep Drop Down 1</a></li>
+                                    <li><a href="#">Deep Drop Down 2</a></li>
+                                    <li><a href="#">Deep Drop Down 3</a></li>
+                                    <li><a href="#">Deep Drop Down 4</a></li>
+                                    <li><a href="#">Deep Drop Down 5</a></li>
+                                </ul>
                             </li>
                         </ul>
-                    </nav>
-                    <!-- END: MEGA MENU -->
-                    <!-- END: LAYOUT/HEADERS/MEGA-MENU -->
-                    <!-- END: HOR NAV -->
-                </div>
-            </div>
+                    </li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                    <li><a th:href="@{/account/login}" class="getstarted">Đăng nhập</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+
+
+            <!-- .navbar -->
+
         </div>
     </header>
 </div>
