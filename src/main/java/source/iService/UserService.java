@@ -24,4 +24,6 @@ public interface UserService {
     List<UserEntity> findByKeyword(String keyword, Pageable pageable);
 
     List<UserEntity> findByKeyword(String keyword);
+
+    List<UserEntity> findByUser(int user_info);
 }

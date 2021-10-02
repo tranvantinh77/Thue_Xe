@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import source.entity.CheckoutEntity;
+import source.entity.OtoEntity;
 
 import java.util.List;
 
@@ -49,4 +50,7 @@ public interface CheckoutDAO extends JpaRepository<CheckoutEntity, Long> {
 
     @Query(value = "select * from checkout where active_fag=0 and status > 0",nativeQuery = true)
     List<CheckoutEntity> findByStatus();
+
+    @Query(value = "select * from checkout where active_fag = 0 and oto_id_id =:oto", nativeQuery = true)
+    List<CheckoutEntity> findByCheckout(int oto);
 }

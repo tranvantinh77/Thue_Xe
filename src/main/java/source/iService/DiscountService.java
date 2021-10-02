@@ -19,4 +19,6 @@ public interface DiscountService {
 
     DiscountEntity findById(Long id);
 
+    List<DiscountEntity> findByDiscount();
+
 }

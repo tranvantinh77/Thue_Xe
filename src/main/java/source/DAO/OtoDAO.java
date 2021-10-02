@@ -36,4 +36,10 @@ public interface OtoDAO extends JpaRepository<OtoEntity, Long> {
             "WHERE oto.active_fag=0 AND  oto.name LIKE %:keyword% OR oto.name like %:keyword% OR oto.price like %:keyword% OR oto.license_plates like %:keyword% " +
             "OR car_company.name like %:keyword% OR category.name like %:keyword%",nativeQuery = true)
     List<OtoEntity> findByKeyword(@Param("keyword") String keyword);
+
+    @Query(value = "select * from oto where active_fag = 0 and car_company_id_id =:carCompany", nativeQuery = true)
+    List<OtoEntity> findByCarCompany(int carCompany);
+
+    @Query(value = "select * from oto where active_fag = 0 and category_id_id =:category", nativeQuery = true)
+    List<OtoEntity> findByCategory(int category);
 }

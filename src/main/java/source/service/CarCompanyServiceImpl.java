@@ -43,9 +43,14 @@ public class CarCompanyServiceImpl implements CarCompanyService {
     }
 
     @Override
-    public List<CarCompanyEntity> findAll() {
-        return carCompanyDAO.findAll();
+    public List<CarCompanyEntity> findByCarCompany() {
+        return carCompanyDAO.findByCarCompany();
     }
+
+//    @Override
+//    public List<CarCompanyEntity> findAll() {
+//        return carCompanyDAO.findAll();
+//    }
 
     @Override
     public CarCompanyEntity findById(Long id) {

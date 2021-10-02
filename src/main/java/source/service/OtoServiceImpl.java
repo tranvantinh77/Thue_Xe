@@ -27,10 +27,15 @@ public class OtoServiceImpl implements OtoService {
     }
 
     @Override
-    public List<OtoEntity> findAll() {
-
-        return otoDAO.findAll();
+    public List<OtoEntity> findByCarCompany(int carCompany) {
+        return otoDAO.findByCarCompany(carCompany);
     }
+
+    @Override
+    public List<OtoEntity> findByCategory(int category) {
+        return otoDAO.findByCategory(category);
+    }
+
 
     @Override
     public List<OtoEntity> findByKeyword(String keyword, Pageable pageable) {

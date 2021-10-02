@@ -11,7 +11,9 @@ public interface OtoService {
 
     List<OtoEntity> findByActiveFag();
 
-    List<OtoEntity> findAll();
+    List<OtoEntity> findByCarCompany(int carCompany);
+
+    List<OtoEntity> findByCategory(int category);
 
     List<OtoEntity> findByKeyword(String keyword, Pageable pageable);
 

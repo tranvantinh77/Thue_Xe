@@ -44,4 +44,9 @@ public class DiscountServiceImpl implements DiscountService {
     public DiscountEntity findById(Long id) {
         return discountDAO.findById1(id);
     }
+
+    @Override
+    public List<DiscountEntity> findByDiscount() {
+        return discountDAO.findByDiscount();
+    }
 }

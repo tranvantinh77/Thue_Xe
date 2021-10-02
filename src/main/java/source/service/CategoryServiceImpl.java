@@ -47,4 +47,9 @@ public class CategoryServiceImpl implements CategoryService {
 
         return categoryDAO.findById1(id);
     }
+
+    @Override
+    public List<CategoryEntity> findByCategory() {
+        return categoryDAO.findByCategory();
+    }
 }

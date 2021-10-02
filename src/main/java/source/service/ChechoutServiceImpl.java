@@ -49,4 +49,9 @@ public class ChechoutServiceImpl implements CheckoutService {
     public List<CheckoutEntity> findByStatus() {
         return checkoutDAO.findByStatus();
     }
+
+    @Override
+    public List<CheckoutEntity> findByCheckout(int oto) {
+        return checkoutDAO.findByCheckout(oto);
+    }
 }

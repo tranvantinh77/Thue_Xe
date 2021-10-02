@@ -20,4 +20,6 @@ public interface CheckoutService {
     CheckoutEntity findById(Long id);
 
     List<CheckoutEntity> findByStatus();
+
+    List<CheckoutEntity> findByCheckout(int oto);
 }

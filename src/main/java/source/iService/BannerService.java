@@ -19,5 +19,5 @@ public interface BannerService {
 
     BannerEntity findById(Long id);
 
-    List<BannerEntity> findAll();
+    List<BannerEntity> findByStatus();
 }

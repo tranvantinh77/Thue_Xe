@@ -61,5 +61,10 @@ public class UserServiceImpl implements UserService {
         return userDAO.findByKeyword(keyword);
     }
 
+    @Override
+    public List<UserEntity> findByUser(int user_info) {
+        return userDAO.findByUser(user_info);
+    }
+
 
 }

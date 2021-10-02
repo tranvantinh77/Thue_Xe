@@ -47,7 +47,7 @@ public class BannerServiceImpl implements BannerService {
     }
 
      @Override
-     public List<BannerEntity> findAll() {
-         return bannerDAO.findAll();
+     public List<BannerEntity> findByStatus() {
+         return bannerDAO.findByStatus();
      }
  }

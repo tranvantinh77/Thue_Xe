@@ -26,4 +26,10 @@ public interface BannerDAO extends JpaRepository<BannerEntity, Long> {
 
     @Query(value = "select * from banner banner where (banner.active_fag=0) and (banner.code like %:keyword% or banner.name like %:keyword% )",nativeQuery = true)
     List<BannerEntity> findByKeyword(@Param("keyword") String keyword);
+
+    @Query(value = "select * from banner where active_fag = 0 and status =0 order by update_date desc limit 3", nativeQuery = true)
+    List<BannerEntity> findByStatus();
+
+//    @Query(value = "select * from banner where active_fag = 0 and status =:status order by update_date desc limit 3", nativeQuery = true)
+//    List<BannerEntity> findByStatus(int status);
 }

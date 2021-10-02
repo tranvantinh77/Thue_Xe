@@ -18,7 +18,7 @@ public interface CarCompanyService {
 
     void save(CarCompanyEntity carCompanyEntity);
 
-    List<CarCompanyEntity> findAll();
+    List<CarCompanyEntity> findByCarCompany();
 
     CarCompanyEntity findById(Long id);
 }
